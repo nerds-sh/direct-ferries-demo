@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from 'assets/logo.svg'
-import 'home/app.css'
+import 'home/home.css'
 import { Text } from 'home/text'
 import { Link } from 'home/link'
 
-export const App = () => <div className={'app'}>
-  <header className={'app-header'}>
-    <img src={logo} className={'app-logo'} alt={'logo'} />
+export const Home = () => <div className={'home'}>
+  <header className={'home-header'}>
+    <img src={logo} className={'home-logo'} alt={'logo'} />
     <Text />
     <Link />
   </header>
