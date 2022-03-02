@@ -1,5 +1,5 @@
 import React from 'react'
-import 'dashboard/style.sass'
+import 'dashboard/style.scss'
 
 export const Dashboard = () => <div className={'dashboard'}>
   <div className={'dashboard-content'}>
