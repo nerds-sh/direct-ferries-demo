@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from 'assets/logo.svg'
-import 'app.css'
-import { Text } from 'text'
-import { Link } from 'link'
+import 'home/app.css'
+import { Text } from 'home/text'
+import { Link } from 'home/link'
 
 export const App = () => <div className={'app'}>
   <header className={'app-header'}>
