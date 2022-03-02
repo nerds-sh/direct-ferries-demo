@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from 'startup/router'
+import { ReduxWrapper, Router } from 'startup'
 import 'theme.scss'
 
 ReactDOM.render(<React.StrictMode>
-  <Router />
+  <ReduxWrapper>
+    <Router />
+  </ReduxWrapper>
 </React.StrictMode>, document.getElementById('root'))
 
