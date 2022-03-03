@@ -1,5 +1,5 @@
 import React from 'react'
-import { get } from 'dealpicker/hooks'
+import { get } from 'dealfinder/hooks'
 
 export const Get = () => <div className={'dashboard-response'}>
   <p>{JSON.stringify(get.useResponse())}</p>

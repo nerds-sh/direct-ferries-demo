@@ -1,3 +1,3 @@
-import { dealpicker } from 'repositories/dealpicker'
+import { dealfinder } from 'repositories/dealfinder'
 
-export const repositories = { dealpicker }
+export const repositories = { dealfinder }
