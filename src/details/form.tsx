@@ -4,14 +4,14 @@ import { Type } from 'details/shared/type'
 import { ReturnTrip } from 'details/return-trip'
 import { OneWay } from 'details/one-way'
 import { useContext } from 'details/context'
-import { Types } from 'details/types'
+import { Form as Forms } from 'details/types'
 
 export const Form = () => {
   const { type } = useContext()
 
   return <>
     <Type />
-    {type === Types.Form.Return ? <ReturnTrip /> : <OneWay />}
+    {type === Forms.Return ? <ReturnTrip /> : <OneWay />}
     <Submit />
   </>
 }

@@ -1,10 +1,12 @@
 import { createContext, useContext as useReactContext, useState } from 'react'
 import { FormikConfig, FormikValues, useFormik } from 'formik'
-import { Types } from 'details/types'
+import { Form, Modal } from 'details/types'
 
 type ContextType = {
-    type: Types.Form,
-    setType: (type: Types.Form) => void,
+    type: Form,
+    setType: (type: Form) => void,
+    modal: Modal,
+    setModal: (modal: Modal) => void
 } & FormikValues
 
 export const Context = createContext({} as ContextType)
@@ -17,9 +19,10 @@ const useFormikInit = (): FormikConfig<FormikValues> => ({
 })
 
 export const useDefaultContext = () => {
-  const [type, setType] = useState(Types.Form.Return)
+  const [type, setType] = useState(Form.Return)
+  const [modal, setModal] = useState(Modal.None)
   const formik = useFormik(useFormikInit())
 
-  return { ...formik, type, setType }
+  return { ...formik, type, setType, modal, setModal }
 }
 
