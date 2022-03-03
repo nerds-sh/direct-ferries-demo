@@ -1,13 +1,14 @@
 import { ofType } from 'redux-observable'
 import { getting } from 'dealpicker/slices'
 import { repositories } from 'repositories'
-import { mergeMap, catchError, of } from 'rxjs'
+import { mergeMap, catchError, of, Observable } from 'rxjs'
+import { PayloadAction } from '@reduxjs/toolkit'
 
-export const get = (actions$: any) => actions$
+export const get = (actions$: Observable<any>) => actions$
   .pipe(ofType(getting.attempt))
   .pipe(mergeMap(execute))
 
-const execute = () => repositories.dealpicker.get()
+const execute = ({ payload }: PayloadAction<object>) => repositories.dealpicker.get(payload)
   .pipe(mergeMap(success))
   .pipe(catchError(failure))
 

@@ -11,7 +11,7 @@ const initialState: State = {
   errors: '',
 }
 
-const attempt:Reducer = (state, { payload }) => ({ ...state, input: payload })
+const attempt: Reducer = (state, { payload }) => ({ ...state, input: payload })
 
 const success: Reducer = (state, { payload }) => ({ ...state, data: payload })
 
