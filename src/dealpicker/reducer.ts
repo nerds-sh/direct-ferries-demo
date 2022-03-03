@@ -1,4 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { get } from 'dealpicker/slices'
+import { get, base } from 'dealpicker/slices'
 
-export const reducer = combineReducers({ get: get.reducer })
+export const reducer = combineReducers({
+  get: get.reducer,
+  base: base.reducer,
+})

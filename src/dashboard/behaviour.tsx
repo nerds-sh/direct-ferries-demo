@@ -1,8 +1,9 @@
-import { useFetchData } from 'dealpicker/hooks/use-fetch-data'
+import { get, base } from 'dealpicker/hooks'
 import { ReactElement } from 'react'
 
 export const Behaviour = (): ReactElement => {
-  useFetchData()
+  get.useFetch()
+  base.useFetch()
 
   return '' as unknown as ReactElement
 }
