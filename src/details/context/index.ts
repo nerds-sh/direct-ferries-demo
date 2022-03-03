@@ -14,8 +14,8 @@ export const Context = createContext({} as ContextType)
 export const useContext = ():ContextType => useReactContext(Context)
 
 const useFormikInit = (): FormikConfig<FormikValues> => ({
-  initialValues: { caca: 'pipi' },
-  onSubmit: ({ caca }) => console.log(caca),
+  initialValues: { search: '' },
+  onSubmit: ({ search }) => console.log('search is ', search),
 })
 
 export const useDefaultContext = () => {

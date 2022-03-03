@@ -7,11 +7,11 @@ import { useContext } from 'details/context'
 import { Form as Forms } from 'details/types'
 
 export const Form = () => {
-  const { type } = useContext()
+  const { type, handleSubmit } = useContext()
 
-  return <>
+  return <form onSubmit={handleSubmit}>
     <Type />
     {type === Forms.Return ? <ReturnTrip /> : <OneWay />}
     <Submit />
-  </>
+  </form>
 }
