@@ -1,5 +1,6 @@
 import { Dashboard } from 'dashboard'
-import { Landing } from 'details'
+import {Details} from 'details'
+import {Routes} from "routes";
 
 export const routes = [
   {
@@ -9,9 +10,15 @@ export const routes = [
     component: Dashboard,
   },
   {
-    path: '/',
-    name: 'Landing',
+    path: '/details',
+    name: 'Details',
     exact: true,
-    component: Landing,
+    component: Details,
+  },
+  {
+    path: '/',
+    name: 'Routes',
+    exact: true,
+    component: Routes,
   },
 ]
