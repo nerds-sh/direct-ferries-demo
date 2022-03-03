@@ -1,7 +1,7 @@
 import { settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
 import { from, map, mergeMap } from 'rxjs'
-import { Types } from 'dealpicker'
+import { Types } from 'dealfinder'
 
 const url = ({ stdc }: Types.Base.Input) => `${settings().api}/partners/dealFinderBaseData.aspx?stdc=${stdc}`
 

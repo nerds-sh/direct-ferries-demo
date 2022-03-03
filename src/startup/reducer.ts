@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { reducer as dealpicker } from 'dealpicker'
+import { reducer as dealfinder } from 'dealfinder'
 
-export const reducer = combineReducers({ dealpicker })
+export const reducer = combineReducers({ dealfinder })
 
 export type State = ReturnType<typeof reducer>

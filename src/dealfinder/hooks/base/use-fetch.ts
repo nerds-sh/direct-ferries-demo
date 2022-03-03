@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { base } from 'dealpicker/slices'
+import { base } from 'dealfinder/slices'
 
 const makePayload = () => ({ stdc: 'DF10' })
 

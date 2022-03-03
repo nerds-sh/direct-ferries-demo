@@ -1,4 +1,4 @@
 import { combineEpics } from 'redux-observable'
-import { epic as dealpicker } from 'dealpicker'
+import { epic as dealfinder } from 'dealfinder'
 
-export const epic = combineEpics(dealpicker)
+export const epic = combineEpics(dealfinder)
