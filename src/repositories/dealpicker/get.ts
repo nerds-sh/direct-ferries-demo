@@ -4,15 +4,23 @@ import { from, mergeMap, map } from 'rxjs'
 
 const url = () => `${settings().api}/ferry/ws/dealpicker.asmx/RouteDataGet`
 
-const body = 'journeyType=2&routeId=97&routeIdReturn=98&cult=en-US&stdc=DF10COM&miniCruise=false&baseData=null&callback=null'
+const append = (params: URLSearchParams) => ([key, value]: [string, unknown]) => params.append(key, `${value}`)
 
-const options = () => ({
+const body = (payload: object) => {
+  const params = new URLSearchParams()
+
+  Object.entries(payload).forEach(append(params))
+
+  return params.toString()
+}
+
+const options = (payload: object) => ({
   method: 'POST',
   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  body,
+  body: body(payload),
 })
 
-export const get = () => fromFetch(url(), options())
+export const get = (payload: object) => fromFetch(url(), options(payload))
   .pipe(mergeMap(response => from(response.text())))
   .pipe(map(response => response.split('null(')[1].slice(0, -2)))
   .pipe(map(response => JSON.parse(response)))

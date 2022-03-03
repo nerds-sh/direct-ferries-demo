@@ -1,5 +1,5 @@
 import React from 'react'
-import { useResponse } from 'dashboard/hooks'
+import { useResponse } from 'dealpicker/hooks'
 
 export const Content = () => <div className={'dashboard'}>
   <div className={'dashboard-content'}>

@@ -1,4 +1,4 @@
-import { useFetchData } from 'dashboard/hooks/use-fetch-data'
+import { useFetchData } from 'dealpicker/hooks/use-fetch-data'
 import { ReactElement } from 'react'
 
 export const Behaviour = (): ReactElement => {
