@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { getting } from 'dealpicker/slices'
+import { get } from 'dealpicker/slices'
 
 const makePayload = () => ({
   journeyType: 2,
@@ -13,10 +13,10 @@ const makePayload = () => ({
   callback: null,
 })
 
-export const useFetchData = () => {
+export const useFetch = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getting.attempt(makePayload()))
+    dispatch(get.actions.attempt(makePayload()))
   }, [dispatch])
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useResponse } from 'dealpicker/hooks'
+import { Base } from 'dashboard/base'
+import { Get } from 'dashboard/get'
 
 export const Content = () => <div className={'dashboard'}>
   <div className={'dashboard-content'}>
     <p>I am meant to represent a mighty dashboard</p>
-    <div className={'dashboard-response'}>
-      <p>{JSON.stringify(useResponse())}</p>
-    </div>
+    <Base />
+    <Get />
   </div>
 </div>

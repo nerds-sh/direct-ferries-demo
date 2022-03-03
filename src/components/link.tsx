@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Children } from 'common/types'
+import { Types } from 'common'
 
 type LinkProps = {
     to: string,
-    children: Children,
+    children: Types.Children,
     className?: string,
 }
 

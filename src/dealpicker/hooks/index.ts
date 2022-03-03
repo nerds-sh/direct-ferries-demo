@@ -1,1 +1,2 @@
-export * from 'dealpicker/hooks/use-response'
+export * from 'dealpicker/hooks/get'
+export * from 'dealpicker/hooks/base'
