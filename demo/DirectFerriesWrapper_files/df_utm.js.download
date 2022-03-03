@@ -1,0 +1,348 @@
+var hasUtmInit = false;
+var utmResponse = '';
+
+//Polyfill from developer.mozilla.org
+if (!String.prototype.startsWith) {
+    Object.defineProperty(String.prototype, 'startsWith', {
+        value: function (search, rawPos) {
+            var pos = rawPos > 0 ? rawPos | 0 : 0;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
+}
+
+var AppendQueryParam = function (href, paramName, paramValue) {
+    var appendStr = paramName + '=' + paramValue;
+    var hasParams = href.indexOf('?') !== -1;
+    return hasParams ?
+        href + '&' + appendStr :
+        href + '?' + appendStr;
+};
+
+function readCookie(name) {
+    var nameEQ = encodeURIComponent(name) + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+    return null;
+}
+
+function setCookie(name, value, expires, path, domain, secure) {
+    var today = new Date();
+    today.setTime(today.getTime());
+    if (expires) {
+        expires = expires * 1000 * 60 * 60 * 24;
+    }
+    var expires_date = new Date(today.getTime() + (expires));
+    var cookieString = name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires_date.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "")
+    if (window.location.protocol.indexOf('https') != -1) cookieString += "; secure=true;samesite=none;";
+    document.cookie = cookieString;
+}
+
+function queryString(key) {
+    key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+    var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+    return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+}
+
+var utm = {
+    init: function () {
+        try {
+            var utmResponseObject = this.Response.Init();
+            utmResponse = JSON.stringify(utmResponseObject);
+            setCookie('dfutm', utmResponse, 365, "/");
+            return utmResponse;
+        }
+        catch (e) {
+            console.log("error utm.init()" + e);
+        }
+    },
+    Response: {
+        Init: function () {
+            switch (true) {
+                case this.AffiliateMedium.IsAffiliate():
+                    return this.AffiliateMedium.AffiliateResponse();
+                case this.PpcNDisplayMedium.IsPpcNDisplay():
+                    return this.PpcNDisplayMedium.PpcNDisplayResponse();
+                case this.EmailMedium.IsEmail():
+                    return this.EmailMedium.EmailResponse();
+                case this.SocialMedium.IsSocial():
+                    return this.SocialMedium.SocialResponse();
+                case this.OrganicMedium.IsOrganic():
+                    return this.OrganicMedium.OrganicResponse();
+                case this.AppMedium.IsApp():
+                    return this.AppMedium.AppResponse();
+                case this.ReferralMedium.IsReferral():
+                    return this.ReferralMedium.ReferralResponse();
+                case this.OtherMedium.IsOther():
+                    return this.OtherMedium.OtherResponse();
+                default: return this.UtmDefaultResponse;
+            }
+        },
+        AffiliateMedium: {
+            IsAffiliate: function () {
+                var stdc = queryString('stdc');
+                if (stdc && (stdc.startsWith('F') || stdc.startsWith('MF'))) return true;
+                if (queryString('affid')) return true;
+                return false;
+            },
+            AffiliateResponse: function () {
+                return {
+                    Source: queryString('stdc') ? queryString('stdc') : queryString('affid'),
+                    Medium: 'affiliate',
+                    Campaign: null,
+                    Referrer: null
+                };
+            }
+        },
+        AppMedium: {
+            IsApp: function () {
+                var stdc = queryString('stdc');
+                var mobileApp = queryString('mobileApp');
+                if (stdc && (stdc.endsWith('_AN') || stdc.endsWith('_IO')) || mobileApp) return true;
+                return false;
+            },
+            GetAppSource: function () {
+                var getSourceFromString = function (s) {
+                    if (s && (s.endsWith('AN'))) return "Android";
+                    if (s && (s.endsWith('IO'))) return "Ios";
+                };
+                var result = getSourceFromString(queryString('stdc'));
+                if (!result) result = getSourceFromString(queryString('app'));
+                return result;
+            },
+            AppResponse: function () {
+                return {
+                    Source: this.GetAppSource(),
+                    Medium: 'App',
+                    Campaign: null,
+                    Referrer: null
+                };
+            }
+        },
+        PpcNDisplayMedium: {
+            _ppcGoogleUrlOptions: ["gclid", "gclsrc"],
+            _ppcMicrosoftUrlOptions: ['msclid', 'msclkid'],
+            IsPpcNDisplay: function () {
+                if (this.IsDisplaySource() || this.IsPpcMedium()) return true;
+            },
+            PpcNDisplayResponse: function () {
+                return {
+                    Source: this.GetPpcSource(),
+                    Medium: this.IsDisplaySource() ? 'Display' : 'PPC',
+                    Campaign: this.GetPpcCampaign(),
+                    Referrer: null
+                };
+            },
+            IsDisplaySource: function () {
+                var displayOptions = ["display", "cpm", "banner"];
+                if (queryString('utm_medium')) return displayOptions.indexOf(queryString('utm_medium').toLowerCase()) !== -1;
+                return false;
+            },
+            IsPpcMedium: function () {
+                var ppcMediumOptions = ["cpc", "ppc", "paid"];
+
+                var utmMedium = queryString('utm_medium');
+                if (utmMedium != null) {
+                    for (var i = 0; i < ppcMediumOptions.length; i++) {
+                        if (utmMedium.includes(ppcMediumOptions[i])) return true
+                    }
+                }
+                var ppcOptionsAsQueryString = this._ppcGoogleUrlOptions.concat(this._ppcMicrosoftUrlOptions)
+                for (var i = 0; i < ppcOptionsAsQueryString.length; i++) {
+                    if (queryString(ppcOptionsAsQueryString[i])) return true
+                }
+                return false;
+            },
+            GetPpcSource: function () {
+                for (var i = 0; i < this._ppcMicrosoftUrlOptions.length; i++) {
+                    var microsoftOption = this._ppcMicrosoftUrlOptions[i];
+                    if (queryString(microsoftOption)) return 'microsoft';
+                }
+                for (var i = 0; i < this._ppcGoogleUrlOptions.length; i++) {
+                    var googleOption = this._ppcGoogleUrlOptions[i];
+                    if (queryString(googleOption)) return 'google';
+                }
+                if (queryString('utm_source')) return queryString('utm_source');
+                return '';
+            },
+            GetPpcCampaign: function () {
+                if (queryString('utm_campaign ')) return queryString('utm_campaign ');
+                return '';
+            }
+        },
+        EmailMedium: {
+            validEmailSources: ['df', 'dotmailer'],
+            IsEmail: function () {
+                var utmSource = queryString('utm_source');
+                if (utmSource) {
+                    return this.validEmailSources.indexOf(utmSource.toLowerCase()) !== -1;
+                }
+                return false;
+            },
+            EmailResponse: function () {
+                return {
+                    Medium: "email",
+                    Source: queryString('utm_source'),
+                    Campaign: queryString('utm_campaign'),
+                    Referrer: null
+                }
+            }
+        },
+        SocialMedium: {
+            validSocialReferrers: ['whatsapp', 'facebook', 'twitter', 'instagram', 'social', 'tripadvisor', 'reddit', 'pinterest', 'linkedin', 'blogger', 'youtube', 'trustpilot', 'trust pilot', 'feefo'],
+            validSocialMediums: ['social', 'social-network', 'social-media', 'sm', 'social network', 'social media'],
+            IsSocial: function () {
+                var utmMedium = queryString('utm_medium');
+                if (utmMedium) {
+                    for (var i = 0; i < this.validSocialMediums.length; i++) {
+                        var socialMedium = this.validSocialMediums[i];
+                        if (utmMedium.toLowerCase().indexOf(socialMedium) !== -1) return true;
+                    }
+                }
+                var ref = document.referrer;
+                if (ref) {
+                    for (var i = 0; i < this.validSocialReferrers.length; i++) {
+                        var socialReferrer = this.validSocialReferrers[i];
+                        if (ref.indexOf(socialReferrer) !== -1) return true;
+                    }
+                }
+                return false;
+            },
+            SocialResponse: function () {
+                return {
+                    Medium: "social",
+                    Source: document.referrer ? document.referrer : queryString('utm_source'),
+                    Campaign: queryString('utm_campaign'),
+                    Referrer: null
+                }
+            }
+        },
+        OrganicMedium: {
+            ValidOrganicReferrers: ['360.cn', 'Alice', 'Alltheweb', 'Altavista', 'AOL', 'Ask', 'Auone', 'Avg', 'Babylon', 'Baidu', 'Biglobe', 'Bing', 'Centrum.cz', 'Comcast', 'Conduit', 'CNN', 'Daum', 'DuckDuckGo', 'Ecosia', 'Ekolay', 'Eniro', 'Globo', 'go.mail.ru', 'Google', 'goo.ne', 'haosou.com', 'Incredimail', 'Kvasir', 'Live', 'Lycos', 'Lycos', 'Mamma', 'MSN', 'Mynet', 'Najdi', 'Naver', 'Netscape', 'ONET', 'Ozu', 'Rakuten', 'Rambler', 'Search-results', 'search.smt.docomo', 'Sesam', 'Seznam', 'So.com', 'Sogou', 'Startsiden', 'Szukacz', 'Terra', 'Tut.by', 'Ukr', 'Virgilio', 'Voila', 'Wirtulana Polska', 'Yahoo', 'Yandex', 'Yam'],
+            IsOrganic: function () {
+                var ref = document.referrer;
+
+                if (ref) {
+                    try {
+                        ref = ref.match(/:\/\/(.[^/]+)/)[1];
+                    } catch (e) {
+                        ga('send', 'event', 'Error parsing referrer in dfutm', { nonInteraction: true });
+                    }
+                    for (var i = 0; i < this.ValidOrganicReferrers.length; i++) {// we should get a list of exact matches, because this might give false positive for some sites like traffic from "http://zvhdtfwrbxlcmsnk.neverssl.com/online", which contain the string "msn"
+                        var organicReferrer = this.ValidOrganicReferrers[i];
+                        if (ref.indexOf(organicReferrer.toLowerCase()) !== -1) {
+                            this.OrganicSource = organicReferrer;
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            },
+            OrganicResponse: function () {
+                return {
+                    Medium: "organic search",
+                    Source: this.OrganicSource,
+                    Campaign: "",
+                    Referrer: null
+                }
+            },
+            OrganicSource: null
+        },
+        ReferralMedium: {
+            IsReferral: function () {
+                return document.referrer !== ''
+                    && document.referrer.indexOf('directferries.') === -1
+                    && document.referrer.indexOf('.sofort.com') === -1
+                    && document.referrer.indexOf('.ferries.') === -1
+                    && document.referrer.indexOf('.ferry.') === -1
+                    && document.referrer.indexOf('.traghettiviaggi.') === -1
+                    && document.referrer.indexOf('.faehren.') === -1
+                    && document.referrer.indexOf('ideal.') === -1
+                    && document.referrer.indexOf('rabobank.') === -1
+                    && !queryString('utm_source') && !queryString('utm_medium ');
+            },
+            ReferralResponse: function () {
+                return {
+                    Source: document.referrer,
+                    Medium: 'referral',
+                    Campaign: null,
+                    Referrer: null
+                };
+            }
+        },
+        OtherMedium: {
+            IsOther: function () {
+                if (readCookie('dfutm') || queryString('dfutm')) return true;
+                return false;
+            },
+            OtherResponse: function () {
+                if (queryString('dfutm')) return JSON.parse(queryString('dfutm'));
+                if (readCookie('dfutm')) return JSON.parse(readCookie('dfutm'));
+            }
+        },
+        UtmDefaultResponse: { Source: "", Medium: "DIRECT", Campaign: "", Referrer: null }
+    },
+    UpdateFlagLinks: function () {
+        var paramValue = encodeURIComponent(utmResponse);
+        var flagLinks = document.querySelectorAll('#langs.dropdown>li>a');
+        for (var i = 0; i < flagLinks.length; i++) {
+            var flagLink = flagLinks[i];
+            if (!flagLink.href.includes("dfutm")) {
+                flagLink.href = AppendQueryParam(flagLink.href, 'dfutm', paramValue);
+            }
+        }
+    },
+    DealFinderHiddenInputs: {
+        Init: function () {
+            var newInput = this.CreateHiddenUtmDOM();
+            var fromContainer = this.GetDFContainer();
+            if (fromContainer && !document.querySelector('#dfutm')) {
+                fromContainer.appendChild(newInput);
+            }
+        },
+        CreateHiddenUtmDOM: function () {
+            var newInput = document.createElement("input");
+            newInput.type = 'hidden';
+            newInput.id = 'dfutm';
+            newInput.name = 'dfutm';
+            newInput.setAttribute('value', utmResponse);
+            return newInput;
+        },
+        GetDFContainer: function () {
+            return (document.querySelector('#vmAll')
+                ? document.querySelector('#vmAll')
+                : (document.querySelector('.deal_finder_wrap')
+                    ? document.querySelector('.deal_finder_wrap')
+                    : document.querySelector('#deal_finder1')));
+        }
+    },
+    getUtm: () => {
+        // global variable declared on function.js
+        var utmObject = (typeof utmResponse !== 'undefined') ? utmResponse : "";
+        return utmObject;
+    }
+};
+
+function useTrackingFromJs() {
+    if (!hasUtmInit) {
+        utm.init();
+        hasUtmInit = true;
+    }
+    $(document).ready(function () {
+        utm.UpdateFlagLinks();
+        utm.DealFinderHiddenInputs.Init();
+    });
+}
+
+function useTrackingFromObject(utmString) {
+    utmResponse = JSON.stringify(utmString)
+}
+
+// some elements may be not created

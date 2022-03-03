@@ -1,0 +1,115 @@
+window.__fa__ = window.__fa__ || {};
+(function () {
+    try {
+        // load script
+        function loadScript(url, callback, id) {
+            var script = document.createElement("script");
+            script.src = url;
+            if (!!id) { script.id = id; }
+            script.async = "true";
+            script.addEventListener("load", callback);
+            script.addEventListener("error", function () { console.warn("FA pixel library not loaded!") });
+            document.head.appendChild(script);
+        }
+        // dynamic feed API call
+        function send_feed_data(cookie_id) {
+            if (location.href.indexOf("booking_redirect_df.aspx") <= -1) { return; }
+            if (!window.__fa__ || !window.__fa__.data || !window.__fa__.data.pub) { return; }
+            var origin = window.__fa__.data.pub.split("-")[0].trim();
+            var destination = window.__fa__.data.pub.split("-")[1].trim();
+            // collect data
+            var mapping = {
+                "Dover - Calais": "https://www.directferries.co.uk/dover_calais_ferry.htm",
+                "Holyhead - Dublin": "https://www.directferries.co.uk/holyhead_dublin_ferry.htm",
+                "Hook of Holland - Harwich": "https://www.directferries.co.uk/hook_of_holland_harwich_ferry.htm",
+                "Harwich - Hook of Holland": "https://www.directferries.co.uk/harwich_hook_of_holland_ferry.htm",
+                "Calais - Dover": "https://www.directferries.co.uk/calais_dover_ferry.htm",
+                "Liverpool Birkenhead - Belfast": "https://www.directferries.co.uk/liverpool_birkenhead_belfast_ferry.htm"
+            };
+            var key = Object.keys(mapping).find(key => key.toLowerCase() === window.__fa__.data.pub.toLowerCase());
+            if (!key || !key.length) { return; }
+            if (!mapping[key] || !mapping[key].length) { return; }
+            var payload = [{
+                cookie_id: cookie_id,
+                country_code: window.__fa__.data.sec,
+                custom1: "",
+                custom2: "",
+                custom3: "",
+                destination: destination,
+                origin: origin,
+                route_text: window.__fa__.data.pub,
+                time_stamp: (+ new Date()),
+                url: mapping[key] + "?utm_source=FluidAds&utm_medium=ads&utm_campaign=DirectFerriesEn&source=DirectFerriesEnads"
+            }];
+            // API Call
+            var real_time_http = new XMLHttpRequest();
+            real_time_http.open("PUT", "https://ext.fluidads.com/external/api/feed/record?feedId=cks8tdh3401uuwlk24vm8a82j&externalApiToken=MTYzYmQyOWI2M2JkYjlmZDUzYzU2MDgzNmUxZjg2NTQ=");
+            real_time_http.setRequestHeader("Content-Type", "application/json");
+            real_time_http.send(JSON.stringify({ data: payload }));
+        }
+        window.__fa__.loadPixel = function (data) {
+            if (!!data) { window.__fa__.data = data; }
+            // load pixel
+            loadScript("https://706936832.ad.fluidads.com/js/v1/ad.js", function () {
+                if (!window.__fa__ || !window.__fa__.data) { return; }
+                fa("show", document.currentScript || "#ck7g0suso0001dotk246vr0fo", "5f2a9f561d64abbbb023d726", window.__fa__.data);
+                setTimeout(function () {
+                    var search = (new URL(document.querySelectorAll('script[src*="ad.fluidads.com/s/"]')[0].attributes.src.textContent)).search.substring(1);
+                    var queryObj = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+                    send_feed_data(queryObj.cookie_id);
+                }, 1000);
+            }, "ck7g0suso0001dotk246vr0fo");
+            // google tag
+            loadScript("https://www.googletagmanager.com/gtag/js?id=AW-973390165", function () {
+                if (!window.__fa__ || !window.__fa__.data) { return; }
+                // build payload & data
+                var control_group = window.__fa__.data.custom1.split("").pop().toUpperCase();
+                var payload = {
+                    "send_to": "AW-973390165",
+                    "event_category": window.__fa__.data.sec,
+                    "category": window.__fa__.data.pub,
+                    "user_id": window.__fa__.data.custom1,
+                    "value": window.__fa__.data.custom2
+                };
+                window.dataLayer = window.dataLayer || [];
+                // expose function
+                function gtag() { dataLayer.push(arguments); }
+                // date
+                gtag("js", new Date());
+                // config
+                gtag("config", "AW-973390165");
+                // control group
+                if (["A", "2", "0", "C"].indexOf(control_group) > -1) {
+                    gtag("event", "control group", payload);
+                    loadScript("https://er3pec4ky8.adserver.merciless.localstars.com/pixel/sot:800899a0-d66d-0139-9157-06b4c2516bae/");
+                }
+                // advert a
+                else if (["B", "3", "1", "D", "6", "8"].indexOf(control_group) > -1) {
+                    gtag("event", "direct ferries a", payload);
+                    loadScript("https://er3pec4ky8.adserver.merciless.localstars.com/pixel/sot:346a48c0-b941-0138-7aa8-06b4c2516bae/");
+                }
+                // advert b
+                else if (["E", "4", "5", "F", "7", "9"].indexOf(control_group) > -1) {
+                    gtag("event", "direct ferries b", payload);
+                    loadScript("https://er3pec4ky8.adserver.merciless.localstars.com/pixel/sot:5fc98d80-d66d-0139-47b1-06abc14c0bc6/");
+                }
+                // conversion google script
+                if (location.search && location.search.length) {
+                    var query_params = JSON.parse('{"' + location.search.substring(1).replace(/&/g, '","').replace(/=/g, '":"') + '"}', function (key, value) { return key === "" ? value : decodeURIComponent(value) });
+                    if (!!query_params && query_params.bkid && query_params.bkid.length) {
+                        gtag("event", "conversion", {
+                            "send_to": "AW-973390165/q8fmCNy_2dkCENWCk9AD",
+                            "value": window.__fa__.data.custom2,
+                            "currency": "GBP",
+                            "transaction_id": query_params.bkid
+                        });
+                    }
+                }
+
+            });
+        }
+        setTimeout(() => { window.__fa__.loadPixel(window.__fa__.data); }, 1000);
+    } catch (error) {
+        console.warn(error.message);
+    }
+})();

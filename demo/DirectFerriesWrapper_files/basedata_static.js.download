@@ -1,0 +1,97 @@
+var dealfinderInit = false;
+
+function getCommonQuery() {
+    var commonQuery = "";
+    if (typeof (utm) != 'undefined') {
+        commonQuery = "&dfutm=" + encodeURIComponent(utm.getUtm());
+    }
+    return commonQuery;
+}
+
+function whenGlobalDefinedStatic(varName, fn, count) {
+    let c = count > 0 ? ++count : 1;
+    if (typeof window[varName] === "undefined") {
+        if (count > 300) { // timeout after x iterations (~4 seconds)
+            if (console && console.warn) console.warn("timeout waiting for", varName);
+            return;
+        }
+        return setTimeout(whenGlobalDefinedStatic.bind(window, varName, fn, c), 100);
+    }
+    return fn()
+}
+
+function init( data )
+{
+    if (dealfinderInit === false) {
+        SetEventCookiesDealfinderStatic(data);
+        base_user_data = data.d;
+        DF_DF1.baseData = JSON.stringify(base_user_data);
+        DF_DF1.updateGoogleTags(data.d);
+        isBaseDataSuccess = true;
+        DF_DF1.init();
+        dealfinderInit = true;
+    }
+}
+
+
+
+function getBaseData() {
+    var dfusrpid = document.querySelector('[name="dfusrpidck"]') != null ? document.querySelector('[name="dfusrpidck"]').value : null;
+    var qStr = "";
+    if (dfusrpid != null && dfusrpid != "") {
+        qStr = "&dfusrpid=" + dfusrpid;
+    } else {
+        var dfusrpidcookie = readCookie('dfusrpid');
+        if (dfusrpidcookie != null && dfusrpidcookie != "") {
+            dfusrpid = dfusrpidcookie.split(',')[0];
+            qStr = "&dfusrpid=" + dfusrpid;
+        }
+    }
+    qStr = qStr + getCommonQuery();
+    var url = "https://ssl.directferries.com/partners/dealFinderBaseData.aspx?"
+        + "stdc=" + base_user_data.STDCCode
+        + qStr;
+    var ajaxRequest = $.ajax({
+        dataType: "jsonp",
+        url: url,
+        success: function (data) {
+            whenGlobalDefinedStatic("DF_DF1", function () { init(data) });
+            window.onload = (event) => {
+                init(data)
+                if (typeof experimentsToRun !== 'undefined' && experimentsToRun.length > 0) {
+                    var uniqueExps = $.grep(experimentsToRun, function (val, i) { return experimentsToRun.indexOf(val) === i; });
+                    GetExperimentVariant(ExperimentCallBack, JSON.stringify(uniqueExps));
+                }
+                addTrackingCookies('https://ssl.directferries.com', tracking_data);
+                LogPageRequestEvent(window.location.href, Date.now() - pageLoadStart);
+            }
+        },
+        error: whenGlobalDefinedStatic("DF_DF1", function (data) { DF_DF1.reportAnalytics('fetchFailed', 'Fetch base user data', url); })
+    });
+}
+
+function SetEventCookiesDealfinderStatic(data) {
+    if (typeof data !== 'undefined' && data !== null && data) {
+        try {
+            if (data.d.UniqueUserId != null) {
+                data.d.UniqueUserId = data.d.UniqueUserId.split(',')[0];
+            }
+            if (data.d.SessionId != null) {
+                data.d.SessionId = data.d.SessionId.split(',')[0];
+            }
+            if (data.d.VisitReturningId != null) {
+                data.d.VisitReturningId = data.d.VisitReturningId.split(',')[0];
+            }
+            if (data.d.STDCCode != null) {
+                data.d.STDCCode = data.d.STDCCode.split(',')[0];
+            }
+        } catch (e) {
+            if (typeof (ga) == 'function') ga('send', 'event', 'base data split error', { nonInteraction: true });
+        }
+        addCookie('dfusrpid', data.d.UniqueUserId, 365);
+        addCookieMins('dfsession', data.d.SessionId, 30);
+        addCookie('dfvisit', data.d.VisitReturningId, 3650);
+    }
+};
+
+getBaseData();

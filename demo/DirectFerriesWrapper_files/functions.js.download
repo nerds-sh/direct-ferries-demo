@@ -1,0 +1,709 @@
+<!--WEBSTIE_FUNCTIONS_JS_START-->
+
+
+
+
+//<script>
+      var basketVariant = "A";
+
+      var DF_LandingPage_configs = {
+          STDC: 'DF10COM',
+          Referrers: [
+                    "Bing", "Google", "Yandex", "Duck", "360.cn", "Alice", "Alltheweb", "Altavista", "AOL", "Ask", "Auone", "Avg", "Babylon", "Baidu", "Biglobe", "Centrum.cz", "Comcast", "Conduit", "CNN", "Daum", "Ekolay", "Eniro", "Globo", "go.mail.ru",
+                    "goo.ne", "haosou.com", "Incredimail", "Kvasir", "Live", "Mamma", "Lycos", "MSN", "Mynet", "Najdi", "Naver", "Netscape", "ONET", "Ozu", "Rakuten", "Rambler", 
+                    "Search-results", "search.smt.docomo", "Sesam", "Seznam", "So.com", "Sogou", "Startsiden", "Szukacz", "Terra", "Tut.by", "Ukr", "Virgilio", "Voila", 
+                    "Wirtulana Polska", "Yahoo", "Yam"
+          ],
+          PersistUtmCookieName: 'dfutmpersist'
+      };
+
+      function getUtm()
+      {
+        var utmObj = "";
+        if (typeof (utm) != 'undefined') utmObj = utm.getUtm();
+        return utmObj;
+      }
+
+      
+
+      function addCookie(name, value, days) {
+          var expires;
+
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toGMTString();
+          } else {
+              expires = "";
+          }
+          var cookieString = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/;";
+          if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+          document.cookie = cookieString;
+      }
+
+      function addCookieMins(name, value, mins) {
+          var expires;
+
+          if (mins) {
+              var date = new Date();
+              date.setTime(date.getTime() + (mins * 60 * 1000));
+              expires = "; expires=" + date.toGMTString();
+          } else {
+              expires = "";
+          }
+          var cookieString = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/;";
+          if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+          document.cookie = cookieString;
+      }
+
+      function readCookie(name) {
+          var nameEQ = encodeURIComponent(name) + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+          }
+          return null;
+      }
+
+      function eraseCookie(name) {
+          addCookie(name, "", -1);
+      }
+
+      /* This file contains javascript functions used by DF websites */
+      /*Launches Affiliate Signup form*/
+      function openAffiliateSignupForm(partnerCode) {
+          var url = 'https://ww2.directferries.com/affiliate/sign_up.aspx?stdc=' + partnerCode
+          window.open(url, 'AffiliateSignup', 'status=0, toolbar=0, location=0, menubar=0, resizable=0, scrollbars=0, height=750, width=600');
+      }
+
+
+      /*Language Site Dropdown*/
+      function writeLanguages(sites) {
+          var html = '';
+          var sites = [
+        ["uk", "https://www.directferries.co.uk/", "United Kingdom"],["ie", "https://www.directferries.ie/", "Ireland"],["au", "https://www.directferries.com.au/", "Australia"],["ca", "https://ca.directferries.com/", "Canada"],["qa", "https://ar.directferries.com/", "العربية"],["ma", "https://ar.directferries.ma/", "المغرب"],["cat", "https://cat.directferries.com/", "Catalan"],["cz", "https://www.directferries.cz/", "Česk&#225; republika"],["dk", "https://www.directferries.dk/", "Danmark"],["de", "https://www.directferries.de/", "Deutschland"],["ch", "https://de.directferries.ch/", "Schweiz (DE)"],["at", "https://www.directferries.at/", "&Ouml;sterreich (DE)"],["gr", "https://www.directferries.gr/", "Ελλάδα"],["es", "https://www.directferries.es/", "Espa&#241;a"],["fi", "https://www.directferries.fi/", "Suomi"],["fr", "https://www.directferries.fr/", "France"],["ch", "https://fr.directferries.ch/", "Suisse (FR)"],["be", "https://fr.directferries.be/", "Belgique (FR)"],["ma", "https://fr.directferries.ma/", "Maroc (FR)"],["ca", "https://fca.directferries.com/", "Canada (FR)"],["id", "https://www.directferries.co.id/", "Indonesia"],["it", "https://www.directferries.it/", "Italia"],["jp", "https://www.directferries.jp/", "日本"],["kr", "https://www.directferries.co.kr/", "대한민국"],["no", "https://www.directferries.no/", "Norge"],["nl", "https://www.directferries.nl/", "Nederland"],["be", "https://nl.directferries.be/", "Belgi&euml; (NL)"],["pl", "https://www.directferries.pl/", "Polska"],["pt", "https://www.directferries.pt/", "Portugal"],["ru", "https://www.directferries.ru/", "Россия"],["sk", "https://www.directferries.sk/", "Slovensko"],["se", "https://www.directferries.se/", "Sverige"],["tr", "https://www.directferries.com.tr/", "T&#252;rkiye"],["ua", "https://www.directferries.com.ua/", "Україна"],["cn", "https://www.directferries.cn/", "中国"]
+          ]
+
+          for (var i = 0; i < sites.length; i++) {
+              html += '<li><a class="' + sites[i][0] + '" href="' + sites[i][1] + '">' + sites[i][2] + '</a></li>';
+          }
+          document.getElementById('langs').innerHTML += html;
+      }
+
+      /*Email Subscribe Form*/
+      function clearForm() {
+          document.getElementById("ErrorBox").style.display = "none"
+      };
+      function validateForm() {
+          var x = document.getElementById("subscribe_email").value;
+          if (x == null || x == "" || x.indexOf('@') === -1 || x.indexOf('.') === -1 ||
+                      x.indexOf('/') != -1 ||
+                      x.indexOf(',') != -1 ||
+                      x.indexOf('>') != -1 ||
+                      x.indexOf('*') != -1 ||
+                      x.indexOf('<') != -1 ||
+                      x.indexOf(';') != -1 ||
+                      x.indexOf(':') != -1 ||
+                      x.indexOf('}') != -1 ||
+                      x.indexOf('{') != -1 ||
+                      x.indexOf('#') != -1 ||
+                      x.indexOf('?') != -1 ||
+                      x.indexOf('=') != -1 ||
+                      x.indexOf('+') != -1 ||
+                      x.indexOf('<') != -1 ||
+                      x.indexOf('>') != -1 ||
+                      x.indexOf('^') != -1 ||
+                      x.indexOf('¬') != -1 ||
+                      x.indexOf('`') != -1 ||
+                      x.indexOf('!') != -1 ||
+                      x.indexOf('"') != -1 ||
+                      x.indexOf('%') != -1 ||
+                      x.indexOf('£') != -1 ||
+                      x.indexOf('$') != -1 ||
+                      x.indexOf('^') != -1 ||
+                      x.indexOf('(') != -1 ||
+                      x.indexOf(')') != -1 ||
+                      x.indexOf('[') != -1 ||
+                      x.indexOf(']') != -1) {
+              document.getElementById("AlreadySubbedBox").style.display = "none";
+              document.getElementById("SuccessBox").style.display = "none";
+              document.getElementById("ErrorBox").style.display = "block";
+              return false;
+          }
+          else {
+              document.getElementById("AlreadySubbedBox").style.display = "none";
+              document.getElementById("SuccessBox").style.display = "none";
+              document.getElementById("ErrorBox").style.display = "none";
+              document.getElementById("LoadingWheel").style.display = "block";
+          }
+      };
+
+      function checkSub() {
+          if (delineate(window.location.href) == "1") {
+              document.getElementById("AlreadySubbedBox").style.display = "none";
+              document.getElementById("ErrorBox").style.display = "none";
+              document.getElementById("SuccessBox").style.display = "block";
+          }
+          else if (delineate(window.location.href) == "0") {
+              document.getElementById("ErrorBox").style.display = "none";
+              document.getElementById("SuccessBox").style.display = "none";
+              document.getElementById("AlreadySubbedBox").style.display = "block";
+          }
+      };
+
+      function delineate(str) {
+          theleft = str.indexOf("=") + 1;
+          theright = str.lastIndexOf("&");
+          return (str.substring(theleft, theright));
+      };
+
+      /*AddThis*/
+      var addthis_config = { username: "directferries", ui_language: "en", data_track_clickback: true }
+
+
+    /*Feefo*/
+      function loadFeefo() {
+          var data = "<a class=\"feefo\" href=\"http://www.feefo.com/GB/en/reviews/Direct-Ferries_uk/?id=0\" target=\"none\" onclick=\"feefoClicked()\"></a>"
+        $("#feefoData").append(data);
+      };
+      var feefoAccNo = '0';
+      var feefoAverageReview = '0';
+      var feefoFiveStarReviewAverage = '';
+      var feefoTotalReviews = '0';
+
+      var feefoLoadFeefo = true;
+
+      function LastBookingConfirmationResend(custEmail) {
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/customer_help.asmx/LastBookingConfirmationSend",
+              dataType: "jsonp",
+              data: 'custEmail=' + custEmail+ '&dfutm=' + encodeURIComponent(getUtm()),
+              success: function (data) {
+                  return data.d;
+              },
+              error: function (jqXHR, textStatus, errorThrown) {
+                  return false;
+              }
+          });
+      }
+
+      /* Messaging */
+      function LogPageRequestEvent(pageURL, pageLoadTime) {
+          var dfusrpid = document.querySelector('[name="dfusrpidck"]') != null ? document.querySelector('[name="dfusrpidck"]').value : null;
+          var uniqueUserIdVal = dfusrpid != null && dfusrpid != "" ? dfusrpid : readCookie('dfusrpid');
+          var sessionVal = readCookie('dfsession');
+          var visitVal = readCookie('dfvisit');
+          var stdc = "DF10COM";          
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/dfeventlogging.aspx/LogPageRequest?",
+              dataType: "jsonp",
+              data: 'PageURL=' + encodeURIComponent(pageURL)  + '&PageServerProcessingTime=' + pageLoadTime + '&UniqueUserId=' + uniqueUserIdVal + '&SessionId=' + sessionVal + '&VisitId=' + visitVal + '&STDC=' + stdc + '&dfutm=' + encodeURIComponent(getUtm()),
+              success: SetEventCookies
+          });
+      };
+    
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      };
+
+      function LogExperiment(pageURL, expId, variantVal) {
+          var dfusrpid = document.querySelector('[name="dfusrpidck"]') != null ? document.querySelector('[name="dfusrpidck"]').value : null;
+          var uniqueUserIdVal = dfusrpid != null && dfusrpid != "" ? dfusrpid : readCookie('dfusrpid');
+          var sessionVal = readCookie('dfsession');
+          var visitVal = readCookie('dfvisit');
+
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/dfeventlogging.aspx/LogExperiment?stdc=DF10COM",
+              dataType: "jsonp",
+              data: 'PageURL=' + pageURL + '&ExperimentId=' + expId + '&VariantVal=' + variantVal + '&UniqueUserId=' + uniqueUserIdVal + '&SessionId=' + sessionVal + '&VisitId=' + visitVal + '&dfutm=' + encodeURIComponent(getUtm()),
+              success: SetEventCookies
+          });
+      };
+
+      function SetEventCookies(data) {
+          if (typeof data !== 'undefined' && data !== null && data) {
+              addCookie('dfusrpid', data.d.UniqueUserIdCookie, 365);
+              addCookieMins('dfsession', data.d.SessionIdCookie, 30);
+              addCookie('dfvisit', data.d.VisitReturningIdCookie, 3650);
+              //update hidden value
+              if ($("#hd_dfutm").length) {
+                  $('#hd_dfutm').val(readCookie(DF_LandingPage_configs.PersistUtmCookieName));
+              } else {
+                  if (document.querySelector('#divNewFareSearch form')) {
+                      var hdnUtm = document.createElement('input');
+                      hdnUtm.type = 'hidden';
+                      hdnUtm.name = 'dfutmpersist';
+                      hdnUtm.id = 'hd_dfutm';
+                      hdnUtm.value = readCookie(DF_LandingPage_configs.PersistUtmCookieName)
+                      document.querySelector('#divNewFareSearch form').append(hdnUtm);
+                  }
+              }
+          }
+      };
+
+      /* Experiments */
+      var experimentsToRun = [];
+      var userDrivenExpMappings = {};
+
+      function GetExperimentVariant(callbackFunc, experimentIds, cookieVal) {
+          var expVal = readCookie('dfexp');
+
+          if (expVal == null) {
+              expVal = '';
+          }
+          var dfusrpid = document.querySelector('[name="dfusrpidck"]') != null ? document.querySelector('[name="dfusrpidck"]').value : null;
+          var uniqueUserIdVal = dfusrpid != null && dfusrpid != "" ? dfusrpid : readCookie('dfusrpid');
+          var qStr = "";
+          if (uniqueUserIdVal != null && uniqueUserIdVal != "") qStr = "&dfusrpid=" + uniqueUserIdVal;
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/dfexperiments.aspx/GetVariants?stdc=DF10COM",
+              dataType: "jsonp",
+              data: 'ExperimentIds=' + experimentIds + '&CookieVal=' + encodeURIComponent(expVal) + '&PageUrl=' + window.location.href + '&MethodName=GetVariants' + qStr + '&dfutm=' + encodeURIComponent(getUtm()),
+              success: callbackFunc
+          });
+      };
+
+      $(document).ready(
+
+          $('#btnSearch').click(function () {
+              try {
+                  var uniqueUserIdVal = readCookie('dfusrpid');
+                  var sessionVal = readCookie('dfsession');
+                  var visitVal = readCookie('dfvisit');
+                  var expVal = readCookie('dfexp');
+
+                  SetCookieInputToForm('dfusrpidck', uniqueUserIdVal);
+                  SetCookieInputToForm('dfsessionck', sessionVal);
+                  SetCookieInputToForm('dfvisitck', visitVal);
+                  SetCookieInputToForm('dfexpck', expVal);
+              }
+              catch (e) {
+              }
+          })
+      );
+
+      function SetCookieInputToForm(hiddenInputName, valueToSet) {
+          if (valueToSet !== null) {
+              valueToSet = valueToSet.split(',')[0];
+              if ($('input[name=' + hiddenInputName + ']').length !== 0) {
+                  $('input[name=' + hiddenInputName + ']').val(valueToSet);
+              } else {
+                  $('<input>').attr({
+                      type: 'hidden',
+                      name: hiddenInputName,
+                      value: valueToSet
+                  }).appendTo('form');
+              }
+          }
+      }
+
+      function RunUserActivatedExperiment(expName) {
+          var userDrivenExp = GetUserDrivenExpFromMapping(expName);
+
+          if (typeof userDrivenExp !== 'undefined' && userDrivenExp !== null && userDrivenExp) {
+              if (userDrivenExp.logExp == true) {
+                  LogExperiment(window.location.href, userDrivenExp.expId, userDrivenExp.variant);
+                  userDrivenExpMappings[expName] = new UserDrivenExpMapping(userDrivenExp.expId, userDrivenExp.expName, userDrivenExp.variant, false);
+              }
+
+              if (userDrivenExp.variant == "B") {
+                  eval("exp" + userDrivenExp.expName + "();");
+              }
+          }
+      };
+
+      function ExperimentCallBack(data) {
+          if (typeof data !== 'undefined' && data !== null && data) {
+              if (typeof data.d !== 'undefined' && data.d !== null && data.d) {
+                  if (typeof data.d.Experiments !== 'undefined' && data.d.Experiments !== null && data.d.Experiments) {
+                      if (data.d.Experiments.length > 0) {
+                          for (var i = 0; i < data.d.Experiments.length; i++) {
+                              var exp = data.d.Experiments[i];
+
+                              if (exp.DelayedLogging == true) {
+                                  //add to mapping of delayed experiments
+                                  AddExpMapping(exp.ExperimentName, exp.ExperimentId, exp.VariantValue, exp.LogExperiment);
+                              } else {
+                                  switch (exp.VariantValue) {
+                                      case "B":
+                                          //do experiment - call the func with eval
+                                          eval("exp" + exp.ExperimentName + "();");
+                                      default:
+                                          //do nothing
+                                  }
+                              }
+                          }
+                      }
+
+                      if (typeof data.d.CookieValue !== 'undefined' && data.d.CookieValue !== null && data.d.CookieValue) {
+                          addCookie('dfexp', data.d.CookieValue, 365);
+                      }
+                  }
+              }
+          }
+      };
+
+      function AddExpMapping(expName, expId, variant, logExp) {
+          userDrivenExpMappings[expName] = new UserDrivenExpMapping(expId, expName, variant, logExp);
+      };
+
+      function GetUserDrivenExpFromMapping(expName) {
+          //var result = $.grep(userDrivenExpMappings, function (x) { return x.expName = expName; });
+          var result = userDrivenExpMappings[expName];
+
+          if (typeof result !== 'undefined' && result !== null && result) {
+              return result;
+          }
+      };
+
+      function UserDrivenExpMapping(expId, expName, variant, logExp) {
+          this.expId = expId;
+          this.expName = expName;
+          this.variant = variant;
+          this.logExp = logExp;
+      }
+
+      /* Recent Searches */
+
+      function hasRecentSearches(contId) {
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/GetRecentSearchesToDisplay",
+              dataType: "jsonp",
+              data: "cult=en-US&STDC=DF10COM"+ '&dfutm=' + encodeURIComponent(getUtm()),
+              success: function (data) {
+                  return true;
+              },
+              error: function (jqXHR, textStatus, errorThrown) {
+                  return false;
+              }
+          });
+     };
+
+      function getRecentSearches(contId) {
+          ga('send', 'event', 'AB-243', 'Basket_Icon_Click_' + basketVariant, 'true');
+          $.ajax({
+              type: "GET",
+              url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/GetRecentSearchesToDisplay",
+              dataType: "jsonp",
+              data: "cult=en-US&STDC=DF10COM"+ '&dfutm=' + encodeURIComponent(getUtm()),
+        success: function (data) {
+            showRecentSearches(data.d, contId);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            addRecentSearchesDisplay('<li>No recent searches to display.</li>');
+        }
+    });
+    };
+
+      function showABRecentSearches(data, contId) {
+          //clear display first
+          $("." + contId).empty();
+
+          var cont = "'" + contId + "'";
+          var toDisplay = '';
+
+          if (data.length > 0) {
+              var count = 0
+              for (var i = 0; i < data.length; i++) {
+                  if (count < 2) {
+                      count += 1
+                      var DisplayDetails = data[i];
+                      var redirectUrl = decodeURIComponent(DisplayDetails.RedirectUrlAction);
+                      var template = '<div class="divTblM">';
+                      template += '<div>';
+                      template += '<div class="divTblBox">';
+                      template += '<div class="divTblM">';
+                      template += '<div>';
+                      template += '<b>' + DisplayDetails.RouteTextOut + '</b>';
+                      template += '<small>' + DisplayDetails.DateTimeTextOut + '<br>' + DisplayDetails.OtherInfoTextOut + '</small>';
+                      template += '</div>';
+                      template += '<div>';
+                      template += '<a href="' + redirectUrl + '" class="btn btn-sm">Retrieve</a>';
+                      template += '</div></div></div></div></div>';
+                      toDisplay += template;
+                  }
+              }
+          }
+          addABRecentSearchesDisplay(toDisplay, contId);
+      }
+
+      function addABRecentSearchesDisplay(toDisplay, contId) {
+          $("." + contId).append(toDisplay);
+      }
+
+    function showRecentSearches(data, contId) {
+        //clear display first
+        $("#" + contId).empty();
+
+        var cont = "'" + contId + "'";
+        var toDisplay = '';
+        var displayPriceInfo = true;
+
+        if (data.length > 0) {
+            for (var i = 0; i < data.length; i++) {
+                var DisplayDetails = data[i];
+                var redirectUrl = decodeURIComponent(DisplayDetails.RedirectUrlAction);
+
+                var template = '<li>';
+                template += '<div>';
+                template += '<ul class="rSerCon">';
+                template += '<li class="rSerRou">' + DisplayDetails.RouteTextOut + '</li>';
+                template += '<li class="rSerOp">' + DisplayDetails.OperatorNameOut + '</li>';
+                template += '<li class="rSerDa">' + DisplayDetails.DateTimeTextOut + '</li>';
+
+                if (DisplayDetails.DateTimeTextRet && DisplayDetails.DateTimeTextRet.length > 0 && !DisplayDetails.DiffOutRetRoutes) {
+                    template += '<li class="rSerDa">' + DisplayDetails.DateTimeTextRet + '</li>';
+                }
+
+                template += '<li class="rSerDet">' + DisplayDetails.OtherInfoTextOut + '</li>';
+
+                if (DisplayDetails.DiffOutRetRoutes) {
+                    template += '<li class="rSerRou2">' + DisplayDetails.RouteTextRet + '</li>';
+                    template += '<li class="rSerOp">' + DisplayDetails.OperatorNameRet + '</li>';
+                    template += '<li class="rSerDa">' + DisplayDetails.DateTimeTextRet + '</li>';
+
+                    if (DisplayDetails.OtherInfoTextRet && DisplayDetails.OtherInfoTextRet.length > 0) {
+                        template += '<li class="rSerDet">' + DisplayDetails.OtherInfoTextRet + '</li>';
+                    } else {
+                        template += '<li class="rSerDet">' + DisplayDetails.OtherInfoTextOut + '</li>';
+                    }
+                }
+
+                template += '<li class="rSerRem"><a href="javascript:removeRecentSearch(' + DisplayDetails.RecentSearchCookieID + ',' + cont + ');">Delete</a></li>';
+            template += '</ul>';
+            template += '</div>';
+            template += '<div class="rSerPri">';
+            template += '<span>' + DisplayDetails.PriceText + '</span>';
+            template += '<span class="rSerVal">' + DisplayDetails.ValidFromText + '</span>';
+            template += '<a href="' + redirectUrl + '" class="btn btn-sm">Retrieve</a>';
+            template += '</div>';
+            template += '</li>';
+
+            toDisplay += template;
+        }
+    } else {
+        toDisplay += '<li><span class="rSerNo">No recent searches to display.</span></li>';
+        displayPriceInfo = false;
+    }
+
+    addRecentSearchesDisplay(toDisplay, contId);
+
+    if (!displayPriceInfo) {
+        $('#recentSearchPleaseNote').css('display', 'none');
+        $('#recentSearchPleaseNoteDesktop').css('display', 'none');
+    } else {
+        $('#recentSearchPleaseNote').css('display', 'block');
+        $('#recentSearchPleaseNoteDesktop').css('display', 'block');
+    }
+}
+
+function addRecentSearchesDisplay(toDisplay, contId) {
+    $("#" + contId).append(toDisplay);
+
+    if (contId == 'recentCont') {
+        if ($('#recentPopup').css('display') == 'none') {
+            recPopUp('#recentPopup', '#recentBtn');
+        }
+    }
+}
+
+function removeRecentSearch(id, contId) {
+    $.ajax({
+        type: "GET",
+        url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/RemoveRecentResearchByTypeAndID",
+        dataType: "jsonp",
+        data: "RSType=1&ID=" + id+ '&dfutm=' + encodeURIComponent(getUtm()),
+        success: function (data) {
+            //reload
+            getRecentSearches(contId);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+
+        }
+    });
+}
+
+function LoadDfGeoRedirects() {
+    var cookieName = 'DFgeoRed';
+    var redirectQsKey = 'dfgeor';
+    var reOverrideQsKey = 'dfgeoo';
+
+    function createCookie(name, value, days) {
+        var expires;
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        }
+        else {
+            expires = "";
+        }
+        var cookieString = name + "=" + value + expires + "; path=/;";
+        if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+        document.cookie = cookieString;
+    }
+
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return "";
+    }
+
+    function redirectToSite(siteUrl, gaUserParam) {
+        var sitePath = window.location.pathname;
+        if (!sitePath) {
+            sitePath = '';
+        }
+
+        var siteQuery = window.location.search;
+        if (!siteQuery || siteQuery.length === 0) {
+            siteQuery = '?';
+        }
+        else {
+            siteQuery += '&';
+        }
+        siteQuery += redirectQsKey + '=' + window.location.host
+
+        if (typeof gaUserParam != "undefined" && gaUserParam != null && gaUserParam.length > 0) {
+            siteQuery += '&' + gaUserParam;
+        }
+        
+        if (typeof utm != "undefined") { siteQuery += '&dfutm=' + encodeURIComponent(utm.getUtm()); }
+
+
+        
+        if (window.location.href.indexOf('directferries.co') > 0) {
+            window.location = siteUrl + sitePath + siteQuery;
+        }
+        
+    }
+
+    var cookieValue = getCookie(cookieName);
+
+    
+    function doRedirectForCookie() {
+        var isUkSite = (window.location.href.indexOf('directferries.co.uk') > -1);
+        var isUsSite = (window.location.href.indexOf('directferries.com') > -1 && window.location.href.indexOf('com.au') == -1);
+
+        if (typeof linkerParam === 'undefined' || linkerParam === undefined || linkerParam == null) {
+            linkerParam = '';
+        }
+
+        try {
+            var isNormalUser = true;
+            var botPattern = "(AdsBot-Google|AdsBot-Google-Mobile|googlebot\/|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
+            var re = new RegExp(botPattern, 'i');
+            var userAgent = window.navigator.userAgent;
+            if (re.test(userAgent)) {
+                isNormalUser = false;
+            }
+
+            if (cookieValue && cookieValue.length > 0) {
+                if (isNormalUser && isUkSite && cookieValue === 'US') {
+                    redirectToSite('http://www.directferries.com', linkerParam);
+                } else if (isNormalUser && isUkSite && cookieValue === 'AU') {
+                    redirectToSite('http://www.directferries.com.au', linkerParam);
+                } else if (isNormalUser && isUsSite && cookieValue === 'AU') {
+                    redirectToSite('http://www.directferries.com.au', linkerParam);
+                } else if (isNormalUser && !isUkSite && cookieValue === 'GB') {
+                    redirectToSite('http://www.directferries.co.uk', linkerParam);
+                }
+            }
+        } catch (e) {
+        }
+    }
+    
+
+    function setGeoCookie() {
+        var onSuccess = function (location) {
+            try {
+                var countryCode = '';
+
+                countryCode = location.country.iso_code
+
+                if (countryCode && countryCode.length > 0) {
+                    createCookie(cookieName, countryCode, 365);
+                    cookieValue = countryCode;
+                }
+
+                doRedirectForCookie();
+            }
+            catch (e) {
+            }
+        };
+
+        var onError = function (error) {
+        };
+
+        geoip2.country(onSuccess, onError);
+    }
+
+    
+    function writeRedirectInfo() {
+        var origin = getParameterByName(redirectQsKey)
+        if (origin === 'www.directferries.com') {
+            $('#divRedirect').append('<span>Welcome to ' + window.location.host + '</span> <a href="http://' + origin + '/?dfgeoo=true">Continue to the U.S. site at ' + origin + '</a>');
+        }
+        if (origin === 'www.directferries.com.au') {
+            $('#divRedirect').append('<span>Welcome to ' + window.location.host + '</span> <a href="http://' + origin + '/?dfgeoo=true">Continue to the Australian site at ' + origin + '</a>');
+        }
+        if (origin === 'www.directferries.co.uk') {
+            $('#divRedirect').append('<span>Welcome to ' + window.location.host + '</span> <a href="http://' + origin + '/?dfgeoo=true">Continue to the U.K. site at ' + origin + '</a>');
+        }
+    }
+    
+
+    function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
+    var overrideCookie = getCookie(reOverrideQsKey);
+    if (window.location.href.indexOf(redirectQsKey + '=') > 0) {
+        //we have been redirected to this site from another. Show a message asking the user if they want to see the other site.
+        writeRedirectInfo();
+        $('.reDirect').slideDown();
+    }
+    else if (overrideCookie && overrideCookie.length > 0) {
+        //we have an override cookie save. Suppress message + redirects
+    }
+    else if (window.location.href.indexOf(reOverrideQsKey + '=') > 0) {
+        //we have overridden a redirect. We always want to see this site, save cookie, suppress the message + redirect
+        createCookie(reOverrideQsKey, 'true', 30);
+    }
+    else if (!cookieValue || cookieValue.length === 0) {
+        setGeoCookie();
+    }
+    else {
+        doRedirectForCookie();
+    }
+
+    $('.df_geo_close').click(function () {
+        $('.reDirect').slideUp();
+        createCookie(reOverrideQsKey, 'true', 30);
+    });
+}
+
+
+//</script>
+/*ScriptEnd*/
+<!--WEBSITE_FUNCTIONS_JS_END-->

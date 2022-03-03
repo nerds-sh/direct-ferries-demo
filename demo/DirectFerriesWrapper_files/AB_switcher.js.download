@@ -1,0 +1,182 @@
+var dealfinderVariance;
+var isMobileDF = window.matchMedia('(max-width:768px)').matches || window.location.search.indexOf("mobileApp=true") !== -1;
+var isIE = false; try { eval('"use strict"; class foo {}'); } catch (e) { isIE = true; }
+
+var DF_ABSwitcher =
+{
+    ABExpName: function () {
+        // Even when we're running the mobile dealfinder in desktop experiment, we still want the AB_dealfinder_test_mob template
+        return isMobileDF || isMobileInDesktop ? 'AB_dealfinder_test_mob_' : 'AB_dealfinder_test_';
+    },
+
+    init: function () {
+        if (typeof runNewDealFinder !== 'undefined') {
+            if (runNewDealFinder && ((typeof dealFinderSiteSwitch !== 'undefined' && typeof siteId !== 'undefined') && (dealFinderSiteSwitch.indexOf(siteId) > -1))) // from big-switch.js
+            {
+                try {
+                    var AB = "A";
+                    var switcherCookieName = 'ABSwitcher';
+                    var indx = document.cookie.indexOf(switcherCookieName + '=');
+                    var dateVar = new Date();
+                    dateVar.setFullYear(dateVar.getFullYear() + 1);
+
+                    if ('content' in document.createElement('template')) {
+                        if (indx !== -1) {
+                            AB = document.cookie.substring(indx + switcherCookieName.length + 1, indx + switcherCookieName.length + 2);
+                        }
+                        else {
+                            AB = Math.floor(Math.random() * 2) === 1 ? 'A' : 'B';
+                            var cookieString = switcherCookieName + '=' + AB + ';expires=' + dateVar + ';';
+                            if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+                            document.cookie = cookieString;
+                        }
+                        if (typeof runExp !== 'undefined') {
+                            runExp(this.ABExpName() + AB);
+                            dealfinderVariance = 'undefined';
+                        }
+                        else {
+                            dealfinderVariance = this.ABExpName() + AB;
+                        }
+                    }
+                    DF_ABSwitcher.load(this.ABExpName() + AB);
+                }
+                catch (e) { DF_ABSwitcher.loadOrig(); }
+            }
+            else { DF_ABSwitcher.loadOrig(); }
+        }
+        else { DF_ABSwitcher.loadOrig(); }
+    },
+
+    load: function (templateID) {
+        if ((templateID === "AB_dealfinder_test_B") || (templateID === "AB_dealfinder_test_mob_B")) {
+            var template = document.querySelector('#' + templateID);
+
+            if (template) {
+                document.querySelector('#deal_finder_container').appendChild(document.importNode(template.content, true));
+                if (document.querySelector('#AB_dealfinder_constants')) {
+                    document.querySelector('#deal_finder_container').appendChild(document.importNode(document.querySelector('#AB_dealfinder_constants').content, true));
+                } else if (templateID === 'AB_dealfinder_test_mob_B') {
+                    console.error('DF_ABSwitcher: #AB_dealfinder_constants not specified');
+                }
+            }
+            else {
+                console.error('DF_ABSwitcher: #' + templateID + ' not specified');
+            }
+        }
+        else { DF_ABSwitcher.loadOrig(); }
+    },
+
+    loadOrig: function () {
+        document.write('<script src="' + origDFscriptURL + '"></script>');
+    },
+
+    addCookie: function (name, value, days) {
+        var expires;
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else {
+            expires = "";
+        }
+        var cookieString = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/;";
+        if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+        document.cookie = cookieString;
+
+    },
+
+    readCookie: function (name) {
+        var nameEQ = encodeURIComponent(name) + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+        }
+        return null;
+    },
+
+    GetExperimentVariant: function (callbackFunc, experimentIds,partnerCode) {
+        var expVal = DF_ABSwitcher.readCookie('dfexp');
+
+        if (expVal == null) {
+            expVal = '';
+        }
+        var qStr = DF_ABSwitcher.getUtmQueryString();
+        $.ajax({
+            type: "GET",
+            url: "https://ssl.directferries.com/secure/ws/dfexperiments.aspx/GetVariants?stdc="+partnerCode,
+            dataType: "jsonp",
+            data: 'ExperimentIds=' + experimentIds + '&CookieVal=' + encodeURIComponent(expVal) + '&PageUrl=' + window.location.href + '&MethodName=GetVariants' + qStr,
+            success: callbackFunc
+        });
+    },
+
+    runExperiment: function (name) {
+        var AB = "A";
+        try {
+            var userAgent = window.navigator.userAgent;
+            if (userAgent != "googlebot") {
+                var indx = document.cookie.indexOf(name + '=');
+                var dateVar = new Date();
+                dateVar.setFullYear(dateVar.getFullYear() + 1);
+                if (indx !== -1) {
+                    AB = document.cookie.substring(indx + name.length + 1, indx + name.length + 2);
+                } else {
+                    AB = Math.floor(Math.random() * 2) === 1 ? 'A' : 'B';
+                    var cookieString = name + '=' + AB + ';expires=' + dateVar + ';';
+                    if (window.location.protocol.indexOf('https') != -1) cookieString += "secure=true;samesite=none;";
+                    document.cookie = cookieString;
+                                        
+                    if (typeof DF_ABSwitcher.GetExperimentVariant !== 'undefined') {
+                        var experimentsToRun = [name + AB];
+                        var uniqueExps = $.grep(experimentsToRun, function (val, i) { return experimentsToRun.indexOf(val) === i; });
+                        DF_ABSwitcher.GetExperimentVariant(function (data) { DF_ABSwitcher.addCookie('dfexp', data.d.CookieValue, 365); }, JSON.stringify(uniqueExps));
+                    }
+                }
+            }
+        } catch (error) {
+            ga('send', 'event', 'JavaScript error', 'Error running experiment', 'dealfinder2', { nonInteraction: true });
+        }
+
+        return AB;
+    },
+
+    trackExperimentVariant: function (expList, partnerCode) {
+        try {
+            var userAgent = window.navigator.userAgent;
+            if (userAgent != "googlebot") {
+                DF_ABSwitcher.GetExperimentVariant(function (data) { DF_ABSwitcher.addCookie('dfexp', data.d.CookieValue, 365); }, JSON.stringify(expList), partnerCode);
+            }
+        } catch (error) {
+            ga('send', 'event', 'JavaScript error', 'Error sending experiment variant', encodeURIComponent(expList), { nonInteraction: true });
+        }
+    },
+
+    getUtmQueryString: function () {
+        var qStr = "";
+        try {
+            if (typeof (utm) !='undefined')
+                qStr = utm.getUtm();
+        } catch (e) {
+            console.log("error utm.getUtm()" + e);
+        }
+        return qStr;
+    },
+
+    getCommonQuery: function () 
+    {
+        var query = "&dfutm=" + encodeURIComponent(this.getUtmQueryString());
+
+        // add here all common query parameter. 
+        
+        return query;
+    }
+};
+
+var isMobileInDesktop = !isMobileDF && !isIE && $('#is-mobile-df-enabled').val();
+
+// -------------------------------------------------------
+try {
+    DF_ABSwitcher.load(DF_ABSwitcher.ABExpName() + 'B');
+} catch (e) { DF_ABSwitcher.loadOrig(); }
