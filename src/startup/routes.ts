@@ -1,5 +1,5 @@
 import { Dashboard } from 'dashboard'
-import { Landing } from "landing";
+import { Landing } from 'details'
 
 export const routes = [
   {
