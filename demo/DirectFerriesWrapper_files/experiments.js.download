@@ -1,0 +1,2759 @@
+//<script>
+        try {
+            function runExp(name) {
+                // All device Types
+                if (name == 'AB-2688 Add css for mobile app') {
+                    experimentsToRun.push('df_mobile_app_css');
+                }
+
+                if (name == 'AB_dealfinder_test_mob_A') {
+                    experimentsToRun.push('df_AB_dealfinder_test_mob_A');
+                }
+                
+                if (name == 'AB_dealfinder_test_mob_B') {
+                    experimentsToRun.push('df_AB_dealfinder_test_mob_B');
+                }
+
+                if (name == 'AB_dealfinder_test_A') {
+                    experimentsToRun.push('df_AB_dealfinder_test_A');
+                }
+
+                if (name == 'AB_dealfinder_test_B') {
+                    experimentsToRun.push('df_AB_dealfinder_test_B');
+                }
+
+                if (name == 'AB-2532 Clicktrips js') {
+                    experimentsToRun.push('df_add_clicktrip_in_footer');
+                }
+                
+                if (name == 'accessibility') {
+                    experimentsToRun.push('accessibility');
+                }
+
+                if (name == 'CountryToCountryImageSwap') {
+                    experimentsToRun.push(174);
+                }
+
+                if (name == 'df_better_urgency_messages') {
+                    experimentsToRun.push("df_better_urgency_messages");
+                }
+
+                if (name == 'df_new_route_Directory_tab') {
+                    experimentsToRun.push("df_new_route_Directory_tab");
+                }
+                
+                if (name == 'AA Home') {
+                    experimentsToRun.push('df_aa_home');
+                }
+
+                if (name == 'AA Ferry Operator Ind') {
+                    experimentsToRun.push('df_aa_ferry_operator_ind');
+                }
+
+                if (name == 'AA Country To Country Ind') {
+                    experimentsToRun.push('df_aa_country_to_country_ind');
+                }
+
+                if (name == 'AA Destination Ind') {
+                    experimentsToRun.push('df_aa_destination_ind');
+                }
+
+                if (name == 'AA Port Ind') {
+                    experimentsToRun.push('df_aa_port_ind');
+                }
+
+                if (name == 'AA Route Ind') {
+                    experimentsToRun.push('df_aa_route_ind');
+                }
+
+                if (name == 'Route Main Hide Map') {
+                    experimentsToRun.push('df_route_main_hide_map');
+                }
+
+                if (name == 'Route Urgency Static') {
+                    experimentsToRun.push('df_route_urgency_banner');
+                }
+                if (name == 'Route Page Redesign V2') {
+                    experimentsToRun.push('df_route_page_redesign_v2');
+                }
+                
+                if (name == 'Hide map on country page') {
+                    experimentsToRun.push('df_hide_map_country_page');
+                }
+                if (name == 'Hide map on port page') {
+                    experimentsToRun.push('df_hide_map_port_page');
+                }
+                if (name == 'Hide map on ferry to port page') {
+                    experimentsToRun.push('df_Hide_map_ferry_to_port_page');
+                }
+
+                if (name == 'Landing Pages - Deal Finder Emphasis') {
+                    experimentsToRun.push('df_Landing_page_deal_finder_emphasis')
+                }
+
+                if (name == 'B/A Test Route Main Map') {
+                    experimentsToRun.push('df_load_route_main_map_on_B_only')
+                }
+
+                if (name == 'Country pages with no reviews') {
+                    experimentsToRun.push('df_country_pages_with_no_reviews')
+                }
+
+                if (name == 'Country pages including reviews') {
+
+                    experimentsToRun.push('df_country_pages_including_reviews')
+                }
+
+                if (name == 'Just Booked on Operator Pages or Port Page') {
+                    experimentsToRun.push('df_just_booked')
+                }
+
+                if (name == 'B/A Map Load Route Ind') {
+                    experimentsToRun.push('df_ba_route_ind_load')
+                }
+
+                if (name == 'ShowFullCountryGuide') {
+                    experimentsToRun.push('df_show_full_guide_on_country_pages');
+                }
+
+                if (name == 'AB-656 Move port addressed up the page') {
+                    experimentsToRun.push('df_move_port_address_up_the_page')
+                }
+
+                if (name == 'AB-579 Change Operator Box Text') {
+                    experimentsToRun.push('df_change_op_box_text')
+                }
+
+                if (name == 'df_track_user_data_homepage_old') {
+                    experimentsToRun.push(name)
+                }
+
+                if (name == 'AB-673 Font Awesome on Route Pages') {
+                    experimentsToRun.push('df_font_awesome_route_pages');
+                }
+
+                if (name == 'AB-428 colorful social media') {
+                    experimentsToRun.push('df_colorful_social_media');
+                }
+                if (name == 'AB-718 Feefo green bar') {
+                    experimentsToRun.push('df_feefo_green_bar');
+                }
+
+
+                if (name == 'AB-676 Remove Top Bar Static') {
+                    experimentsToRun.push('df_remove_top_bar_static');
+                }
+
+                if (name == 'AB-17 feefo review in port page') {
+                    experimentsToRun.push('df_feefo_port');
+                }
+
+                if (name == 'AB-17 feefo review in country page') {
+                    experimentsToRun.push('df_feefo_country');
+                }
+
+                if (name == 'AB-756 Navigation V3 - Full Redesign') {
+                    experimentsToRun.push('df_new_site_nav');
+                }
+
+                if (name == 'AB-888 open feefo in new tab') {
+                    experimentsToRun.push('df_feefo_new_tab')
+                }
+
+                if (name == 'AB-876 Show me prices') {
+                    experimentsToRun.push('df_show_me_prices_btn')
+                }
+
+                if (name == 'AB-892 Default List View Op Page') {
+                    experimentsToRun.push('df_default_list_view_op_pages');
+                }
+
+                if (name == 'AB-893 Port Page Rejig') {
+                    experimentsToRun.push('df_port_rejig')
+                }
+
+                if (name == 'AB-916-Redesign operator box V2') {
+                    experimentsToRun.push('df_we_work_with_operator_box_home')
+                }
+
+                if (name == 'AB-970 Emphasis image on route page v2') {
+                    experimentsToRun.push('df_route_page_emphasis_v2');
+                }
+
+                if (name == 'AB-965 Emphasis image on country page') {
+                    experimentsToRun.push('df_country_page_emphasis');
+                }
+
+                if (name == 'AB-877 Why use DF - add how many operators we work with') {
+                    experimentsToRun.push('df_tick_we_work_with_operators')
+                }
+
+                if (name == 'AB-1010 Deal finder focus lightbox style') {
+                    experimentsToRun.push('df_dealfinder_lighbox_style')
+                }
+                
+                if (name == 'AB-1090 Hide premium phone') {
+                    experimentsToRun.push('df_contactus_hide_premium')
+                }
+
+
+                if (name == 'AB-960 homepage h1') {
+                    experimentsToRun.push('df_homepage_h1')
+                }
+
+                if (name == 'AB-1121 remove link to feefo reviews page') {
+                    experimentsToRun.push('df_remove_feefo_link')
+                }
+
+                if (name == 'AB-1208 contact us banner') {
+                    experimentsToRun.push('df_phones_not_working')
+                }
+                 if (name == 'AB-1411-phones_unavailable-after-3pm') {
+                    experimentsToRun.push('df_phones_not_available_after_3pm')
+                }
+
+                if (name == 'AB-963 Homepage SEO content') {
+                    experimentsToRun.push('df_homepage_seo_content')
+                }
+
+                if (name == 'AB-1204 Show Alternative route links') {
+                    experimentsToRun.push('df_alternative_route_links')
+                }
+
+                if (name == 'df_Looking_for_cheap_tickets_to_X_Y') {
+                    experimentsToRun.push("df_Looking_for_cheap_tickets_to_X_Y");
+                }
+                if (name == 'AB-873 get price fill deal finder') {
+                    experimentsToRun.push("df_get_price_fill_df");
+                }
+
+                if (name == "df_feefo_darkBlue_bar")
+                {
+                    experimentsToRun.push("df_feefo_darkBlue_bar");
+                }
+
+                if (name == 'AB-1030 Use e-ticket as a selling point') {
+                    experimentsToRun.push('df_e_ticket_as_a_selling_point')
+                }
+
+                if (name == 'AB-1169 GERMANY and FRANCE Route links on Homepage') {
+                    experimentsToRun.push('df_DE_FR_routelinks_homepage')
+                }
+
+
+
+                if (name == 'df_special_offer_wording')
+                {
+                    experimentsToRun.push("df_special_offer_wording");
+                }
+
+                if (name == 'AB-889 Route Page - Move More Useful Info Further Up') {
+                    experimentsToRun.push('df_route_useful_info_up');
+                }
+
+                if (name == 'AB-1392 As a user i want to see top destination into the home page.') {
+                    experimentsToRun.push('df_home_top_destinations');
+                }
+
+                if (name == 'AB-1419 Add Contact Us Form') {
+                    experimentsToRun.push("df_contact_us_form");
+                }
+
+                if (name == "df_route_page_from_price")
+                {
+                    experimentsToRun.push('df_route_page_from_price');
+                }
+
+
+                if (name == "AB-1295 Advertise ancillary products/FC on homepage")
+                {
+                    experimentsToRun.push('df_fc_on_homepage');
+                }
+
+                if (name == "AB-1920 Advertise ancillary products/FC on homepage") {
+                    experimentsToRun.push('df_fc_on_homepage');
+                }
+
+
+                if (name === "AB-925 Landing page breadcrumbs") {
+                    experimentsToRun.push("df_landing_page_breadcrumbs");
+                }
+
+                if (name === "AB-1644 Add contact us banner on certain route/search result pages (Tanger Algeciras)") {
+                   experimentsToRun.push("df_add_contactus_message_TA");
+                }
+
+                if (name == 'AB-1737 Add Dynamic Home Page Experiments Agains static') {
+                    experimentsToRun.push("df_homepage_test_static");
+                }
+
+
+                if (name == 'df_route_page_intros') {
+                    experimentsToRun.push("df_route_page_intros");
+                }
+
+                if (name == 'AB-1499 Redesign Popular Routes') {
+                     experimentsToRun.push("df_redesign_popular_routes");
+                }
+
+                if (name == 'AB-1772 Brexit Info Banner')
+                {
+                    experimentsToRun.push("df_brexit_banner");
+                }
+
+                if (name == 'AB-1772 Brexit Info Banner HomePage') {
+                    experimentsToRun.push("df_brexit_banner_homepage");
+                }
+
+                if (name === "AB-947 Operator page redesign")
+                {
+                    experimentsToRun.push("df_operator_redesign");
+                }
+
+                if (name == 'AB-1635 Make button get price bigger on route page') {
+                       experimentsToRun.push("df_button_makeprice_bigger_routepage");
+                }    
+
+                if (name == 'df_df_fade_calendar') {
+                    experimentsToRun.push("df_df_fade_calendar");
+                }
+
+                if (name == 'AB-1418 improve connection feeling with ops')
+                {
+                    experimentsToRun.push("df_improve_connection_ops");
+                }
+
+                if (name == 'AB-2026 fully clickable ships on operator page') {
+                    var ClickableShipsVariant = "A";
+                    $('.ovlyS> .rImg').click(function () {
+                        ga('send', 'event', 'AB-1306', 'ShipImageClicked:' + window.innerWidth < 768 ? 'Mobile' : 'Desktop or Tablet', 'ExperimentVariant:' + ClickableShipsVariant);
+                    })
+                    experimentsToRun.push('df_fully_clickable_ships_op_page');
+                }
+
+                if (name == 'AB-1884 Dismiss button to urgency message') {
+                    experimentsToRun.push("df_dismiss_urgency_route_page");
+                }
+
+                if (name == 'AB-2082 Enable Captcha') {
+                    experimentsToRun.push("df_enable_captcha");
+                }
+
+                if (name === 'AB-2002 redesign active tab') {
+                    experimentsToRun.push('df_ferry_ticket_tab')
+                }
+
+                if (name === 'AB-2183 On Offer page move Book Now to the top') {
+                    experimentsToRun.push('df_move_booknow_top')
+                }
+
+                if (name === 'MAR-781 Unhide destination content') {
+                    experimentsToRun.push('df_unhide_destination_content');
+                }
+
+                if (name == 'Home Page Normal') {
+                    experimentsToRun.push('df_dynamic_home_page_normal');
+                }
+
+                if (name == 'Home Page Speedy') {
+                    experimentsToRun.push('df_dynamic_home_page_speedy');
+                }
+
+
+
+
+
+                if (name == "AB-2254 Feature Toggle My Account")
+                {
+                    experimentsToRun.push('df_toggle_myaccount');
+                }
+
+                if (name == "Route Page Static") {
+                    experimentsToRun.push('df_route_page_static');
+                }
+
+                if (name == "Route Page Dynamic") {
+                    experimentsToRun.push('df_route_page_dynamic');
+                }
+
+                if (name == 'Operator Page Dynamic')
+                {
+                   experimentsToRun.push('df_operator_page_dynamic');
+                }
+
+                if (name == 'Operator Page Static') {
+                   experimentsToRun.push('df_operator_page_static');
+                }
+
+                if (name == 'Destination Page Dynamic')
+                {
+                   experimentsToRun.push('df_destination_page_dynamic');
+                }
+
+                if (name == 'Destination Page Static')
+                {
+                   experimentsToRun.push('df_destination_page_static');
+                }
+
+                if (name == 'BreadCrumbListViewModel')
+                {
+                    experimentsToRun.push('df_redesign_breadcrumbs_A');
+                }
+
+                if (name == 'BreadCrumbListViewModelAb2273')
+                {
+                    experimentsToRun.push('df_redesign_breadcrumbs_B');
+                }
+
+                if (name == 'LatestRoutePricesViewModel')
+                {
+                    experimentsToRun.push('df_redesign_latest_ferry_prices_on_homepage_A');
+                }
+
+                if (name == 'LatestRoutePricesViewModelAb2327')
+                {
+                    experimentsToRun.push('df_redesign_latest_ferry_prices_on_homepage_B');
+                }
+
+                if (name == 'OnBoardViewModel')
+                {
+                    experimentsToRun.push('df_tidyup_mobile_homepage_A');
+                }
+
+                if (name == 'OnBoardViewModelAb2327')
+                {
+                    experimentsToRun.push('df_tidyup_mobile_homepage_B');
+                }
+
+                if (name == 'DestinationHeaderViewModelAb2606A')
+                {
+                    experimentsToRun.push('df_mobile_dealfinder_on_destination_desktop_page_A');
+                }
+
+                if (name == 'DestinationHeaderViewModelAb2602B')
+                {
+                    experimentsToRun.push('df_mobile_dealfinder_on_destination_desktop_page_B');
+                }
+
+                if (name == 'HeaderViewModelRoutePageA')
+                {
+                    experimentsToRun.push('df_show_mobile_dealfinder_on_desktop_route_pages_A');
+                }
+
+                if (name == 'HeaderViewModelRoutePageB')
+                {
+                    experimentsToRun.push('df_show_mobile_dealfinder_on_desktop_route_pages_B');
+                }
+
+                if (name == 'OperatorHeaderViewModelAb2602A')
+                {
+                    experimentsToRun.push('df_mobile_dealfinder_on_operator_desktop_page_A');
+                }
+
+                if (name == 'OperatorHeaderViewModelAb2602B')
+                {
+                    experimentsToRun.push('df_mobile_dealfinder_on_operator_desktop_page_B');
+                }
+
+
+                if (name == 'AB-2660-Covid banner')
+                {
+                    experimentsToRun.push('df_covid_banner');
+                }
+
+                if (name == 'AB-2660-Hide phone section')
+                {
+                    experimentsToRun.push('df_hide_phone_section');
+                }
+
+
+                // Mobile Only Experiments
+                if (window.innerWidth < 768) {
+                    if (name == "RoutePageRedesignMobile V2") {
+                        experimentsToRun.push(179);
+                    }
+                    if (name == "OperatorLogosMobileV2") {
+                        experimentsToRun.push(180);
+                    }
+                    if (name == "ScrollToTopMobile") {
+                        experimentsToRun.push(185);
+                    }
+
+                    if (name == "MobileOperatorPage") {
+                        experimentsToRun.push(212);
+                    }
+
+                    if (name == 'Mobile FS Radios Redesign V2') {
+                        experimentsToRun.push('df_mobile_fs_radios_redesign_v2');
+                    }
+
+                    if (name == 'AB-624 Mobile Deal Finder Full Screen Popups') {
+                        experimentsToRun.push('df_Fullscreen_Pops')
+                    }
+
+                    if (name == 'AB-735 Lang Dropdown On Mobile') {
+                        experimentsToRun.push('df_lang_dropdown_mobile');
+                    }
+
+                    if (name == 'AB-818 feefo review in route page v2') {
+                        experimentsToRun.push('df_feefo_routes_v2')
+                    }
+
+                    if (name == 'AB-723 Sitewide UI (material design)') {
+                        experimentsToRun.push('df_sitewide_styles');
+                    }
+                    if (name == 'AB-1060 Push Why use DF to the top of route page') {
+                        experimentsToRun.push('df_push_whyDF_top_route_ind');
+                    }
+
+                    if (name == 'AB-1812 Move WHY DF to top of country pages') {
+                        experimentsToRun.push('df_movewhydf_topcountry');
+                    }
+
+
+
+                    if (name == 'AB-1887 Move country to country picture in the description') {
+                        experimentsToRun.push('df_move_ctc_picture_after_title_mobile');
+                    }
+
+                    if (name == 'AB-1911 Make ship images on route pages fully clickable') {
+                        experimentsToRun.push('df_fully_clickable_ships');
+                    }
+
+                    if (name == 'AB-1912 Animate content on scroll - route page') {
+                        experimentsToRun.push('df_scroll_animation_mobile');
+                    }
+
+                  if (name == 'AB-1889 Operators SAYT') {
+                      experimentsToRun.push('df_operators_sayt');
+                  }
+
+                  if (name === 'AB-1901 fully clickable country divs') {
+                      $('.divTbl').click(function () {
+                          ga('send', 'event', 'AB-1901 fully clickable country divs', 'Country div clicke: Mobile', 'ExperimentVariant:' + isCountryDivClickable);
+                      })
+                      experimentsToRun.push('df_fully_clickable_country_divs');
+                  }
+
+                  if (name === 'AB-1908 Add button to graph') {
+                      experimentsToRun.push('df_add_btn_to_graph');
+                  }
+
+                  if (name === 'AB-1886 Redesign Scroll to top') {
+                      experimentsToRun.push('df_redesign_scroll_to_top');
+                  }              
+                  
+                  if (name === 'AB-1861 homepage global menu') {
+                      experimentsToRun.push('df_homepage_global_menu');
+                  }
+                
+                  if (name === 'AB-1885 Redesign ferry company item') {
+                      experimentsToRun.push('df_redesign_ferry_company_item_mobile');
+                  }
+
+                  if (name === 'df_company_desc_collapsible_mob') {
+                    experimentsToRun.push('df_company_desc_collapsible_mob');
+                  }
+
+                  if (name === 'df_op_logo_on_ship_p_mob') {
+                      experimentsToRun.push('df_op_logo_on_ship_p_mob');
+                  }
+
+                  if (name === 'df_redesign_ship_item_mob') {
+                      experimentsToRun.push('df_redesign_ship_item_mob');
+                  }
+                    if (name === 'AB-1910 Change Route Page background to group content') {
+                        experimentsToRun.push('df_bg_divs_route_page')
+                    }
+
+                  if (name === 'df_routes_collapsible_divs_mob') {
+                      experimentsToRun.push('df_routes_collapsible_divs_mob');
+                  }
+
+                 if (name === 'Latest Route Prices A') {
+                     experimentsToRun.push('df_latest_route_priceA');
+                 }
+
+                 if (name === 'Latest Route Prices B') {
+                     experimentsToRun.push('df_latest_route_priceB');
+                 }
+
+                 if (name === 'Tidy Up Mobile Page Sections A') {
+                     experimentsToRun.push('df_tidiyup_mobilepage_sectionsA');
+                 }
+                 if (name === 'Tidy Up Mobile Page Sections B') {
+                     experimentsToRun.push('df_tidiyup_mobilepage_sectionsB');
+                 }
+              }
+
+                // Desktop and Tablet Only Experiments
+              if (window.innerWidth >= 768) {
+                    if (name == "RoutePageRedesignDesktop") {
+                        experimentsToRun.push(113);
+                    }
+
+                    if (name == 'AB-704 Emphasis image on route page') {
+                        experimentsToRun.push('df_route_page_emphasis');
+                    }
+
+                  if (name == 'AB-1213 Mobile DF on desktop - mobile DF') {
+                      experimentsToRun.push('df_mobile_df_on_desktop');
+                  }
+
+                  if (name == 'AB-1213 Mobile DF on desktop - desktop DF') {
+                      experimentsToRun.push('df_desktop_df_on_desktop');
+                  }
+
+                }
+
+              // Tablet Only Experiments
+              if (window.innerWidth >= 768 && window.innerWidth < 992) {
+                  //
+              }
+
+                // Desktop Only Experiments
+              if (window.innerWidth >= 992) {
+                  //
+                    if (name == 'AB-1808 Move popular route up from the home page and link them to the booking engine') {
+                        experimentsToRun.push('df_movepopular_routes_up_routelinks');
+                    }
+              }
+         }   
+
+            //DF Integration stuff
+            try {
+                if (dealfinderVariance === 'AB_dealfinder_test_A' || dealfinderVariance === 'AB_dealfinder_test_B' || dealfinderVariance === 'AB_dealfinder_test_mob_A' || dealfinderVariance === 'AB_dealfinder_test_mob_B') {
+                    runExp(dealfinderVariance);
+                    dealfinderVariance = 'undefined';
+                }
+            } catch (e) {
+
+            }
+		
+            //DF Integration stuff
+
+            //Call Global Experiments Here
+            runExp('ScrollToTopMobile');            
+            runExp('Mobile FS Radios Redesign V2');
+            runExp('AB-624 Mobile Deal Finder Full Screen Popups');
+            //runExp('AB-567 Footer Redesign');
+            runExp('AB-735 Lang Dropdown On Mobile');
+            runExp('AB-676 Remove Top Bar Static');
+            runExp('AB-723 Sitewide UI (material design)');
+            runExp('AB-876 Show me prices');
+            runExp('AB-756 Navigation V3 - Full Redesign');
+            runExp('AB-1010 Deal finder focus lightbox style');
+            runExp('df_df_fade_calendar');
+            runExp('AB-1886 Redesign Scroll to top');
+            runExp('accessibility');
+
+            function exp79() {
+                try {
+                    $('#divIntroText h1, #divIntroText p').appendTo('.onBoardI');
+
+                    $('.onBoard').appendTo('#divIntroText');
+                    $('.onBoard').removeClass('sm6 md3 colH colM');
+                    $('.onBoard h3').addClass('h1');
+                    $('.onBoardI img').appendTo('#divIntroText');
+
+                    $('.onBoardI').removeClass('md3');
+                    $('.onBoardI').addClass('md6 reviewSwap');
+                    $('#divIntroText').addClass('reviewSwap');
+
+
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.reviewSwap{padding-right:0;}.reviewSwap h3{background-position: -7px -514px}.reviewSwap h1{background-image: url(/image/sprites/sprite.png);background-repeat: no-repeat; background-position: -4px -434px;padding-left: 55px;}@media (max-width:992px) {.reviewSwap img{display: none;}.onBoardI.reviewSwap{display: block!important;}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) {
+                }
+            };
+
+            function exp107() {
+                try {
+                    $('head').append('<style>@media (max-width: 767px) { .ui-datepicker{width:98%!important;left:1%!important;right:1%!important;border: none!important;padding:5px 5px 1px 5px!important;-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);box-shadow: 0 6px 12px rgba(0,0,0,.175);}.ui-dateoucker-rFix{position: fixed!important;top: 0!important;height: 100%!important;padding-top:60px;z-index: 10000!important} .ui-widget{font-size:14px!important;} .ui-datepicker td a, .ui-datepicker td span{text-align: center!important;padding:10px 5px!important;} .ui-widget-header{color:#333!important;font-size:16px!important;background:#FFF!important;border:none!important;} .ui-icon-circle-triangle-e, .ui-icon-circle-triangle-w{background-image:url(/image/sprites/sprite-be.png)!important;} .ui-icon-circle-triangle-e{background-position: -16px -397px!important;height:27px!important;width:18px!important;top:19px!important;} .ui-icon-circle-triangle-w{background-position: -16px -492px!important;height:27px!important;width:18px!important;top:19px!important;} .ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev{top:0!important;width:50px!important;height:50px!important;} .ui-datepicker .ui-datepicker-next{right:4px!important;} .ui-datepicker .ui-datepicker-next-hover{right:3px!important;} .ui-datepicker .ui-datepicker-prev{left:2px!important;} .ui-datepicker .ui-datepicker-prev-hover{left:1px!important;} .ui-state-hover{border:none!important;} .ui-datepicker .ui-datepicker-title{line-height: 2.8em!important;} .ui-datepicker-calendar a.ui-state-active{border-color:#006fa0!important;} .ui-state-activ{background: 50% 50% repeat-x #006fa0!important;} .ui-datepicker-close:hover{background-color:#dc5829!important;text-decoration:none!important;color:#FFF!important}}</style>');
+                    $('#cal_out[readonly]').mousedown(function () {
+                        $('body').scrollTop($('#cal_out').offset().top - 30);
+                        $('#ui-datepicker-div').click(function () {
+                            $('body').scrollTop($('#cal_out').offset().top - 30);
+                        });
+                    });
+
+                    $('#cal_ret[readonly]').mousedown(function () {
+                        $('body').scrollTop($('#cal_ret').offset().top - 30);
+                        $('#ui-datepicker-div').click(function () {
+                            $('body').scrollTop($('#cal_ret').offset().top - 30);
+                        });
+                    });
+                } catch (e) { }
+            };
+
+            function exp113() {
+                try {
+                    $('.whyUseDF, .routeOnboard').show();
+                    $('#divRouteMap, #divRouteAlternatives, #divRouteC2C').appendTo('#routeLft');
+                    $('#divOperators').appendTo('#routeOp');
+                    $('.reviewSum').appendTo('#routeRev');
+                    $('.reviewSum .description').addClass('more');
+                    $('.highcharts').appendTo('#routeRest');
+                    $('.intTxt, .txt').appendTo('#routeRest');
+
+                    var noOps = $('.opTbl > li').length;
+                    $('.reviewSum ul > li').show();
+                    $('.reviewSum ul > li').slice(noOps).hide();
+                } catch (e) { }
+            };
+
+            function expdf_route_useful_info_up() {
+                try {
+                    $('#routeRev').appendTo('#routeRest');
+                    $('#routeInfo').appendTo('#routeRest');
+
+                } catch (e) { }
+            };
+
+
+            function exp174() {
+                try {
+                    $('.AB174A').hide();
+                    $('.AB174B').show();
+                } catch (e) { }
+            };
+
+            function exp179() {
+                try {
+                    $('.whyUseDF, .routeOnboard').show();
+                    $('#divRouteMap, #divRouteAlternatives, #divRouteC2C').appendTo('#routeLft');
+                    $('#divOperators').appendTo('#routeOp');
+                    $('.reviewSum').appendTo('#routeRev');
+                    $('.reviewSum .description').addClass('more');
+                    $('.highcharts').appendTo('#routeRest');
+                    $('.intTxt, .txt').appendTo('#routeRest');
+
+                    var noOps = $('.opTbl > li').length;
+                    $('.reviewSum ul > li').show();
+                    $('.reviewSum ul > li').slice(noOps).hide();
+
+                    if ($(window).width() < 767) {
+                        $('#divOperators').addClass('mobOpRoutes');
+
+                        if ($('#divOperators .opTbl > li').length == 1) {
+                            $('#divOperators .opTbl > li').css('width', '100%')
+                        }
+                    }
+                } catch (e) { }
+            };
+
+            function exp180() {
+                try {
+                    if (window.innerWidth < 768) {
+                        $('.hOpBox').insertBefore($('.AB180LogosMobile'));  
+                    }
+                } catch (e) {
+                }
+            };
+
+            function exp185() {
+                try {
+
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = ".abMobBookNow{display: none;} @media (max-width:767px){.abMobBookNow{position: fixed;bottom: 20px;left:15px;right:15px;} .abMobBookNow .btn{width:100%;-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);box-shadow: 0 6px 12px rgba(0,0,0,.175);background-color: #64B6E6;background-image:url('/image/ab/white-arrow-n.png');background-position: right center;}"
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                    $('body').append('<div class="abMobBookNow"><span class="btn">Book Now</span></div>');
+
+                    $(window).on('scroll', function () {
+
+                        var top = $('body').scrollTop(),
+                            divBottom = $('.fsWrap').offset().top + $('.fsWrap').outerHeight();
+                        if (divBottom > top) {
+                            $('.abMobBookNow').fadeOut();
+                        } else {
+                            if (!$('.fsPop').is(':visible')) {
+                                $('.abMobBookNow').fadeIn(1500);
+
+                            }
+                        }
+                    });
+
+                    $(".abMobBookNow .btn").click(function () {
+                        $("html, body").animate({
+                            scrollTop: 0
+                        }, "slow");
+                        $(".fsPop").fadeIn("slow");
+                        $(".fsWrap").addClass('fsWrapPop');
+                        if (typeof (ga) === 'function') ga('send', 'event', 'AB-1886', 'Book now clicked');
+                    });
+
+                } catch (e) { }
+            };
+
+            function expdf_pull_recent_search() {
+                try {
+                    $.ajax({
+                        type: "GET",
+                        url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/GetRecentSearchesToDisplay",
+                        dataType: "jsonp",
+                        data: "cult=en-US&STDC=DF10COM"+ '&dfutm=' + encodeURIComponent(utmResponse),
+                        success: function (data) {
+                            if (!jQuery.isEmptyObject(data.d)) {
+                                ga('send', 'event', 'AB-44', 'RecentSearchesPulled', 'true');
+                            } else { ga('send', 'event', 'AB-44', 'RecentSearchesNone', 'true'); }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            ga('send', 'event', 'AB-44', 'AJAX Call Errored', 'true');
+                        }
+                    });
+                } catch (e) { ga('send', 'event', 'AB-44', 'Exception Caught', 'true'); }
+            };
+
+            function exp188() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.banner{background:url(/image/backgrounds/main-ab.jpg) no-repeat center center;background-size:cover;}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) {
+                }
+            };
+
+            function exp96() {
+                try {
+                    $('.AB96RecentSearchSlide').hide();
+                    $('.AB96RecentSearch').html('<div class="sm4 newRecentSearch"><div><b>Still interested in these searches?</b><div class="AB96RSData"></div></div></div>')
+                    showABRecentSearches(rsd, 'AB96RSData');
+                } catch (e) {
+
+                }
+            }
+
+            function exp212() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '@media (max-width:767px) {.row.content{display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-orient: vertical;-moz-box-orient: vertical;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: start;-moz-box-align: start;-ms-flex-align: start;-webkit-align-items: flex-start;align-items: flex-start;}.row.content > div.sm6{-webkit-box-ordinal-group: 2;-moz-box-ordinal-group: 2;-ms-flex-order: 2;-webkit-order: 2;order: 2;width:100%;}.row.content > div.sm6:last-child{-webkit-box-ordinal-group: 1;-moz-box-ordinal-group: 1;-ms-flex-order: 1;-webkit-order: 1;order: 1;width:100%;}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+
+                } catch (e) { }
+            };
+
+            function expdf_aa_home() {
+                try {
+                } catch (e) { }
+            }
+
+            function expdf_aa_ferry_operator_ind() {}
+
+            function expdf_aa_country_to_country_ind() {}
+
+            function expdf_new_route_Directory_tab() {
+                var script = document.createElement('script');
+                script.innerHTML = "$('.rptPtLst').addClass('ab-route-list')";
+                document.getElementsByTagName('body')[0].appendChild(script);
+
+                var style = document.createElement('style');
+                style.type = 'text/css';
+
+                style.innerHTML = '.ab-route-list.rptPtLst ul.tabs.t2 {width: inherit; border-spacing: 10px;} .ab-route-list.rptPtLst ul.tabs.t2 li {text-align: center; border-left: none; background: #f5f5f5; -webkit-box-shadow: 4px 4px 8px -2px rgba(153,153,153,1); -moz-box-shadow: 4px 4px 8px -2px rgba(153,153,153,1); box-shadow: 4px 4px 8px -2px rgba(153,153,153,1); border-radius: 2px;} .ab-route-list.rptPtLst ul.tabs.t2 li.active {background: #e0f1fa;} .ab-route-list .rtTbl > li{margin-bottom: 10px;padding-bottom:10px; width: 49.5%;float: left;margin-right: 1%;background: #e0f1fa;padding: 10px; transition: 0.4s; border-left: 3px solid #75b3e6;} .ab-route-list .rtTbl > li:nth-child(even) {margin-right: 0;} .ab-route-list .rtTbl > li:hover {background: #fafafa; transition: 0.4s;} @media (max-width: 991px) {.ab-route-list .rtTbl > li {min-height: 122px;}} @media (max-width: 600px) {.ab-route-list .rtTbl > li {width: 100%; margin-right: 0 !important; min-height: inherit;}}'
+                document.getElementsByTagName('head')[0].appendChild(style)
+            }
+
+            function expdf_better_urgency_messages() {
+                try {          
+                    var script = document.createElement('script')
+                    script.innerHTML = "function dismissUrgency() {$('#ab-urgency-route').css('display', 'none');}"
+                    document.getElementsByTagName('body')[0].appendChild(script)
+                    // add html with js
+                    $('.abUrgencyMsg').hide();
+                    $('.abNewUrgencyMsg').html('<div id="ab-urgency-route" class="ab-sitewide-notifications urgency-warning"><p><strong>' + urgencyMessageTextJs + '</strong></p><p class="secondary"' + urgencyTipTextJs + '</p><a onclick="dismissUrgency()"><div class="ab-sitewide-notifications--close"></div></a>')
+                }
+                catch (e) { }
+            }
+
+            function expdf_Looking_for_cheap_tickets_to_X_Y() {
+                //change for the new experiment.
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+
+                    style.innerHTML = '.looking-for-cheap-tickets {background: #66BB6A; padding: 0 20px; text-align: center; color: #fff;}.looking-for-cheap-tickets span {margin-bottom: 0; font-weight: bold; display: inline-block; background: #55a253; padding: 8px 30px; position: relative;}@media (min-width: 767px) {.looking-for-cheap-tickets span:before {content: ""; position: absolute; top: 0; right: -20px; border-top: 40px solid #66BB6A; border-left: 40px solid #55a253; width: 0;}.looking-for-cheap-tickets span:after {content: ""; position: absolute; top: 0; left: -16px; border-bottom: 40px solid #66BB6A; border-right: 40px solid #55a253; width: 0;}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+
+                    // add html with js
+                    $(".ab-route-banner").before('<div class="looking-for-cheap-tickets"><span>' + abChepeastTicket + '</span></div>');
+
+                } catch (e) { }
+            }
+
+            function expdf_feefo_darkBlue_bar()
+            {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '#feefoData {margin-top:-15px;}#feefoData .feefo {padding:7px;background:#193354;color:#fff;position:relative;}#feefoData .feefo:before {content: "";background: #193354;position: absolute;left: -100%;top:0px;bottom: 0;width: 100%;;height:100%;}#feefoData .feefo:after{content: "";background: #193354;position: absolute;right: -100%;top:0px;bottom: 0;width: 100%;;height:100%;}#feefoData .feefoL {height:auto;margin-top:-6px;}@media (max-width:991px) {#feefoData {float:left;text-align:center;}#feefoData .feefo {font-size:14px;}#feefoData .feefoL {height:18px;}}.feeRating,.rating, .sRating {background-image:none;width:85px;}.feeRating.f50::after,.rating.r50::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f45::after,.rating.r45::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f40::after,.rating.r40::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f35::after,.rating.r35::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f30::after,.rating.r30::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f25::after,.rating.r25::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f20::after,.rating.r20::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f15::after,.rating.r15::after {font-family:"Font Awesome Solid";content:"\\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f10::after,.rating.r10::after {font-family:"Font Awesome Solid";content:"\\f005";font-size:14px;color:#64b6e6;}.feeRating.f5::after,.rating.r5::after {font-family:"Font Awesome Solid";content:"\\f089";font-size:14px;color:#64b6e6;}.hreview .rating, .hreview .sRating {text-align:right;}.feeRating.f50::after, .feeRating.f45::after, .feeRating.f40::after, .feeRating.f35::after, .feeRating.f30::after, .feeRating.f25::after, .feeRating.f20::after, .feeRating.f15::after, .feeRating.f10::after, .feeRating.f5::after {color:#fff}.feeRating.f45,.rating.r45 {width:auto;}.feeRating.f35,.rating.r35 {width:auto;}.feeRating.f25,.rating.r25 {width:auto;}.feeRating.f15,.rating.r15 {width:auto;}.feeRating.f5,.rating.r5 {width:auto;}';
+                    document.getElementById("divFeefoContainer").appendChild(style);
+                    $('#feefoData>a.feefo').attr('target', 'none');
+                    $('#feefoData img').attr('src', '/image/ab/ab-feefo-white-logo.png');
+                    $('body').css('overflow-x', 'hidden')
+                } catch (e) { }
+            }
+
+            function expdf_aa_destination_ind() {
+                try {
+
+                } catch (e) { }
+            }
+
+            function expdf_aa_route_ind() {
+                try {
+
+                } catch (e) { }
+            }
+
+            function expdf_aa_port_ind() {
+                try {
+
+                } catch (e) { }
+            }
+
+            function expdf_mobile_fs_radios_redesign_v2() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '@media (max-width:767px){.rd-disable,.rd-enable{background-color:#eee;background-image:none;border-color:#ccc;color:#a6a6a6}.rd-disable.selected,.rd-enable.selected{color:#FFF;background:#64B6E6;border-radius:10px!important;width:50%!important;border:1px solid #64B6E6}.fsRadios{border-radius:3px;display:table;margin:10px 0!important;padding:0 15px;width:100%;background:url(/image/ab/fs-radio-fix.jpg) center center no-repeat;min-height:32px;}.fsRadios label{padding:5px 15px!important;margin:0!important;cursor:pointer;float:none;display:table-cell!important;width:50%;text-align:center;border:1px solid #EEE;border-top-right-radius:10px;border-bottom-right-radius:10px;font-weight:400;line-height: 16px!important;}.fsRadios label:first-child{border-radius:10px 0 0 10px}.fsRadios input{display:none}.fsRadios:after,.fsRadios:before{content:" ";display:table}.fsRadios:after{clear:both}.fsRadios label.diffreturn{display:none!important}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+
+                    $('.fsRadios input').each(function () {
+                        if ($(this).is(':checked')) {
+                            $(this).parent().addClass('rd-enable selected');
+                        } else {
+                            $(this).parent().addClass('rd-disable');
+                        }
+                    });
+
+                    $('.fsRadios').after('<div class="cl"></div>');
+
+                    $(".rd-enable").click(function () {
+                        var parent = $(this).parents('.fsRadios');
+                        $('.rd-disable', parent).removeClass('selected');
+                        $(this).addClass('selected');
+                        $('.checkbox', parent).attr('checked', true);
+                    });
+                    $(".rd-disable").click(function () {
+                        var parent = $(this).parents('.fsRadios');
+                        $('.rd-enable', parent).removeClass('selected');
+                        $(this).addClass('selected');
+                        $('.checkbox', parent).attr('checked', false);
+                    });
+                } catch (e) { }
+            }
+
+            function expdf_route_main_hide_map() {
+                try {
+                    $('.portMapCtr, .portMap #map_canvas, .popRoLst h2').hide();
+                    $('.popRoLst').appendTo('.portMap');
+                    $('.rptPtLst .tabs li a').text('Ferry Ports');
+                    $('.rptPtLst .tabs li:first-child a').text($('.popRoLst h2').text());
+                    $('.popRoLst ul').css('margin-top', '10px');
+                } catch (e) { }
+            }
+
+            $(document).ready(function () {
+                if (window.innerWidth < 768) {
+                    $(".topBar").addClass('mobileTopMenu');
+                }
+                var mobNavTracking = 0;
+                $(".mobileTopMenu").click(function () {
+                    if (mobNavTracking == 0) {
+                        ga('send', 'event', 'AB-156', 'mobileMenuClicked', 'true');
+                        mobNavTracking = 1;
+                    }
+                });
+            });
+
+            function expdf_route_page_redesign_v2() {
+                try {
+                    $(document).ready(function () {
+
+                        $('#routeLft').show();
+                        $('#routeInfo').show();
+                        $('.whyUseDF, .routeOnboard, .opShips').show();
+                        $('#divOperators').appendTo('#routeOp');
+                        $('#routeOp').removeClass('md6');
+                        $('.reviewSum').appendTo('#routeRev');
+                        $('.reviewSum .description').addClass('more');
+                        $('.highcharts').appendTo('#routeRest');
+                        $('.intTxt').appendTo('#routeInfo');
+                        $('.intTxt h1').addClass('h2');
+                        $('#divRouteMap').appendTo('#routeLft');
+                        $('#divRouteAlternatives h3').addClass('h4');
+                        $('.txt').appendTo('#routeRest');
+                        $('.opShips .rating').hide();
+
+                        $('.opShips .row > .xs6:first-child').addClass('sm12');
+                        $('.routeOnboard').hide();
+                        //if (hideAltDiv) {
+                        //    $('#divRouteAlternatives').hide();
+                        //    $('#divRouteC2C').hide();
+                        //}
+                    });
+
+                } catch (e) { }
+            }
+
+            function expdf_route_urgency_banner() {
+                try {
+                        var style = document.createElement('style');
+                        style.type = 'text/css';
+                        style.innerHTML = '.abError{background: url(/image/ab/icon-timer-red.png) no-repeat 8px 13px #fad5cf;color: #b30000;font-size: 15px;padding: 5px 7px 6px 42px;display: block;background-color: #fad5cf;border: 1px solid #fad5cf;font-weight: 700;margin-bottom: 15px!important;} .abError span{font-weight: 400;color: #193354;} .noBanner{margin-bottom:0}';
+                        document.getElementsByTagName('head')[0].appendChild(style);
+                        $('.abUrgencyMsg').show();
+
+                } catch (e) { }
+            }
+
+            function expdf_Landing_page_deal_finder_emphasis() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '#header{background:#FFF}.banner{margin-bottom:30px;min-height: 518px}.subNav{display:none}.fsWrap{background:#318bbd;border-top-left-radius:5px;border-top-right-radius:5px;border:5px solid #2c7ca9;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175)}.fs .btn.disabled{padding:4px 10px}.fs .advSer .checkRadio + label{display:none}.fs .advSer .checkRadio + #curLbl{display:block}@media (min-width:768px){.fs #curLbl{float:right}}.abDestPost h1{color:#FFF;text-shadow:0 1px 2px rgba(0,0,0,.5);font-size:60px;text-align:center;margin-bottom:6px}.abDestPost p{color:#fd0;text-shadow:0 1px 2px rgba(0,0,0,.5);font-size:24px;text-align:center;font-weight:700;margin-bottom:20px;line-height:20px}@media (max-width:767px){.abDestPost h1{font-size:40px}.abDestPost p{font-size:18px}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                    $('.noBanner').addClass('banner');
+                    $('.noBanner > div').addClass('con');
+                    $('.noBanner').removeClass('con noBanner');
+
+                    if (countryNameH2 == 'Isle of man') {
+                        countryNameH2 = 'Isle of Man';
+                    }
+                    if (countryNameH2 == 'Isle of wight') {
+                        countryNameH2 = 'Isle of Wight';
+                    }
+
+                    $('.banner .con').prepend('<div class="abDestPost" style="display:none"><h1>' + countryNameH2 + '</h1><p>' + noOfRoutesText + '</p></div>');
+                    $('.banner .abDestPost').show();
+
+                    if (countryName == 'isle of man') {
+                        countryName = 'isle_of_man'
+                    }
+
+                    if (countryName == 'isle of wight') {
+                        countryName = 'isle_of_wight'
+                    }
+
+                    $('.banner').addClass(countryName.toLowerCase());
+
+                    self.isMinWiz(true)
+                    if (window.innerWidth >= 768) { abDestPost(); }
+
+                    $(window).resize(function (event) {
+                        if (window.innerWidth >= 768) {
+                            abDestPost();
+                        } else {
+                            $('.banner, .banner > .con').removeAttr('style');
+                        }
+                    });
+
+                    function abDestPost() {
+                        viewportHeight = $(window).height();
+                        viewportHeight = viewportHeight - 135;
+
+                        $('.banner').css({
+                            'height': viewportHeight,
+                            'position': 'relative'
+                        });
+
+                        $('.banner > .con').css({
+                            'position': 'absolute',
+                            'left': '50%',
+                            'top': '50%',
+                            'margin-left': -$('.banner > .con').outerWidth() / 2,
+                            'margin-top': -$('.banner > .con').outerHeight() / 2 - 25
+                        });
+                    }
+
+                      if ($('.abDestPostTicks').length == 0) {
+                        var style = document.createElement('style');
+                        style.type = 'text/css';
+                        style.innerHTML = '.abDestPostTicks{background:#2c7ca9;padding:5px 10px 12px 10px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);box-shadow: 0 6px 12px rgba(0,0,0,.175);}.abDestPostTicks li{font-size:16px;color:#FFF;text-shadow:0 1px 2px rgba(0,0,0,.3);font-weight:700;line-height:24px;padding-left:23px;padding-right:12px;background:url(/image/ab/icon-live-tick-white.png) no-repeat left top;text-align:left}@media (min-width:768px){.abDestPostTicks{margin-left:0;text-align:center;}.abDestPostTicks li{text-align:center;display:inline-block}}';
+                        document.getElementsByTagName('head')[0].appendChild(style);
+                        $('.banner .con').append("<ul class='abDestPostTicks'><li>Trusted by over 2.5 million customers</li><li>We work with over 200 ferry companies!</li><li>We check up to 1 million prices for our customers daily</li></ul>");
+                    }
+
+              } catch (e) { }
+            }
+
+            function expdf_hide_map_country_page() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '#map, .tabs{display:none;}.rtSum .accordion> ul > li:first-child > h4{border-top: 1px solid #64B6E6  ;!important}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                } catch (e) { }
+            }
+
+            function expdf_hide_map_port_page() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '#divPortMap{display:none;}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) { }
+            }
+
+            function expdf_Hide_map_ferry_to_port_page() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '.opRoutes{display:none;}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                } catch (e) { }
+            }
+
+            function expdf_load_route_main_map_on_B_only() {
+                abLoadMap();
+            }
+
+            function expdf_country_pages_with_no_reviews() {
+                try {
+                    $('.abCtryNoReviews').css('display', 'table-cell');
+                } catch (e) { }
+            }
+
+
+            function expdf_country_pages_including_reviews() {
+                try {
+                    $('.abCtryNoReviews').css('display', 'table-cell');
+                    $("#countryOp").css("width", '100%');
+                    $("#countryRev").css("width", '100%');
+                } catch (e) { }
+            }
+
+            function expdf_just_booked() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '.abJustBooked{background: #e0f1fa;padding:15px;margin-bottom: 15px}.abJustBooked .sm4{padding-left:10px;padding-right:10px;}.abJustBooked .row{margin-left:-10px;margin-right:-10px;}.abJustBooked .justBooked{background:#ffffff;padding:7px;}.abJustBooked .justBookedImg{width:75px;}.abJustBooked .justBookedImg img{height:60px;min-width:65px;border-radius: 3px;}.abJustBooked .justBookedTxt{font-size:13px;}.abJustBooked > div{height: 74px;overflow: hidden;position: relative;}.justBookedRow{position: absolute;right: 6px;}.justBookedRow .sm4{width:auto;margin:0;padding:0 6px;display: block;float:left;}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+
+                    $('#abJustBookedCon').show()
+
+                    var cards = $(".justBookedRow .sm4");
+                    for (var i = 0; i < cards.length; i++) {
+                        var target = Math.floor(Math.random() * cards.length - 1) + 1;
+                        var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+                        cards.eq(target).before(cards.eq(target2));
+                    }
+
+                    runJustBooked()
+
+                    function runJustBooked() {
+                        var bookingsToShow = 3;
+                        var widthFix = 3;
+
+                        if (window.innerWidth < 768) {
+                            bookingsToShow = 1;
+                            widthFix = 10;
+                        }
+                        if (window.innerWidth >= 768 && window.innerWidth < 992) {
+                            bookingsToShow = 2;
+                            widthFix = 5;
+                        }
+
+                        var divWidths = $('#abJustBookedWrap').width() / bookingsToShow + widthFix;
+                        var noOfDivs = $('#abJustBookedWrap .sm4').length;
+                        var totalWidth = noOfDivs * divWidths;
+                        $('.justBookedRow').css('width', totalWidth);
+                        $('.justBookedRow .sm4').css('width', divWidths);
+
+                        $('.justBookedRow .sm4').each(function (i) {
+                            if (i < noOfDivs - bookingsToShow) {
+                                j = i * 500
+                                $(".justBookedRow").delay(2000 + j).animate({ right: "-=" + divWidths }, 1000);
+                            }
+                        });
+                    }
+
+                    $(window).resize(function (event) {
+                        $('.justBookedRow, .justBookedRow .sm4').removeAttr('style');
+                        $('.justBookedRow').finish();
+                        $('.justBookedRow').css('right', '6px');
+
+                        runJustBooked();
+                    });
+
+
+                } catch (e) {
+                }
+            }
+
+            //function expdf_basket_icon_recent_searches() {
+            //    basketVariant = "B";                
+            //    var style = document.createElement('style');
+            //    var noOfItems;
+            //    try {
+            //        $.ajax({
+            //            type: "GET",
+            //            url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/GetRecentSearchesToDisplay",
+            //            dataType: "jsonp",
+            //            data: "cult=en-US&STDC=DF10COM",
+            //            success: function (data) {
+            //                noOfItems = Object.keys(data.d).length;
+            //                style.type = 'text/css'
+            //                style.innerHTML = '.rSer > a{background-image:url(/image/ab/icon-cart.png)!important;padding-right:0!important;padding-left:30px;background-position: 0 1px!important;position: relative;}.rSer .abSearchCount{position: absolute;top:-3px;left:12px;font-size:11px;font-weight: 700;color:#EA5B28;font-style: normal;}'
+            //                document.getElementsByTagName('head')[0].appendChild(style)
+            //                $('.rSer a').before('<i class="abSearchCount"></i>');
+            //                if (noOfItems != 0) {
+            //                    $('.rSer .abSearchCount').text(noOfItems);
+            //                } else {
+            //                    $('.rSer .abSearchCount').text("0");
+            //                }
+            //
+            //            },
+            //            error: function (jqXHR, textStatus, errorThrown) {
+            //                //console.log(errorThrown)
+            //            }
+            //        });
+            //
+            //        $('.rSer .popupClose').click(function () {
+            //            expdf_basket_icon_recent_searches()
+            //        });
+            //
+            //    } catch (e) { //console.log(e); }
+            //    };
+            //
+            //}
+
+            function expdf_ditch_hero_image() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.banner{background:none;} .banner > .con{padding: 0 15px!important;}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) {
+                }
+            }
+
+            function expdf_ba_route_ind_load() {
+                try {
+                    abLoadRouteMap();
+                } catch (e) {
+                }
+            }
+
+            function expdf_top_offer_instead_of_slider_homepage() {
+                try {
+                    var noOfItems = $(".carouselIn .item").length;
+
+                    if (noOfItems > 1) {
+                        for (i = 1; i < noOfItems; i++) {
+                            $(".carouselIn .item:eq(1)").remove();
+                        }
+                    }
+
+                    $('#offerSlider').removeClass('carousel');
+                    $('.carouselDots').hide();
+                    $(".carouselIn .item").addClass('active');
+                } catch (e) {
+                }
+            }
+
+            function expdf_add_hero_image() {
+                try {
+                    $('.con.noBanner > div').addClass('con');
+                    $('.con.noBanner').addClass('banner');
+                    $('.con.noBanner').removeClass('con noBanner');
+                    self.isMinWiz('false');
+                } catch (e) {
+                }
+            }
+
+            function expdf_display_system_font() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = 'body{font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,\'Open Sans\', "Helvetica Neue", Helvetica, Arial, sans-serif!important;}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) {
+                }
+            }
+
+            function expdf_top_4_countries_with_heading_change() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.imgPrices .imgTxt{display:block;position:relative;margin-bottom:10px}.imgPrices .imgTxt img{width:100%;height:148px}@media (max-width:767px){.imgPrices .imgTxt img{height:auto}}.imgPrices .imgTxt span{display:block;position:absolute;bottom:0;background-color:#e0f1fa;padding:4px 5px 1px 0}.imgPrices .imgTxt h5{margin:0;font-size:14px;font-weight:700;line-height:1.1}.imgPrices .imgTxt p{margin:0;font-size:12px;color:#333}.hIntBox h1,.hOpBox h2,.hPorBox h2,.hPriBox h2,.hRouBox h2,.onBoard h3{font-size:22px}.imgPrices .imgTxt a:hover h5{text-decoration:underline}.imgPrices.row{margin-left:-5px;margin-right:-5px}.imgPrices .xs6{padding-left:5px;padding-right:5px}.opLogos .ovly{height:54px}.opLogos .ovlyTxt{height:55px}.onBoard h3{background-position:-7px -515px}.hIntBox h1{padding:10px 0 0 55px}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                    var heading1 = $('.hPriBox h2');
+                    var heading2 = $('.hOpBox h2');
+                    $('#countrySelect').hide();
+                    $('#countrySelect2').show();
+                    heading1.text(heading1.html().replace('<br>', ' '));
+                    heading2.text(heading2.html().replace('<br>', ' '));
+                    $('#countrySelect2 > h2').html('Popular Destinations');
+                } catch (e) { }
+            };
+
+            function expdf_show_full_guide_on_country_pages() {
+                try {
+                    $('.AB446').removeClass('more');
+                    $('.AB446-1').hide();
+                } catch (e) {
+                }
+            }
+
+            function expdf_promote_free_cancellation_homepage() {
+                try {
+                    var cult = "en-us";
+                    var altTxt = "Free Cancellation Available";
+                    var FCtxt = "*Free cancellation available on all bookings made at least 72 hours in advance for an additional fee";
+                    $('.offerSlider').append('<div class="carousel slide"><div class="carouselIn"><img src="/image/ab/free-cancellation-' + cult + '.jpg" alt="' + altTxt + '"></div></div>');
+                    $('#offerSlider').remove();
+                    $('footer .accordion').append('<div class="sm12 copy" style="margin-bottom:10px;margin-top:10px;">' + FCtxt + '</div>');
+                } catch (e) {
+                }
+            }
+
+            function expdf_larger_height_inputs_radios() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '@media (max-width:767px){.fs .form-control,.fs .fsControl{height:44px!important;line-height:42px!important;padding-top:0!important;padding-bottom:0!important;}.fs .btn,.fs .fsDone{height:44px!important;padding:11px 24px 11px 10px!important;background-position:right -1092px!important;font-size:13px!important;line-height:21px!important}.fs .petGrp .btn-default{height:44px!important;line-height:33px!important;padding: 4px 14px 4px 14px!important}.fs .petGrp label{padding:0 10px!important}.ui-autocomplete .ui-state-disabled{padding:7px 0!important;}.ui-autocomplete li{padding:10px 1px!important}.fsRadios .rd-disable, .fsRadios .rd-enable{padding: 13px 15px!important;}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) {
+                }
+            }
+            function expdf_promote_payment_options_on_landing_pages() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.cards{padding-top:15px;}.cards h3{color: #FFF;text-shadow: 0 1px 2px rgba(0,0,0,0.5);font-size: 22px;}.cards i{background-color: #FFF;border: 5px solid #FFF;border-radius:5px;box-sizing: content-box;}.american_express{width: 37px;}.jcb{width: 33px;}.visa, .visa_electron{width: 37px;}@media (max-width:767px){.cards h3{font-size:18px;}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+
+                    $('.cards').appendTo('.banner > .con');
+                    $('.cards').prepend('<h3>We accept the following payment methods</h3>');
+
+                    var clickIcon = 0;
+                    $('.cards > i').click(function () {
+                        if (clickIcon == 0) {
+                            ga('send', 'event', 'AB-402', "payIconClicked", 'true');
+                            clickIcon = 1;
+                        };
+
+                    }
+                       )
+
+                } catch (e) {
+                }
+            }
+
+            function expdf_feefo_country() {
+                expdf_feefo_port_country();
+            }
+
+            function expdf_feefo_port() {
+                expdf_feefo_port_country();
+            }
+
+            function expdf_feefo_port_country() {
+                try {
+                    $('#abFeefoReviewsCon').show();
+
+                    loadFeefo();//feefosummery
+                    $('.abFeefoReviews #feefoData img').attr('src', '/image/ab/feefo-logo-4.svg');
+                    var cards = $(".abFeefoReviewsRow .sm4");
+                    for (var i = 0; i < cards.length; i++) {
+                        var target = Math.floor(Math.random() * cards.length - 1) + 1;
+                        var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+                        cards.eq(target).before(cards.eq(target2));
+                    }
+
+                    runfeefoReview()
+
+                    function runfeefoReview() {
+                        var bookingsToShow = 3;
+                        var widthFix = 3;
+
+                        if (window.innerWidth < 768) {
+                            bookingsToShow = 1;
+                            widthFix = 10;
+                        }
+                        if (window.innerWidth >= 768 && window.innerWidth < 992) {
+                            bookingsToShow = 2;
+                            widthFix = 5;
+                        }
+
+                        var noOfDivs = $('#abFeefoReviewsWrap .sm4').length;
+                        widthFix = (noOfDivs > widthFix) ? widthFix : noOfDivs
+                        bookingsToShow = (noOfDivs > bookingsToShow) ? bookingsToShow : noOfDivs
+
+                        var divWidths = $('#abFeefoReviewsWrap').width() / bookingsToShow + widthFix;
+
+                        var totalWidth = noOfDivs * divWidths;
+                        $('.abFeefoReviewsRow').css('width', totalWidth);
+                        $('.abFeefoReviewsRow .sm4').css('width', divWidths);
+
+                        var feefoAnimationIterations = noOfDivs - bookingsToShow
+                        abFeefoReviewsRowAnimation(feefoAnimationIterations, divWidths);
+                    }
+
+                    $(window).resize(function (event) {
+                        $('.abFeefoReviewsRow, .abFeefoReviewsRow .sm4').removeAttr('style');
+                        $('.abFeefoReviewsRow').finish();
+                        $('.abFeefoReviewsRow').css('right', '6px');
+
+                        runfeefoReview();
+                    });
+
+                    function abFeefoReviewsRowAnimation(iterations, divWidths) {
+                        $('.abFeefoReviewsRow .sm4').each(function (i) {
+                            if (i < iterations) {
+                                $(".abFeefoReviewsRow").delay(4000).animate({ right: "-=" + divWidths }, 1000);
+                            }
+                        });
+                        $(".abFeefoReviewsRow").promise().done(function () {
+                            $(".abFeefoReviewsRow").delay(4000).animate({ right: "+=" + $(".abFeefoReviewsRow")[0].style['right'].replace('-', '').replace('px', '') }, 2000);
+                        });
+                    }
+
+                } catch (e) {
+                }
+            }
+
+            function expdf_move_port_address_up_the_page() {
+                try {
+                    var address = $('.abHowToGetTo');
+                    if (address.length > 0) {
+                        var selectedIndex;
+                        var selectedAddressSimilarity;
+                        for (var i = 0; i < address.length; i++) {
+                            var adminTranslation = $('.abHowToGetTo:eq(' + i + ') h5').text();
+              
+                            /*
+                             * Hack. This experiment was chacking for identical strings. Admin translations don't always match
+                             * database / label translations. So let's find the closest matching title instead.
+                             * 
+                             * e.g. Adresse du port de Calais -> Adresse du port de ferry de Calais
+                             */
+                            var iterationSimilarity = levenshtein_distance(adminTranslation, portAddress);
+                            if (selectedAddressSimilarity === undefined || selectedAddressSimilarity > iterationSimilarity) {
+                                selectedIndex = i;
+                                selectedAddressSimilarity = iterationSimilarity;
+                            }
+                        }
+                        $('#divPortMap h3').text(portNameH3);
+                        $('#divPortMap h3').after('<p class="abAddressMove"></p>');
+                        $('.abAddressMove').append($('.abHowToGetTo:eq(' + selectedIndex + ') p').html());
+                    }
+                } catch (e) {
+                }
+            }
+
+            /*
+             * Measure the distance between two strings. 
+             */
+            function levenshtein_distance(a, b) {
+                var t = [], u, i, j, m = a.length, n = b.length;
+                if (!m) { return n; }
+                if (!n) { return m; }
+                for (j = 0; j <= n; j++) { t[j] = j; }
+                for (i = 1; i <= m; i++) {
+                    for (u = [i], j = 1; j <= n; j++) {
+                        u[j] = a[i - 1] === b[j - 1] ? t[j - 1] : Math.min(t[j - 1], t[j], u[j - 1]) + 1;
+                    } t = u;
+                } return u[n];
+            }
+
+            function expdf_ship_banner_move_social_icons() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.hCon+.hCon{display:none}.abSocialMove{padding:0 0 5px;margin:0;text-align:center}.abSocialMove ul li{display:inline-block;float:none}.abShipBannerCon .sm7{background:url(/image/ab/banners/ferry.jpg) bottom left no-repeat;background-size:cover;min-height:210px}.abShipBanner{background:#e0f1fa;padding:35px 15px}.abShipBanner h3{background:0 0;padding:0}.abShipBanner p{margin:0;padding:20px 0}.abShipBanner>div{margin:0}@media (max-width:767px){.abShipBannerCon .sm7{margin:0 15px}}@media (min-width:768px){.abShipBannerCon .sm5{padding-right:0}.abShipBannerCon .sm7{padding-left:0;border-right:15px solid #FFF}}@media (min-width:768px) and (max-width:992px){.abShipBannerCon.hCon{display:table;padding-left:0;padding-right:0;margin-bottom:30px}.abShipBannerCon.hCon .rowH{display:table-row}.abShipBannerCon.hCon .colH{display:table-cell;float:none}.abShipBannerCon.hCon .colT{vertical-align:top}.abShipBannerCon.hCon .colM{vertical-align:middle}}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+
+                    $('footer .con .row').prepend('<div class="abSocialMove social"></div>');
+                    $('.abSocialMove').append($('.social ul'));
+                    $('.hCon + .hCon').after('<div class="con hCon abShipBannerCon" style="margin-bottom:30px;display:block;"><div class="row rowH"><div class="colH colM sm5 md4"><div class="abShipBanner"></div></div><div class="colH colM sm7 md8"></div></div></div>');
+                    $('.abShipBanner').append($('.onBoard'));
+                } catch (e) {
+                }
+            }
+                              
+        function expdf_change_op_box_text() {
+            try {
+                 $('.hOpBox h2').text("We work with the biggest operators!");
+            } catch (e) {
+            }
+        }
+
+    function expdf_Persistent_USPBar() {
+        try {
+            $('#USPBarDiv').css("display", "block");
+           
+            var url = window.location.pathname;
+            var myPageName = url.substring(url.lastIndexOf('.') + 1);
+            var idx = myPageName.indexOf("htm");
+            
+            if (idx == 0) {
+                $('#USPBarDiv').css("margin-bottom", "20px");
+            }
+      
+        } catch (e) {
+        }
+        }
+
+        function expdf_Fullscreen_Pops() {
+            try {
+                var style = document.createElement('style')
+                style.type = 'text/css'
+                style.innerHTML = '@media (max-width: 767px) {.fs .formPopup{position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:0!important;background:#FFF;padding-top:0!important;overflow: scroll;}.fs .popupTitle{border:none!important;}.fs .formCon{border:none!important;}.fs .fsDone{width:100%!important;font-size:14px!important;line-height: 1.42857143!important;padding: 4px 10px!important;background-image:none!important;}#passPopupOut table, #passPopupRet table{width:100%!important;}.fs .formPopup .form-group{margin-bottom:10px!important;}.fs .popupClose{top:6px!important;}.fs .fsTLnk{margin-bottom:10px!important;}.fs .formCon{padding:15px!important;}}'
+                document.getElementsByTagName('head')[0].appendChild(style)
+
+            } catch (e) {
+            }
+        }
+
+        function expdf_homepage_tablet_redo() {
+            try {
+                var style = document.createElement('style')
+                style.type = 'text/css'
+                style.innerHTML = '@media (max-width:990px){.onBoard h3,.hOpBox h2,.hPorBox h2,.hPriBox h2,.hRouBox h2,.newOpLogos h2,.newOpLogos h3,.newOpLogos h3.h1{font-size:20px}.hIntBox .whyUseDF h1{background:none;padding-left:0;color:#222;font-size:20px;margin-bottom:20px}}@media (min-width:450px) and (max-width:990px){.hIntBox .whyUseDF h1{text-align:center}.accomm,.onBoard,.social{width:50%;float:left}.hIntBox .whyUseDF{background:#dff3de;margin-bottom:15px;padding:15px;float:left;width:100%}.whyUseDF p,.whyUseDFMobile p{background:url(/image/ab/tick2.png) left 8px no-repeat;font-size:14px;width:50%;float:left;height:51px;margin-left:0}.countryData .btn{white-space:wrap}}@media (min-width:1200px){.subNav ul li a,.subNav ul li span{font-size:13px}}@media (max-width:766px){.hOpBox,.hPorBox,.hPriBox,.hRouBox{width:100%;float:left}.row.opLogos .xs2{width:20%}}@media (max-width:650px){.accomm,.onBoard,.social{width:100%;float:left}}@media (max-width:549px){.row.opLogos .xs2{width:33.33%}}'
+                document.getElementsByTagName('head')[0].appendChild(style)
+
+                $('h2 br').replaceWith(' ');
+                $('h3 br').replaceWith(' ');
+                $('h1 br').replaceWith(' ');
+            } catch (e) {
+            }
+        }
+
+        function expdf_welcome_back_call() {
+            try {
+                if (localStorage.getItem("dfFirstName") == null) {
+                    $.ajax({
+                        type: "GET",
+                        url: "https://ssl.directferries.com/secure/ws/recent_searches.asmx/GetUserNameToDisplay",
+                        dataType: "jsonp",
+                        success: function (data) {
+                            //console.log('Made successful ajax call');
+                            if (data.d['userName'] !== undefined) {
+                                localStorage.setItem("dfFirstName", data.d['userName']);
+                                setUpWelcomeBackExp(localStorage.getItem("dfFirstName"));
+                            }// else console.log('Undefined Cookie');
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            //console.log('Made unsuccessful ajax call');
+                            $('.abWelcomeBack').parent().hide();
+                        }
+                    });
+                } else {
+                    //console.log('No AJAX');
+                    setUpWelcomeBackExp(localStorage.getItem("dfFirstName"))
+                }
+            } catch (e) {
+
+            }
+        }
+        function setUpWelcomeBackExp(nameInput) {
+            var myOuterDiv = document.createElement('div');
+            $(myOuterDiv).addClass('sm12');
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = '.abWelcomeBack{background: url(/image/ab/icon-user.png) 8px 3px no-repeat #cce9cc;padding:7px 15px 7px 36px;margin-bottom: 15px;font-size: 13px;color: #117f11;border-radius: 3px;} @media (min-width:768px) {.abWelcomeBack{display: none;}}';  myOuterDiv.append(style);
+            var myInnerDiv = document.createElement('div');
+            $(myInnerDiv).addClass('abWelcomeBack');
+            $(myInnerDiv).html('Welcome back [--X--]'.replace('[--X--]', nameInput));
+            myOuterDiv.append(myInnerDiv);
+            $('.sm12.logoBar').after(myOuterDiv);
+        }
+
+        //function expdf_footer_redesign() {
+        //    try {
+        //        $("#newFooter").addClass("ab-new-footer");
+        //    } catch (e) {
+        //    }
+        //}
+
+        function expdf_font_awesome_route_pages() {
+            try {
+                (function () {
+                    var css = document.createElement('link');
+                    css.href = '/styles/font_awesome.css';
+                    css.rel = 'stylesheet';
+                    css.type = 'text/css';
+                    document.getElementsByTagName('head')[0].appendChild(css);
+                })();
+            } catch (e) {
+            }
+        }
+
+        function expdf_lang_dropdown_mobile() {
+            try {
+                var style = document.createElement('style')
+                style.type = 'text/css'
+                style.id = 'langDropdownMobileExpStyle'
+                style.innerHTML = '@media (max-width:767px){.conNav{display:block!important;margin:10px 0 0!important}.conNav>li{display:none!important}.conNav>li.lang{display:block!important}.conNav>li.lang>a{padding:5px 0;background-position:right -1272px}.conNav .lang .dropdown{width:293px!important}}'
+                document.getElementsByTagName('head')[0].appendChild(style)
+                var mobLangTracking = 0;
+                $("#lang").click(function () {
+                    if (mobLangTracking == 0) {
+                        ga('send', 'event', 'AB-735', 'mobLangClicked', 'true');
+                        mobLangTracking = 1;
+                    }
+                });
+            } catch (e) {
+            }
+        }
+
+        function expdf_track_user_data_homepage_old() {
+            try {           
+            }
+            catch (e) { }
+        }
+
+        function expdf_colorful_social_media() {
+            try {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '.social ul li a{font-size:0;padding-top:40px;color:#fff}.social ul li.facebook{background:url(/image/ab/ab-facebook-icon.png) no-repeat}.social ul li.twitter{background:url(/image/ab/ab-twitter-icon.png) no-repeat}.social ul li.google{background:url(/image/ab/ab-google-plus-icon.png) no-repeat}.social ul li.youtube{background:url(/image/ab/ab-youtube-icon.png) no-repeat}.social ul li.signUp{background:url(/image/ab/ab-email-icon.png) no-repeat}.social ul li.download{background:url(/image/ab/ab-app-icon.png) no-repeat}';
+                document.getElementsByClassName("social")[0].appendChild(style);
+            } catch (e) { }
+        }
+
+        function expdf_route_page_emphasis() {
+            try {
+                var style = document.createElement('style')
+                style.type = 'text/css'
+                style.innerHTML = '.ab-route-banner {background:url(/image/ab/banners/ireland.jpg) no-repeat top right;padding:160px 20px 20px 20px;position:relative;height:480px;margin-bottom:15px;} .ab-route-banner.ab-route-banner--albania {background:url(/image/ab/banners/albania.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--corsica {background:url(/image/ab/banners/corsica.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--croatia {background:url(/image/ab/banners/croatia.jpg) no-repeat 0px -330px} .ab-route-banner.ab-route-banner--elba {background:url(/image/ab/banners/elba.jpg) no-repeat 0px -240px} .ab-route-banner.ab-route-banner--england {background:url(/image/ab/banners/england.jpg) no-repeat 0px -180px} .ab-route-banner.ab-route-banner--france {background:url(/image/ab/banners/france.jpg) no-repeat 0px -300px} .ab-route-banner.ab-route-banner--germany {background:url(/image/ab/banners/germany.jpg) no-repeat 0px -300px} .ab-route-banner.ab-route-banner--gotland {background:url(/image/ab/banners/gotland.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--greece {background:url(/image/ab/banners/greece.jpg) no-repeat left -130px} .ab-route-banner.ab-route-banner--ireland {background:url(/image/ab/banners/ireland.jpg) no-repeat top left} .ab-route-banner.ab-route-banner--isle-of-man {background:url(/image/ab/banners/isle_of_man.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--isle-of-wight {background:url(/image/ab/banners/isle_of_wight.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--jersey {background:url(/image/ab/banners/jersey.jpg) no-repeat 0px -90px} .ab-route-banner.ab-route-banner--mallorca {background:url(/image/ab/banners/mallorca.jpg) no-repeat top center} .ab-route-banner.ab-route-banner--morocco {background:url(/image/ab/banners/morocco.jpg) no-repeat 0px -10px} .ab-route-banner.ab-route-banner--norway {background:url(/image/ab/banners/norway.jpg) no-repeat left -20px} .ab-route-banner .countryHeader {position:absolute;opacity:0.3;font-size:110px;color:#fff;left:10%;top:4%;-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); -webkit-mask-size: 200%;animation: shine 2s infinite ease-in;text-transform:uppercase;} .ab-route-banner span.ab-route-banner--subheader {font-size:28px;color:#fff;letter-spacing:0.5px;font-weight:bold;left:12%;position:absolute;text-transform:uppercase;line-height:24px;top:24%;} .ab-route-banner .con.noBanner {position:relative;} .ab-route-banner .con.noBanner .fsWrap {box-shadow:4px 5px 10px 2px #0000005e;-webkit-box-shadow:4px 5px 10px 2px #0000005e;border-bottom-right-radius:5px;border-bottom-left-radius:5px;} @-webkit-keyframes shine { from {-webkit-mask-position: 150%;} to {-webkit-mask-position: -50%;} } @media (min-width:1800px) { .ab-route-banner, .ab-route-banner.ab-route-banner--albania, .ab-route-banner.ab-route-banner--corsica, .ab-route-banner.ab-route-banner--croatia, .ab-route-banner.ab-route-banner--elba, .ab-route-banner.ab-route-banner--england, .ab-route-banner.ab-route-banner--france, .ab-route-banner.ab-route-banner--germany, .ab-route-banner.ab-route-banner--gotland, .ab-route-banner.ab-route-banner--greece, .ab-route-banner.ab-route-banner--ireland, .ab-route-banner.ab-route-banner--isle-of-man, .ab-route-banner.ab-route-banner--isle-of-wight, .ab-route-banner.ab-route-banner--jersey, .ab-route-banner.ab-route-banner--mallorca, .ab-route-banner.ab-route-banner--morocco, .ab-route-banner.ab-route-banner--norway {background-position:top center;} } @media (max-width:1000px) { .ab-route-banner .countryHeader {font-size:80px;} .ab-route-banner span.ab-route-banner--subheader {top:100px;} } @media (max-width:786px) { .ab-route-banner .countryHeader {font-size:70px;top:5%;} .ab-route-banner {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/ireland.jpg) ;} .ab-route-banner.ab-route-banner--albania {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/albania.jpg) ;} .ab-route-banner.ab-route-banner--corsica {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/corsica.jpg) ;} .ab-route-banner.ab-route-banner--croatia {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/croatia.jpg) ;} .ab-route-banner.ab-route-banner--elba {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/elba.jpg) ;} .ab-route-banner.ab-route-banner--england {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/england.jpg) ;} .ab-route-banner.ab-route-banner--france {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/france.jpg) ;} .ab-route-banner.ab-route-banner--germany {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/germany.jpg) ;} .ab-route-banner.ab-route-banner--gotland {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/gotland.jpg) ;} .ab-route-banner.ab-route-banner--greece {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/greece.jpg) ;} .ab-route-banner.ab-route-banner--ireland {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/ireland.jpg) ;} .ab-route-banner.ab-route-banner--isle-of-man {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/isle_of_man.jpg) ;} .ab-route-banner.ab-route-banner--isle-of-wight {height:auto;background-position:0px -60px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/isle-of-wight.jpg) ;} .ab-route-banner.ab-route-banner--jersey {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/jersey.jpg) ;} .ab-route-banner.ab-route-banner--mallorca {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/mallorca.jpg) ;} .ab-route-banner.ab-route-banner--morocco {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/morocco.jpg) ;} .ab-route-banner.ab-route-banner--norway {height:auto;background-position:left 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/norway.jpg) ;} } @media (max-width:400px) { .ab-route-banner {padding:90px 10px 10px 10px;} .ab-route-banner .countryHeader {font-size:50px;left:20px;top:14px;} .ab-route-banner span.ab-route-banner--subheader {top:55px;} }';
+                document.getElementsByTagName('head')[0].appendChild(style)
+                $('#header > > .con.noBanner').parent().addClass("ab-route-banner--" + routeIndCountryImgName.toLowerCase());
+                $('#header > > .con.noBanner').parent().addClass("ab-route-banner effect-shine");
+                $('#header > > .con.noBanner').before('<div class="countryHeader">' + routeIndCountryNameTranslate + '</div>');
+                $('#header > > .con.noBanner').before('<span class="ab-route-banner--subheader">' + routeIndPortNameTranslate + '</span>');
+            } catch (e) { }
+        }
+
+        function expdf_route_page_emphasis_v2() {
+            try {
+                var CountryToImgList = routeIndCountryToImgList.split(",");
+                routeIndCountryImgName = CountryToImgList[Math.floor(Math.random() * CountryToImgList.length)];
+                var styleStr = '.ab-route-banner {background:url(/image/ab/banners/[--COUNTRYIMG--]) no-repeat top right;padding:160px 20px 20px 20px;position:relative;height:480px;margin-bottom:15px;} .ab-route-banner.ab-route-banner-country {background:url(/image/ab/banners/[--COUNTRYIMG--]) no-repeat top left} .ab-route-banner .countryHeader {position:absolute;opacity:0.3;font-size:110px;color:#fff;left:10%;top:4%;-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); -webkit-mask-size: 200%;animation: shine 2s infinite ease-in;text-transform:uppercase;} .ab-route-banner span.ab-route-banner--subheader {font-size:28px;color:#fff;letter-spacing:0.5px;font-weight:bold;left:12%;position:absolute;text-transform:uppercase;line-height:24px;top:24%;} .ab-route-banner .con.noBanner {position:relative;} .ab-route-banner .con.noBanner .fsWrap {box-shadow:4px 5px 10px 2px #0000005e;-webkit-box-shadow:4px 5px 10px 2px #0000005e;border-bottom-right-radius:5px;border-bottom-left-radius:5px;} @-webkit-keyframes shine { from {-webkit-mask-position: 150%;} to {-webkit-mask-position: -50%;} } @media (min-width:1800px) { .ab-route-banner, .ab-route-banner.ab-route-banner-country {background-position:top center;} } @media (max-width:1000px) { .ab-route-banner .countryHeader {font-size:80px;} .ab-route-banner span.ab-route-banner--subheader {top:100px;} } @media (max-width:786px) { .ab-route-banner .countryHeader {font-size:70px;top:5%;} .ab-route-banner {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/[--COUNTRYIMG--]) ;} .ab-route-banner.ab-route-banner-country {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/[--COUNTRYIMG--]) ;} } @media (max-width:400px) { .ab-route-banner {padding:90px 10px 10px 10px;} .ab-route-banner .countryHeader {font-size:50px;left:20px;top:14px;} .ab-route-banner span.ab-route-banner--subheader {top:55px;} }';
+                styleStr = styleStr.split('[--COUNTRYIMG--]').join(routeIndCountryImgName);
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = styleStr;
+                document.getElementsByTagName('head')[0].appendChild(style)
+                $('#header > > .con.noBanner').parent().addClass("ab-route-banner-country");
+                if ($('.ab-route-banner effect-shine').length == 0) {
+                    $('#header > > .con.noBanner').parent().addClass("ab-route-banner--" + routeIndCountryImgName.toLowerCase());
+                    $('#header > > .con.noBanner').parent().addClass("ab-route-banner effect-shine");
+                    $('#header > > .con.noBanner').before('<div class="countryHeader">' + routeIndCountryNameTranslate + '</div>');
+                    $('#header > > .con.noBanner').before('<span class="ab-route-banner--subheader">' + routeIndPortNameTranslate + '</span>');
+                }
+            } catch (e) { }
+        }
+
+        function expdf_country_page_emphasis() {
+            try {
+                var CountryToImgList = destinationIndCountryToImgList.split(",");
+                destinationIndCountryImgName = CountryToImgList[Math.floor(Math.random() * CountryToImgList.length)];
+                var styleStr = '.ab-destination-banner {background:url(/image/ab/banners/[--COUNTRYIMG--]) no-repeat top right;padding:160px 20px 20px 20px;position:relative;height:480px;margin-bottom:15px;} .ab-destination-banner.ab-destination-banner-country {background:url(/image/ab/banners/[--COUNTRYIMG--]) no-repeat top left} .ab-destination-banner h1 {position:absolute;opacity:0.3;font-size:110px;color:#fff;left:10%;top:4%;-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); -webkit-mask-size: 200%;animation: shine 2s infinite ease-in;text-transform:uppercase;} .ab-destination-banner span.ab-destination-banner--subheader {font-size:28px;color:#fff;letter-spacing:0.5px;font-weight:bold;left:12%;position:absolute;text-transform:uppercase;line-height:24px;top:24%;} .ab-destination-banner .con.noBanner {position:relative;} .ab-destination-banner .con.noBanner .fsWrap {box-shadow:4px 5px 10px 2px #0000005e;-webkit-box-shadow:4px 5px 10px 2px #0000005e;border-bottom-right-radius:5px;border-bottom-left-radius:5px;} @-webkit-keyframes shine { from {-webkit-mask-position: 150%;} to {-webkit-mask-position: -50%;} } @media (min-width:1800px) { .ab-destination-banner, .ab-destination-banner.ab-destination-banner-country {background-position:top center;} } @media (max-width:1000px) { .ab-destination-banner h1 {font-size:80px;} .ab-destination-banner span.ab-destination-banner--subheader {top:100px;} } @media (max-width:786px) { .ab-destination-banner h1 {font-size:70px;top:5%;} .ab-destination-banner {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/[--COUNTRYIMG--]) ;} .ab-destination-banner.ab-destination-banner-country {height:auto;background-position:center 0px;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/image/ab/banners/[--COUNTRYIMG--]) ;} } @media (max-width:400px) { .ab-destination-banner {padding:90px 10px 10px 10px;} .ab-destination-banner h1 {font-size:50px;left:20px;top:14px;} .ab-destination-banner span.ab-destination-banner--subheader {top:55px;} }';
+                styleStr = styleStr.split('[--COUNTRYIMG--]').join(destinationIndCountryImgName);
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = styleStr;
+                document.getElementsByTagName('head')[0].appendChild(style)
+                $('#header > > .con.noBanner').parent().addClass("ab-destination-banner-country");
+                $('#header > > .con.noBanner').parent().addClass("ab-destination-banner effect-shine");
+                $('#header > > .con.noBanner').before("<h1>" + destinationIndCountryNameTranslate + "</h1>");
+            } catch (e) { }
+        }
+
+        function expdf_feefo_green_bar() {
+            try {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '#feefoData {margin-top:-15px;}#feefoData .feefo {padding:7px;background:#429a42;color:#fff;position:relative;}#feefoData .feefo:before {content: "";background: #429a42;position: absolute;left: -100%;top:0px;bottom: 0;width: 100%;;height:100%;}#feefoData .feefo:after{content: "";background: #429a42;position: absolute;right: -100%;top:0px;bottom: 0;width: 100%;;height:100%;}#feefoData .feefoL {height:auto;margin-top:-6px;}@media (max-width:991px) {#feefoData {float:left;text-align:center;}#feefoData .feefo {font-size:14px;}#feefoData .feefoL {height:18px;}}.feeRating,.rating, .sRating {background-image:none;width:85px;}.feeRating.f50::after,.rating.r50::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f45::after,.rating.r45::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f40::after,.rating.r40::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f35::after,.rating.r35::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f30::after,.rating.r30::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f25::after,.rating.r25::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f20::after,.rating.r20::after {font-family:"Font Awesome Solid";content:"\\f005 \\f005";font-size:14px;color:#64b6e6;}.feeRating.f15::after,.rating.r15::after {font-family:"Font Awesome Solid";content:"\\f005 \\f089";font-size:14px;color:#64b6e6;}.feeRating.f10::after,.rating.r10::after {font-family:"Font Awesome Solid";content:"\\f005";font-size:14px;color:#64b6e6;}.feeRating.f5::after,.rating.r5::after {font-family:"Font Awesome Solid";content:"\\f089";font-size:14px;color:#64b6e6;}.hreview .rating, .hreview .sRating {text-align:right;}.feeRating.f50::after, .feeRating.f45::after, .feeRating.f40::after, .feeRating.f35::after, .feeRating.f30::after, .feeRating.f25::after, .feeRating.f20::after, .feeRating.f15::after, .feeRating.f10::after, .feeRating.f5::after {color:#fff}.feeRating.f45,.rating.r45 {width:auto;}.feeRating.f35,.rating.r35 {width:auto;}.feeRating.f25,.rating.r25 {width:auto;}.feeRating.f15,.rating.r15 {width:auto;}.feeRating.f5,.rating.r5 {width:auto;}';
+                document.getElementById("divFeefoContainer").appendChild(style);
+                $('#feefoData>a.feefo').attr('target', 'none');
+                $('#feefoData img').attr('src', '/image/ab/ab-feefo-white-logo.png');
+                $('body').css('overflow-x', 'hidden')
+            } catch (e) { }
+        }
+
+        function expdf_remove_top_bar_static() {
+            try {
+                $('.topBar').css("display", "none");
+                $('#divFooterSubPages').css("display", "block");
+            } catch (e) {
+
+            }
+        }
+        function expdf_sitewide_styles() {
+            try {
+                $("head link[rel='stylesheet']").last().after("<link rel='stylesheet' href='http://static.directferries.co.uk/css/sitewide-ui.css' type='text/css' media='screen'>");
+
+            } catch (e) {
+            }
+        }
+        function expdf_new_site_nav() {
+            try {
+                $(".subNav li").children().eq(5).css("display", "none")
+                $(".subNav li").children().eq(10).css("display", "none")
+
+                $(".topBar").css("display", "none")
+                $(".ab-navigation--footer").css("display", "block")
+                $(".ab-new-navigation").css("display", "block")
+                $(".logoBar").css("display", "none")
+                $("footer").children().eq(0).css("display", "none")
+                $("footer").css("padding", "0px 0")
+
+                $(".lang.new").append($("#langs").clone())
+                $(".rSer.ab-new--list").append($("#recentPopup").clone())
+            } catch (e) { }
+        }
+        function expdf_feefo_new_tab() {
+            try {
+                $('#feefoData>a.feefo').attr('target', 'none');
+            } catch (e) { }
+        }
+
+                    function expdf_show_me_prices_btn() {
+        try {
+            $("#btnSearch").text("Show me prices")
+} catch (e) {
+}
+}
+            function expdf_default_list_view_op_pages() {
+                try {
+                    $('#tabList').click();
+                } catch (e) { }
+            }
+
+            function expdf_port_rejig() {
+                try {
+                    var parel = $('div.intTxt').parent().parent();
+                    parel.append($('div.intTxt').parent());
+                } catch (e) {
+                }
+            }
+
+            function expdf_we_work_with_operator_box_home() {
+                try {
+                    $("#WeWorkWith").css("display", "block");
+                    $(".sm6.md4.colH.hOpBox").addClass("ab-operator-box hOpBox")
+                } catch (e) {
+                }
+            }
+
+            function expdf_feefo_routes_v2() {
+                try {
+                    $('#abFeefoReviewsCon').hide();
+                    $('#routeRev').hide();
+                    $('.feefo-wrap').parent().show();
+                    $('#routeInfo').addClass("sm12 md6")
+                } catch (e) {
+                }
+            }
+            function expdf_tick_we_work_with_operators() {
+                try {
+                    $('#weWorkWithOpsP').css("display", "block");
+
+                } catch (e) {
+                }
+            }
+
+            function expdf_dealfinder_lighbox_style() {
+                try {
+                    $(".formPopup").css("z-index", "10000")
+                    $("#ui-datepicker-div").css("z-index", "10000!important")
+                    $("#ui-id-1").css("z-index", "10000")
+                    $("#ui-id-2").css("z-index", "10000")
+
+                    $(".fsPop, .fsWrap").unbind('click')
+                    $(".fsWrap").click(function () {
+                        $(".fsPop").fadeIn("slow");
+                        $(".fsWrap").addClass('fsWrapPop');
+                        $(".fsPop").click(function () { $(".fsPop").fadeOut("slow"); })
+                    });
+                } catch (e) {
+                }
+            }
+
+            function expdf_contact_us_form() {
+                $('.hideFormControlDiv').show();
+                $("li[id^='emailDF']").remove()
+            }
+
+            function expdf_contactus_hide_premium() {
+                try {
+                    $('.premiumPhoneLi > span').filter(function () {
+                        var excludedSites = ['callingFromDF10PT', 'callingFromDF10CA', 'callingFromDF10F_CA', 'callingFromDF10CN', 'callingFromDF10COM', 'callingFromDF10AU', 'callingFromDF10ID'];
+                        return (excludedSites.indexOf($(this).parent().attr('id')) == -1)
+                    }).contents().filter(function () {
+                        return this.nodeType == 3;
+                    }).wrap('<div> <div />').parent().hide();
+
+                    $('.premiumPhoneLi > span > b').filter(function () {
+                        var excludedSites = ['callingFromDF10PT', 'callingFromDF10CA', 'callingFromDF10F_CA', 'callingFromDF10CN', 'callingFromDF10COM', 'callingFromDF10AU', 'callingFromDF10ID'];
+                        return (excludedSites.indexOf($(this).parent().parent().attr('id')) == -1)
+                    }).hide();
+                    $('.callAbroadSpan').filter(function () {
+                        var excludedSites = ['callingFromDF10PT', 'callingFromDF10CA', 'callingFromDF10F_CA', 'callingFromDF10CN', 'callingFromDF10COM', 'callingFromDF10AU', 'callingFromDF10ID'];
+                        return (excludedSites.indexOf($(this).parent().parent().attr('id')) == -1)
+                    }).each(function (index) {
+                        var v = $(this).parent().parent().next().children('span').children('b').html();
+                        $(this).children('b').html(v);
+                        $(this).parent().parent().parent().parent().parent().children('p').last().hide()//hide asterisch
+                    })
+                } catch (e) {
+                }
+            }
+
+            function expdf_remove_feefo_link() {
+                try {
+                    $('.feefo').removeAttr("href")
+                    $('.feefo').on("mouseover", function () {
+                        $(this).css("color", "#193354");
+                    })
+                }
+                catch (e) { }
+            }
+
+            function expdf_phones_not_working() {
+                try {
+                    $('.PhonesNotWorking').show();
+                    $('.PhonesNotWorking').text("Due to a telephone provider outage our phone lines are currently down. Our provider is working on the issue and we are hopeful that this will be resolved shortly. We are very sorry for any inconvenience this will cause you. We are still reachable via email. If you have an urgent issue please send us an email at customer.services@directferries.com and we will get back to you as soon as we can.")
+                } catch (e) { }
+            }
+
+            function expdf_phones_not_available_after_3pm() {
+                try {
+                   
+                     $('.PhonesNotWorking').show();
+                     $('.PhonesNotWorking').text($('#phonesNotWorkingText').text())
+                } catch(e){
+
+                }
+            }
+
+            function expdf_homepage_seo_content() {
+                try {
+                    $('.ab-con--wrapper').show();
+                } catch (e) { }
+            }
+
+            function expdf_alternative_route_links() {
+                try {
+                    $('#divRouteAlternatives').show();
+                    $('#divRouteC2C').show();
+                } catch (e) { }
+            }
+
+            function expdf_DE_FR_routelinks_homepage() {
+                try {
+                    $('.popRouteDiv').show();
+                } catch (e) {
+                }
+            }
+            function expdf_e_ticket_as_a_selling_point() {
+                try {                    
+                    $('#etix').show();
+                } catch (e) { }
+            }
+
+            function expdf_special_offer_wording()
+            {
+                try {
+                    $(".gaTrackSO").text("Deals");
+                    $("a.btn-sm").text("View Deal");
+                } catch (e) { }
+            }
+
+            function expdf_route_page_from_price()
+            {
+                $("span.btn").unbind();
+                $("li.lk").hide();
+                $(".expRoutePageFromPriceB").show();
+            }
+
+            function expdf_AB_dealfinder_test_mob_A() {
+                try {
+                } catch (e) {
+                }
+            }
+            function expdf_AB_dealfinder_test_mob_B() {
+                try {
+                } catch (e) {
+                }
+            }
+
+            function expdf_AB_dealfinder_test_A() {
+                try {
+                } catch (e) {
+                }
+            }
+            function expdf_AB_dealfinder_test_B() {
+                try {
+                } catch (e) {
+                }
+            }
+
+            function expdf_get_price_fill_df() {
+                try {
+                    $('.btn.btn-xs').click(function () {
+                        _getpricefilldf = true;
+                        if (window.innerWidth < 768) {
+                            _deviceTypeMobile = true;
+                        }
+                        else {
+                            _deviceTypeMobile = false
+                        }
+                        $('#txtrouteout').trigger('click')
+                        $('.ui-autocomplete').css('opacity', '0.01');
+                        setTimeout(function () {
+                            var uiItemId;
+                            var uItemIndex = 0;
+                            $('.ui-menu-item').each(function () {
+                                //alert($(this).children().eq(0).text() + "  :  " + $('#hdnRouteOut').val())
+
+                                if ($(this).children().eq(0).text() == $('#hdnRouteOut').val() && $(this).children().eq(2).text().indexOf($('#hdnRouteRet').val()) > -1) {
+
+                                    uiItemId = $(this).attr('id');
+
+                                    $('#txtrouteout').val($('#hdnRouteOut').val() + " - " + $('#hdnRouteRet').val())
+
+                                    $(this).trigger('click');
+
+                                    $('.ui-menu-item').each(function () {
+                                        if ($(this).children().eq(0).text() == $('#hdnRouteOut').val() && $(this).children().eq(2).text().indexOf($('#hdnRouteRet').val()) > -1) {
+                                            uItemIndex = $(this).index()
+                                        }
+                                    })
+                                }
+                                if (uItemIndex > 0) {
+                                    $('#txtrouteout').trigger('click');
+                                    setTimeout(function () { $('#dealP').trigger('click') }, 100);
+                                    setTimeout(function () { $('.ui-menu-item:eq(' + (uItemIndex).toString() + ')').trigger('mouseover') }, 140);
+                                    setTimeout(function () { $('.ui-menu-item:eq(' + (uItemIndex).toString() + ')').trigger('mouseover') }, 150);
+                                    setTimeout(function () { $('.ui-menu-item:eq(' + (uItemIndex).toString() + ')').trigger('mouseover') }, 153);
+                                    setTimeout(function () { $('.ui-menu-item:eq(' + (uItemIndex).toString() + ')').trigger('mouseover') }, 154);
+                                    setTimeout(function () { $('.ui-menu-item:eq(' + (uItemIndex).toString() + ')').trigger('click') }, 155);
+                                    $('.ui-autocomplete').css('opacity', '1');
+                                    setTimeout(function () { return false; }, 170)
+                                } else {
+                                    $('.ui-autocomplete').css('display', 'none');
+                                }
+                            });
+                        }, 250)
+                        $('.ui-autocomplete').css('opacity', '1');
+                    }
+             );
+                } catch (e) { }
+            }
+
+            function expdf_home_top_destinations() {
+                try
+                {
+                   populateDataTopDestinations();
+                }
+                catch (e)
+                {
+                }
+            }
+
+            function expdf_fc_on_homepage() {
+                try
+                {
+                    $("#free_cancellation_info_div").show();
+                } catch (e) { }
+            }
+                
+            function expdf_landing_page_breadcrumbs() {
+                try {
+                    $('.Breadcrumbs').show();
+                } catch (e) { }
+            }
+
+            
+            function expdf_operator_redesign() {
+                try {
+                    $('#operatorOnTop').show()
+                    $('.topBar').hide();
+                    $('.conNav').appendTo('#highestdiv');
+                    $('.conNav').addClass('ab-947-mt-10');
+                    $(".noBanner").parent("div").addClass("banner df-947-banner-fix")
+                    $("#homebar").css("display","none")
+                    $("#imgOperatorLogo").parents(':eq(3)').hide()
+                    $(".opReview").css("font-size", "14px")
+                    strurl = "url('https://static.directferries.co.uk/image/ab/ab-947/" + OpName + "')"
+                    $(".banner").css("background-image", strurl)
+                } catch (e) { }
+            }
+
+            function expdf_add_contactus_message_TA() {
+                try {
+                    var d = new Date();
+                    if (checkWorkingHours(d.getDay(),d.getHours(),1,5,8,18))
+                    {
+                        $('#ab-urgency-route').show();
+                        $('#UrgencyTip').hide();
+                    }
+                } catch (e) { }
+            }
+
+            function checkWorkingHours(day, hour, dayfrom, dayto, hourfrom, hourto) {
+                var working = false
+                if (day >= dayfrom && day <= dayto) {
+                    if (hour >= hourfrom && hour <= hourto) {
+                        working = true
+                    }
+                }
+                return working
+            }
+
+            function expdf_homepage_test_static() {
+
+            }
+
+            function expdf_route_page_intros() {
+                $("#header > .con").addClass("ab-910-relative");
+                $(".ab-route-banner").addClass("df-910-route-banner");
+                $("#ab-910").show();              
+                $(".countryHeader").hide();
+                $(".ab-route-banner--subheader").hide();
+                $("#routeInfo").hide();
+                $("#routeRev").removeClass("md6");
+                $(".noBanner").addClass("df-910-top");
+                $(".noBanner").prepend($(".df-910-show-mob"));
+                $(".noBanner").before($(".df-ab910-experiment"));
+                var totalSailing = 0;
+                var i = 0;
+                var sailingLength = $(".sa").length;
+                var saillingArray = $(".sa").text().match(/\d+/g).map(function (n) { return parseInt(n)});
+                var sailingTime;
+
+                if ($(".du").length > 0) {
+                    sailingTime = document.getElementsByClassName('du')[0].textContent
+                }
+
+                while (i < sailingLength) {
+                    totalSailing += saillingArray[i];
+                    i++;
+                }
+                
+                $(".df-910-sailings-li").append("<i class='far fa-calendar-alt orange'></i><strong>" + ab910SailingString + "</strong> " + totalSailing + " " + ab910SailingSecondString);
+                $(".df-910-time-li").append("<i class='far fa-clock orange'></i><strong>" + ab910AverageTimeString + "</strong> " + sailingTime + "");
+
+            }
+
+
+
+            function expdf_redesign_popular_routes() {
+
+                $(".linkable").addClass("df-1499-outer-grid");
+                $("#poprout").addClass("df-1499-title")
+                var sub_ul = $('<ul class="homepage-routes df-1499-outer-gridtwo" id="gridtwo"/>');
+                $("#popularRoutes").append(sub_ul);
+                var numelements = $(".linkable li").length
+                $(".linkable li").slice(9, numelements).appendTo("#gridtwo")
+                var ul = document.getElementById("gridone");
+                var listItems = ul.getElementsByTagName("li");
+                for (var i = 0; i < listItems.length; ++i) {
+                    var destiny = listItems[i].firstChild.getAttribute("data-im")
+                    var imagedest = document.createElement("img")
+                    imagedest.src = 'https://static.directferries.co.uk/image/ab/ab-1499/' + destiny + '.jpg'
+                    listItems[i].prepend(imagedest)
+                }
+            }
+
+            function expdf_brexit_banner()
+            {
+                $('.df-1772-brexit-outer').show()
+            }
+
+            function expdf_brexit_banner_homepage() {
+                $('.df-1772-brexit-outer').addClass('con').show()
+            }
+
+
+            function expdf_push_whyDF_top_route_ind()
+            {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '@media only screen and (min-width: 0px) and (max-width: 767px) {.newRoute .routeCol {order:2; -webkit-order:2}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+
+            function expdf_button_makeprice_bigger_routepage()
+            {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '.opRoutes .btn-xs {font-size:12px; padding:10px 25px 10px 17px; background-position:right -1094px}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+
+            function expdf_movewhydf_topcountry()
+            {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '@media only screen and (min-width: 0px) and (max-width: 767px) {.newCountry #countryLft { order: initial; -webkit - order: initial }}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+
+            function expdf_move_ctc_picture_after_title_mobile() {
+                try {
+                    document.querySelector(".sm8.md9 h1").after(document.querySelector(".AB174A"))
+                } catch (e) { }
+            }
+
+            function expdf_df_fade_calendar() {
+                try {
+                    $(document).ready(function () {
+                        var style = document.createElement('style')
+
+                        style.innerHTML = '@-webkit-keyframes fade-in {0 % {opacity: 0;}100 % {opacity: 1;}}@keyframes fade-in {0%{opacity: 0;}100%{opacity: 1;}}.ui-datepicker {-webkit-animation: fade -in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;-webkit-animation: fade -in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}';
+                        document.getElementsByTagName('head')[0].appendChild(style)
+                    });
+                } catch (e) { }
+            }
+
+            function expdf_improve_connection_ops() {
+                $('#litFerryCompaniesH2').hide();
+                $('#litFerryCompanies1418H2').show();
+            }
+
+            function expdf_scroll_animation_mobile() {
+                var script = document.createElement("script");
+                script.setAttribute('src', 'https://static.directferries.co.uk/scripts/aos.js');
+                document.body.appendChild(script);
+
+                var link = document.createElement("link")
+                link.setAttribute('href', 'https://static.directferries.co.uk/css/aos.css');
+                link.setAttribute('rel', "stylesheet");
+                document.head.appendChild(link);
+
+                $('#UrgencyTip').attr('data-aos', 'fade-right')
+                $('.whyUseDF').attr('data-aos', 'fade-left')
+                $('.whyUseDF').find('.h1').attr('data-aos', 'fade-right')
+                $('.alts').children().eq(0).attr('data-aos', 'fade-right')
+                $('.alts').find('.ulTbl').attr('data-aos', 'fade-left')
+
+                $('#divRouteAlternatives').attr('data-aos', 'fade-right')
+
+                $('#divRouteC2C').attr('data-aos', 'fade-left')
+                $('#divRouteC2C').attr('data-aos', 'fade-right')
+
+                $('.opShips h2').attr('.fade-in')
+                $('#divOpShips').find('.row').attr('data-aos', 'fade-right')
+                $('#divOpShips').attr('data-aos', 'fade-right')
+                $('.opShips h2').attr('data-aos', 'fade-left')
+
+                $('#routeOp').attr('data-aos', 'fade-left')
+                $('#routeRev').attr('data-aos', 'fade-right')
+                $('#routeInfo').attr('data-aos', 'fade-left')
+                $('#routeRest').attr('data-aos', 'fade-right')
+
+                $('.signUp').attr('data-aos', 'fade-right')
+                //$('.sm12.cards').attr('data-aos', 'fade-left')
+                //$('.sm12.copy').attr('data-aos', 'fade-right')
+
+                setTimeout(aosInit, 800)
+            }
+            function aosInit() {
+                AOS.init({
+                    duration: 800
+                });
+            }
+
+            function expdf_fully_clickable_ships() {
+                $('.ovlyS').click(function () {
+                    $(this).find('a')[0].click();
+                });
+            }
+
+            function expdf_homepage_global_menu() {
+                var masterMenu = {
+                    init: function () {
+                        $('nav.topBar, nav.subNav li.mMenu').css('display', 'none'); //Hide old menus
+                        this.setupCanvas();
+                        document.querySelector('#langDropdownMobileExpStyle').remove();
+                        this.createBurger();
+                        document.querySelector('.sidenav >.conNav').appendChild(document.querySelector('li.lang'));//move language menu
+                        this.travelTypeMenu();
+                        this.recentSearchMenu();
+                        this.headerTabItems();
+
+                        document.querySelector('.closebtn').addEventListener('click', this.closeNav)
+                        document.querySelector('#travelType').addEventListener('click', function () {
+                            masterMenu.toggleAwesomeArrow(this.querySelector('#travelTyle-collapse-arrow'), this.querySelector('div.content'));
+                        });
+                        document.querySelector('#recentSearches').addEventListener('click', function () {
+                            getRecentSearches('recentContMob');
+                            masterMenu.toggleAwesomeArrow(this.querySelector("#recentSearches-collapse-arrow"), this.querySelector('div.content'));
+                        });
+                        var newstyle = document.createElement('style');
+                        newstyle.innerHTML = '@media (max-width: 767px) {nav.subNav li.active {position: relative !important;}}';
+                        document.querySelector('li.lang').appendChild(newstyle);
+                    },
+                    travelTypeMenu: function () {
+                        //create travel type header item
+                        document.querySelector('#travelType > .header.nav-header >i').previousSibling.textContent = document.querySelector('nav.topBar').querySelector('.sm12').textContent;
+                        //move traveltype items ino new travelType menu
+                        var travelTypeMenuItems = document.querySelector('nav.topBar > div').querySelectorAll('div:not(.active) > a');
+                        Array.prototype.forEach.call(travelTypeMenuItems, function (a) {
+                            document.querySelector('#travelType > .content').appendChild(a);
+                        })
+                    },
+                    recentSearchMenu: function () {
+                        //create 'recent searches' header item
+                        document.querySelector('#recentSearches > .header.nav-header >i').previousSibling.textContent = document.querySelector('.rSerM').textContent;
+                        //move 'recent searches' items ino new 'recent searches' menu
+                        document.querySelector('#recentSearches').querySelector('.content').appendChild(document.querySelector('.rSerMcon'));
+                        document.querySelector('.rSerMcon').style.display = "block";
+                    },
+                    headerTabItems: function () {
+                        //move Tab menu items under global mobile menu
+                        var tabMenuItems = document.querySelectorAll('.subNav>ul>li.mHide')
+                        Array.prototype.forEach.call(tabMenuItems, function (a) {
+                            if (a.querySelector('.rSerM') === null) {
+                                var listItem = document.createElement('li')
+                                // set the id of the items apropriatelly for them to have font awesome
+                                a.classList.forEach(function (c) {
+                                    if (['nav-offers', 'nav-countries', 'nav-port-finder', 'nav-operators', 'nav-alerts', 'nav-account', 'nav-cs'].indexOf(c) > -1) {
+                                        listItem.id = c;
+                                    }
+                                })
+                                listItem.classList.add('nav-header');
+                                listItem.appendChild(a);
+                                document.querySelector('.navPages').appendChild(listItem);
+                            }
+                        })
+                    },
+                    setupCanvas: function () {
+                        var canvasDiv = document.querySelector('#navCanvas');
+                        canvasDiv.addEventListener('click', this.closeNav);
+                        canvasDiv.style.width = '0%';
+                        canvasDiv.style.opacity = '0.5';
+                    },
+                    createBurger: function () {
+                        var burgerSpan = document.createElement('span');
+                        burgerSpan.classList.add('openNav');
+                        burgerSpan.addEventListener('click', this.openNav);
+                        var burgerIcon = document.createElement('i');
+                        burgerIcon.classList.add('fas');
+                        burgerIcon.classList.add('fa-bars');
+                        burgerSpan.appendChild(burgerIcon);
+                        document.querySelector('div.sm12.logoBar').appendChild(burgerSpan);
+                    },
+                    toggleAwesomeArrow: function (arrowControl, contenControl) {
+                        if (contenControl.style.display == 'none') {
+                            $(contenControl).slideDown();
+                            $(arrowControl).removeClass('fa-angle-down').addClass('fa-angle-up');
+                        }
+                        else {
+                            $(contenControl).slideUp();
+                            $(arrowControl).removeClass('fa-angle-up').addClass('fa-angle-down');
+                        }
+                    },
+                    openNav: function () {
+                        document.querySelector('#ab-mobile-sidenav').style.width = '250px';
+                        document.querySelector("#navCanvas").style.width = "100%";
+                    },
+                    closeNav: function () {
+                        if (document.querySelector('.fa-angle-up')) {
+                            Array.prototype.forEach.call(document.querySelectorAll('.fa-angle-up'), function (a) {
+                                var arrowControl = a.parentNode.parentNode.querySelector('#travelTyle-collapse-arrow, #recentSearches-collapse-arrow');
+                                var contenControl = a.parentNode.parentNode.querySelector('div.content');
+                                masterMenu.toggleAwesomeArrow(arrowControl, contenControl);
+                            });
+                        }
+                        document.querySelector("#navCanvas").style.width = "0%";
+                        document.querySelector('#ab-mobile-sidenav').style.width = '0';
+                    }
+                }
+                masterMenu.init();
+            }
+
+            function expdf_operators_sayt() {
+                //create SAYT txtBox and inject it
+                var OpInput = document.createElement("input");
+                OpInput.id = 'txtOpsSAYT'; OpInput.type = 'text'; OpInput.classList = 'form-control txtOpsSAYT'; OpInput.autocomplete = 'Off'; OpInput.placeholder = "Select Company";
+                document.querySelector('#lnkSel').parentElement.appendChild(OpInput);
+                //Add style
+                var style = document.createElement('style')
+                style.innerHTML = '#lnkSel {display: none;}';
+                style.innerHTML += '#txtOpsSAYT {width: 100%; height: 44px;border-radius: 22px; padding-left: 20px; padding-right: 20px;} ';
+                style.innerHTML += '#txtOpsSAYT:focus{outline: none;} ';
+                style.innerHTML += '.element {animation-name: stretch; animation-duration: 0.3s; animation-timing-function: ease-out; animation-delay: 0s; animation-direction: alternate; animation-iteration-count: 20; animation-fill-mode: none; animation-play-state: running;} ';
+                style.innerHTML += '@keyframes stretch {0% { transform: scale(.95); }100% { transform: scale(1.0); }}';
+                document.getElementsByTagName('head')[0].appendChild(style)
+                //create list of Ops
+                var OperatorItemsArray = [];
+                document.querySelector('#lnkSel').removeChild(document.querySelector('#lnkSel > option'));
+                Array.prototype.forEach.call(document.querySelectorAll('#lnkSel > option'), function (x) {
+                    OperatorItemsArray.push({ 'label': x.value, 'value': x.text });
+                })
+                //Setup as SAYT
+                $('#txtOpsSAYT').autocomplete({
+                    minLength: 0,
+                    source: function (request, response) {
+                        var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i"); // look for case insensitive match, anywhere in the string
+                        response($.grep(OperatorItemsArray, function (item) {
+                            return matcher.test(item.value);
+                        }));
+                    },
+                    autoFocus: true,
+                    select: function (event, ui) {
+                        var rptItem = document.getElementById(ui.item.label.replace("/", "").replace(".htm", "")).parentNode;
+                        rptItem.scrollIntoView({ behavior: "smooth", block: "start" });
+                        rptItem.classList.add("element");
+                        setTimeout(function () { rptItem.classList.remove("element"); }, 5000);
+                        this.value = ui.item.value;
+                    },
+                }).autocomplete("instance")._renderItem = function (ul, item) {//format the list items
+                    return $("<li>")
+                        .append(item.value)
+                        .appendTo(ul);
+                };
+                $('#txtOpsSAYT').focus(function () {//onFocus show a list with all the ops
+                    $(this).data("uiAutocomplete").search($(this).val());
+                    this.previousElementSibling.previousElementSibling.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            }
+
+            function expdf_fully_clickable_country_divs() {
+                var destinationDivs = document.querySelector('.sm12.dests').querySelectorAll('.divTbl')
+                isCountryDivClickable = 'B';
+                Array.prototype.forEach.call(destinationDivs, function (x) {
+                    var newDiv = document.createElement('div');
+                    x.querySelector('.btn.btn-xs').style.display = "none";
+                    x.style.borderRadius = '4px';
+                    x.addEventListener('click', function () { this.querySelector('.btn.btn-xs').click(); });
+                    newDiv.setAttribute("style", "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);");
+                    newDiv.classList.add('dummyDiv');
+                    x.querySelector('.det').appendChild(newDiv);
+                    newDiv.appendChild(x.querySelector('a'));
+                    newDiv.appendChild(x.querySelector('p'));
+                    newDiv.appendChild(x.querySelector('.btn.btn-xs'));
+                });
+            }
+
+            function expdf_fully_clickable_ships_op_page() {
+                ClickableShipsVariant = "B"
+                $('.ovlyS').click(function () {
+                    $(this).find('a')[0].click();
+                });
+            }
+         function expdf_dismiss_urgency_route_page() {
+                $('#UrgencyTip').css('position', 'relative')
+                $("<a  onclick=\"dismissUrgencyP()\" class=\"notifications-red--close\"></a>").insertBefore(".abError.abUrgencyMsg");
+            }
+
+            function expdf_add_btn_to_graph() {
+                var tempDiv = document.createElement('div');
+                tempDiv.style.textAlign = 'center';
+                tempDiv.style.margin = '15px'
+                var tempSpan = document.createElement('span');
+                tempSpan.innerHTML = 'Book Now';
+                tempSpan.style.background = '#EA5B28';
+                tempSpan.style.color = '#FFF';
+                tempSpan.style.fontWeight = '700';
+                tempSpan.style.textAlign = 'center';
+                tempSpan.style.borderRadius = '3px';
+                tempSpan.style.padding = '10px';
+                tempSpan.onclick = function bookNowClick() {
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+                    $(".fsPop").fadeIn("slow");
+                    $(".fsWrap").addClass('fsWrapPop');
+                    if (typeof ga !== undefined) ga('send', 'event', 'AB-1908 button to route graph', 'Button clicked');
+                }
+                tempDiv.appendChild(tempSpan);
+                document.querySelector('.highcharts').appendChild(tempDiv);
+            }
+
+            function expdf_redesign_scroll_to_top() {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = "@media (max-width: 767px) { html body .abMobBookNow {position: fixed; bottom: 10px; right: 10px; left: initial; }  html body .abMobBookNow span.btn {background-color: #EA5B28; padding: 10px 24px 10px 10px; border-radius: 25px;} }";
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                }
+             function expdf_redesign_ferry_company_item_mobile() {
+                try {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '@media (max-width: 767px) { #divCountryNew #countryRest #rtSum .tabCon ul.c2cTbl li div div ul {padding: 10px; border: 1px solid #e6e6e6; border-radius: 5px; box-shadow: #ddd 1px 1px 4px 0px; border-bottom: 4px solid #64B6e6;} #divCountryNew #countryRest #rtSum .tabCon ul.c2cTbl li div div ul li.sa {float: right;} #divCountryNew #countryRest #rtSum .tabCon ul.c2cTbl li div div ul li.lk span.btn.btn-xs {width: 100%; padding: 6px 15px 6px 7px; background-position: right -1151px}}';
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                } catch (e) { }
+            }
+
+    function expdf_fully_clickable_ships() {
+        $('.ovlyS').click(function () {
+            $(this).find('a')[0].click();
+        });
+    }
+        function expdf_improve_connection_ops()
+        {
+            $('#litFerryCompaniesH2').hide();
+            $('#litFerryCompanies1418H2').show();
+        }
+
+
+    function expdf_movepopular_routes_up_bookingengine() {
+
+        var Control_popular_routes = 'AB1808_popular_routes'
+
+        if (SiteID == 204 || SiteID == 203)
+        {
+            Control_popular_routes = 'AB1808_popular_routes2'
+        }
+
+        $('#popularRoutesDiv').appendTo('#ab1808');
+        $('#gridone').hide();
+        $('#' + Control_popular_routes).show();
+
+
+        $(".bookable").addClass("df-1499-outer-grid");
+        $("#poprout").addClass("df-1499-title")
+        var sub_ul = $('<ul class="homepage-routes df-1499-outer-gridtwo" id="gridtwo"/>');
+        $("#popularRoutes").append(sub_ul);
+        var numelements = $(".bookable li").length
+        $(".bookable li").slice(9, numelements).appendTo("#gridtwo")
+        var ul = document.getElementById(Control_popular_routes);
+        var listItems = ul.getElementsByTagName("li");
+        
+        for (var i = 0; i < listItems.length; ++i) {
+            var destiny = listItems[i].firstChild.getAttribute("data-im")
+            var imagedest = document.createElement("img")
+            imagedest.src = 'https://static.directferries.co.uk/image/ab/ab-1499/' + destiny + '.jpg'
+            listItems[i].prepend(imagedest)
+
+        }
+       
+
+    }
+
+    function expdf_movepopular_routes_up_routelinks() {
+
+        var Control_popular_routes = 'gridone'
+
+        if (SiteID == 204 || SiteID == 203) {
+            Control_popular_routes = 'gridone'
+        }
+        
+        $('#popularRoutesDiv').appendTo('#ab1808');
+        $('#AB1808_popular_routes').hide();
+        $('#' + Control_popular_routes).show();
+
+
+        $(".linkable").addClass("df-1499-outer-grid");
+        $("#poprout").addClass("df-1499-title")
+        var sub_ul = $('<ul class="homepage-routes df-1499-outer-gridtwo" id="gridtwo"/>');
+        $("#popularRoutes").append(sub_ul);
+        var numelements = $(".linkable li").length
+        $(".linkable li").slice(9, numelements).appendTo("#gridtwo")
+        var ul = document.getElementById(Control_popular_routes);
+        var listItems = ul.getElementsByTagName("li");
+
+        for (var i = 0; i < listItems.length; ++i) {
+            var destiny = listItems[i].firstChild.getAttribute("data-im")
+            var imagedest = document.createElement("img")
+            imagedest.src = 'https://static.directferries.co.uk/image/ab/ab-1499/' + destiny + '.jpg'
+            listItems[i].prepend(imagedest)
+
+        }
+
+
+    }
+
+            function expdf_ferry_ticket_tab() {
+                var oldAnchor = document.querySelector('nav.subNav').querySelector('li.active>a')
+                var newAnchor = document.createElement('a');
+                newAnchor.classList.add('ab-seo-title-wrapper');
+                newAnchor.href = oldAnchor.href;
+                var newDiv = document.createElement('div');
+                newDiv.style = 'font-size:14px;color:#fff;margin:0px;padding:2px 0px;padding-right:25px;display:inline;background:url(/image/home-ticket-icon.svg) no-repeat right;';
+                newDiv.innerText = 'Ferry Ticket';
+                newAnchor.appendChild(newDiv);
+                oldAnchor.parentNode.appendChild(newAnchor);
+                oldAnchor.remove();
+            }
+
+            function expdf_enable_captcha() {
+                $("#googleCaptcha").css('display', 'block');
+                $('.italian-form-capture input[type=submit]').attr('disabled', true);
+            }
+
+            function expdf_routes_collapsible_divs_mob() {
+                var colExp = function () {
+                    var content = $(this).parent().find("p");
+                    if (content.css('display') == 'block') {
+                        content.slideUp();
+                        var el = this.querySelector('i');
+                        el.classList.remove('fa-angle-up');
+                        el.classList.add('fa-angle-down');
+                    }
+                    else {
+                        content.slideDown();
+                        var el = this.querySelector('i');
+                        el.classList.remove('fa-angle-down');
+                        el.classList.add('fa-angle-up');
+                    }
+                    if (typeof (ga) === 'function') ga('send', 'event', 'AB-2175', 'Expand collapse clicked');
+                };
+                var guids = document.querySelectorAll('.txt h3');
+                guids.forEach(function (i) {
+                    var arrow = document.createElement('i');
+                    arrow.classList.add('fas');
+                    arrow.classList.add('fa-angle-up');
+                    arrow.style = 'float: right; padding: 3px;';
+                    i.appendChild(arrow);
+                    i.addEventListener('click', colExp, false);
+                });
+                var routeDesc = document.querySelector('.intTxt h1');
+                var arrow = document.createElement('i');
+                arrow.classList.add('fas');
+                arrow.classList.add('fa-angle-up');
+                arrow.style = 'float: right; padding: 3px;';
+                routeDesc.appendChild(arrow);
+                routeDesc.addEventListener('click', colExp, false);
+            }
+
+
+    
+            function expdf_company_desc_collapsible_mob() {       
+                var texts = document.querySelectorAll('.intTxt h1');
+                texts.forEach(function (i) {
+                    i.parentNode.querySelector('.moreLink').style.display = 'none'
+                    i.parentNode.querySelector('.more').style.display = 'block';            
+                    var arrow = document.createElement('i');
+                    arrow.classList.add('fas');
+                    arrow.classList.add('fa-angle-up');
+                    arrow.style = 'float: right; padding: 3px;';
+                    i.appendChild(arrow);
+                    i.addEventListener('click', function () {
+                        var content = $(this).parent().find("p");
+                        if (content.css('display') == 'block') {
+                            content.slideUp();
+                            var el = this.querySelector('i');
+                            el.classList.remove('fa-angle-up');
+                            el.classList.add('fa-angle-down');
+                        }
+                        else {
+                            content.slideDown();
+                            var el = this.querySelector('i');
+                            el.classList.remove('fa-angle-down');
+                            el.classList.add('fa-angle-up');
+                        }
+                        if (typeof (ga) === 'function') ga('send', 'event', 'AB-2176', 'Expand collapse clicked');
+                    }, false);
+                });
+            }
+
+
+
+            function expdf_op_logo_on_ship_p_mob() {
+                var opLogo = document.getElementById('hdnOperatorLogo');
+                if (typeof(opLogo) != "undefined" && opLogo.value != "") {
+                    var style = document.createElement('style')
+                    style.type = 'text/css'
+                    style.innerHTML = '.opLog {margin: 0 0 20px 0;} .opLog img { margin: 0; }';
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                    var newOpDiv = document.createElement('div');
+                    newOpDiv.classList.add('opLog');
+                    var newOpImg = document.createElement('img');            
+                    newOpImg.src = opLogo.value;
+                    newOpDiv.appendChild(newOpImg);
+                    document.getElementById('hShipName').parentNode.prepend(newOpDiv);
+                }        
+            }
+
+            function expdf_redesign_ship_item_mob() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '@media (max-width: 767px) { .shipOnboard {clear: both;box-shadow: #ddd 0px 0px 4px 1px;float: left;border-radius: 4px; margin-bottom: 10px; width: 100%; border-bottom: 3px solid #64b6e7;} .shipOnboard .desc {width: 60%; float: left; padding: 6px;} .shipOnboard .desc p {margin-bottom: 0; padding-bottom: 0; border-bottom: none;} .shipOnboard .log {width: 40%; float: left; text-align: center; padding: 6px;} .shipOnboard .log img { margin-bottom: 10px; } } @media (min-width: 768px) { .shipOnboard .log {display: none;} }';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                    var allPics = document.querySelectorAll('.log');
+                    allPics.forEach(function (i) { i.style.display = 'block'; });
+                } catch (e) { }
+            }
+            function expdf_move_booknow_top()
+            {
+                $('#dfArticle_divBookNowB').show();
+                $('#dfArticle_divBookNow').hide();
+            }
+
+            function expdf_bg_divs_route_page() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '@media (max-width: 767px) {.templateGroup {border-radius: 4px;box-shadow: #c9c9c9 0px 1px 6px 0px;padding: 10px;margin: 15px 0 15px 0;}.abError {padding: 5px 7px 6px 42px;}.df-1772-brexit-inner {margin: 0px 0px 8px 0px;}.abNewUrgencyMsg {margin - bottom: 0px;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                    $('#pnlMain').addClass('templateGroup');
+                    $('.abError').addClass('templateGroup');
+                    $('#divOperators').addClass('templateGroup');
+                    $('#routeInfo').addClass('templateGroup');
+                    $('.highcharts').addClass('templateGroup');
+                    $('#shipReviews_divReviewsMain').addClass('templateGroup');
+                    $('.txt').addClass('templateGroup');
+                } catch (e) { }
+            }
+
+            function expdf_unhide_destination_content()
+            {
+                try {
+                    document.querySelector('.moreLink').click();
+                    document.querySelector('.lessLink').style.display = 'none';
+                } catch (e) {}
+            }
+
+            function expdf_add_clicktrip_in_footer() {
+                try {
+                    var s = document.createElement("script");
+                    s.type = "text/javascript";
+                    s.src = "https://static.clicktripz.com/r/ucb.js";
+                    s.setAttribute("data-alias", "directferries");
+                    $("body").append(s);
+
+                } catch (e) { }
+            }
+
+            function expdf_dynamic_home_page_normal()
+            {
+
+            }
+
+            function expdf_dynamic_home_page_speedy()
+            {
+
+            }
+
+
+            function expdf_toggle_myaccount()
+            {
+                var accLink = document.querySelector('.myAcnt > a');
+                if (accLink != null) {
+                    accLink.href = "https://account.directferries.com/";
+                }
+            }
+            
+            function expaccessibility() {
+                try {
+                    var isIe = false; try { eval('"use strict"; class foo {}'); } catch (e) { isIe = true; }
+                    if (!isIe) {
+                        var link = document.createElement("link");
+                        link.setAttribute('href', 'https://static.directferries.co.uk/css/abtests/accessibility.css');
+                        link.setAttribute('rel', "stylesheet");
+                        document.head.appendChild(link);
+                    }
+                } catch (e) {} 
+            }
+
+            function expdf_covid_banner() {
+                try {
+                    document.querySelector(".covid-19-inner.con.hCon.covid-19-hide").style.display = "block";
+                } catch (e) {} 
+            }
+
+            function expdf_hide_phone_section() {
+                try {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = '.hide-phone-section {display:none; }';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                } catch (e) {} 
+            }
+            
+            function expdf_mobile_app_css() {
+                try {
+                    if (window.location.search.indexOf("mobileApp=true") !== -1) {
+                        document.body.classList.add("AppStyle");
+                        var link = document.createElement("link");
+                        link.setAttribute('href', 'https://static.directferries.co.uk/css/app.css');
+                        link.setAttribute('rel', "stylesheet");
+                        document.head.appendChild(link);
+                    }
+                } catch (e) {} 
+            }
+            
+            function expdf_route_page_static() {
+
+            }
+
+            function expdf_route_page_dynamic() {
+
+            }
+
+            function expdf_mobile_df_on_desktop() { }
+
+            function expdf_desktop_df_on_desktop() {}
+
+            function expdf_operator_page_dynamic() { }
+
+            function expdf_operator_page_static() {}
+
+            function expdf_latest_route_priceA() {}
+
+            function expdf_latest_route_priceB() {}
+
+            function expdf_tidiyup_mobilepage_sectionsA() { }
+
+            function expdf_tidiyup_mobilepage_sectionsB() {}
+
+            function expdf_destination_page_dynamic() {}
+
+            function expdf_destination_page_static() { }
+
+            function expdf_redesign_breadcrumbs_A() { }
+            function expdf_redesign_breadcrumbs_B() { }
+            function expdf_redesign_latest_ferry_prices_on_homepage_A() { }
+            function expdf_redesign_latest_ferry_prices_on_homepage_B() { }
+            function expdf_tidyup_mobile_homepage_A() { }
+            function expdf_tidyup_mobile_homepage_B() { }
+
+            function expdf_mobile_dealfinder_on_destination_desktop_page_A() { }
+            function expdf_mobile_dealfinder_on_destination_desktop_page_B() { }
+            function expdf_show_mobile_dealfinder_on_desktop_route_pages_A() { }
+            function expdf_show_mobile_dealfinder_on_desktop_route_pages_B() { }
+            function expdf_mobile_dealfinder_on_operator_desktop_page_A() { }
+            function expdf_mobile_dealfinder_on_operator_desktop_page_B() { }
+
+            ////EXAMPLES////
+
+            //normal experiment :- push to list, so call this from the template
+            //function runExp(name) {
+            //    if (name == 'AAHomeUK') {
+            //        experimentsToRun.push(46);
+            //    }
+            //}
+
+            ////experiment callback func example
+            //function exp46() {
+            //    try {
+            //        $('.hIntBox').hide();
+            //    } catch (e) {
+            //    }        
+            //};
+
+            ////when running by name
+            //function expdf_static_delayed_log_test() {
+            //    try {
+            //    //$('#divOnboard').hide();
+            //        return false;
+            //    } catch (e) {
+            //    }
+            //};
+
+            ////user interaction activated experiment example - Add these to the list of experiments to push, when configuring in admin, they need to be 'Delayed Logging' ones
+            //function abtest() {
+            //    RunUserActivatedExperiment('df_static_delayed_log_test');
+            //};
+            //Or like this direclty on an element
+            //onclick="RunUserActivatedExperiment('df_static_delayed_log_test');
+
+            ////END EXAMPLES////
+        }
+        catch (e) {
+        }
+        //</script>
+/*ScriptEnd*/

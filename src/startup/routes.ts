@@ -1,5 +1,5 @@
-import { Home } from 'home'
 import { Dashboard } from 'dashboard'
+import { Landing } from "landing";
 
 export const routes = [
   {
@@ -10,8 +10,8 @@ export const routes = [
   },
   {
     path: '/',
-    name: 'Home',
+    name: 'Landing',
     exact: true,
-    component: Home,
+    component: Landing,
   },
 ]
