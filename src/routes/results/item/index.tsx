@@ -1,23 +1,19 @@
 import React from 'react'
-import {Col, Container, Row} from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 import 'routes/results/item/style.scss'
+import { Origin } from 'routes/results/item/origin'
+import { Destination } from 'routes/results/item/destination'
 
-export const Item = () => <Container className={"itemContainer"}>
-    <Row className={'mt-2 p-2'}>
+export const Item = () => <Container className={'itemContainer'}>
+  <Row className={'mt-2 p-2'}>
     <Col>
-        <Container>
-            <Row>Port</Row>
-            <Row>Country</Row>
-        </Container>
+      <Origin />
     </Col>
     <Col>
-        Icon
+      Icon
     </Col>
     <Col>
-        <Container>
-            <Row>Port</Row>
-            <Row>Country</Row>
-        </Container>
+      <Destination />
     </Col>
-</Row>
+  </Row>
 </Container>

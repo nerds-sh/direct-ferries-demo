@@ -1,14 +1,7 @@
-import { Dashboard } from 'dashboard'
-import {Details} from 'details'
-import {Routes} from "routes";
+import { Details } from 'details'
+import { Routes } from 'routes'
 
 export const routes = [
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    exact: true,
-    component: Dashboard,
-  },
   {
     path: '/details',
     name: 'Details',
