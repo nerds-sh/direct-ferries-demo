@@ -11,7 +11,9 @@ const useContainerProps = (kind: Modal) => ({
 
 export const Person = ({ kind }: {kind: Modal}) => <Container {...useContainerProps(kind)}>
   <Row>
-    <Col>Icon</Col>
+    <Col>
+      <img className={"personIcon"} src={"https://static.directferries.co.uk/image/ico/light-blue/passengers.svg"} />
+    </Col>
   </Row>
   <Row>
     <Col>{kind === Modal.Adults ? 'Adults' : 'Children'}</Col>
