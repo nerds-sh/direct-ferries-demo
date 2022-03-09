@@ -4,7 +4,7 @@ import { Form } from 'routes/form'
 import { Results } from 'routes/results'
 
 const params = {
-  'SearchTerm': '',
+  'SearchTerm': '', //initial call without any searchterm but making another calls when typing the search term
   'AB_SAYT_ports': 'false',
   'OtherPortSearchStr': '',
   'legType': '1',
