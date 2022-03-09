@@ -9,10 +9,12 @@ const useContainerProps = (kind: Modal) => ({
   onClick: useOnItemClick(kind),
 })
 
+const iconUrl = 'https://static.directferries.co.uk/image/ico/light-blue/passengers.svg'
+
 export const Person = ({ kind }: {kind: Modal}) => <Container {...useContainerProps(kind)}>
   <Row>
     <Col>
-      <img className={"icon"} src={"https://static.directferries.co.uk/image/ico/light-blue/passengers.svg"} />
+      <img alt={'icon'} className={'icon'} src={iconUrl} />
     </Col>
   </Row>
   <Row>
