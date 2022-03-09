@@ -32,3 +32,5 @@ export const Routes = () => <>
   <Results />
   <a href={getDefaultRoutes()}>Get default routes</a>
 </>
+
+export * from 'routes/reducer'
