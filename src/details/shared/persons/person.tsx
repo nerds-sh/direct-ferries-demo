@@ -5,14 +5,14 @@ import { Modal } from 'details/types'
 import { useOnItemClick } from 'details/shared/persons/hooks'
 
 const useContainerProps = (kind: Modal) => ({
-  className: 'personContainer',
+  className: 'container',
   onClick: useOnItemClick(kind),
 })
 
 export const Person = ({ kind }: {kind: Modal}) => <Container {...useContainerProps(kind)}>
   <Row>
     <Col>
-      <img className={"personIcon"} src={"https://static.directferries.co.uk/image/ico/light-blue/passengers.svg"} />
+      <img className={"icon"} src={"https://static.directferries.co.uk/image/ico/light-blue/passengers.svg"} />
     </Col>
   </Row>
   <Row>
