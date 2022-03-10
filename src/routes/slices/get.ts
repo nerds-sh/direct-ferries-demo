@@ -2,7 +2,7 @@ import { Types } from 'common'
 import { Routes } from 'routes/types'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = Types.SliceState<Routes.Input, any, any>
+type State = Types.SliceState<Routes.Input, Routes.Item[], any>
 
 type Reducer = Types.Reducer<any, State>
 
@@ -23,7 +23,7 @@ const initialState: State = {
     baseData: '',
     callback: '',
   },
-  data: '',
+  data: [],
   errors: '',
 }
 
