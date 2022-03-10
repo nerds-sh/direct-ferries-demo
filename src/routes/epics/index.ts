@@ -1,1 +1,1 @@
-export * from 'routes/epics/default-routes'
+export * from 'routes/epics/get'

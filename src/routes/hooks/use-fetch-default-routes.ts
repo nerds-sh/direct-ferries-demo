@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { defaultRoutes } from 'routes/slices'
+import { get } from 'routes/slices'
 import { useEffect } from 'react'
 
 const params = {
@@ -23,6 +23,6 @@ export const useFetchDefaultRoutes = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(defaultRoutes.actions.attempt(params))
+    dispatch(get.actions.attempt(params))
   }, [dispatch])
 }

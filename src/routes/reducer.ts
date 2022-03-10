@@ -1,4 +1,4 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { defaultRoutes } from 'routes/slices'
+import { get } from 'routes/slices'
 
-export const reducer = combineReducers({ defaultRoutes: defaultRoutes.reducer })
+export const reducer = combineReducers({ get: get.reducer })
