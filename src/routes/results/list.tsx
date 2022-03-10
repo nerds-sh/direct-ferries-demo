@@ -1,10 +1,7 @@
 import React from 'react'
 import { Item } from 'routes/results/item'
+import { useRoutes } from 'routes/hooks/use-routes'
 
 export const List = () => <>
-  <Item />
-  <Item />
-  <Item />
-  <Item />
-  <Item />
+  {useRoutes().map((item, id) => <Item item={item} key={id} />)}
 </>

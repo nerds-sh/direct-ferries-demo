@@ -4,17 +4,18 @@ import 'routes/results/item/style.scss'
 import { Origin } from 'routes/results/item/origin'
 import { Destination } from 'routes/results/item/destination'
 import { useOnClick } from 'routes/results/item/hooks'
+import { Routes } from 'routes/types'
 
-export const Item = () => <Container className={'container'} onClick={useOnClick()}>
+export const Item = ({ item }: {item: Routes.Item}) => <Container className={'container'} onClick={useOnClick()}>
   <Row className={'mt-2 p-2'}>
     <Col>
-      <Origin />
+      <Origin item={item} />
     </Col>
     <Col>
       Icon
     </Col>
     <Col>
-      <Destination />
+      <Destination item={item} />
     </Col>
   </Row>
 </Container>
