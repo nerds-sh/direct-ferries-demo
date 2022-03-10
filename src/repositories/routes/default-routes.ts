@@ -11,7 +11,7 @@ const options = (payload: object) => ({
   body: bodyFromParams(payload),
 })
 
-export const get = (payload: object) => fromFetch(url(), options(payload))
+export const defaultRoutes = (payload: object) => fromFetch(url(), options(payload))
   .pipe(mergeMap(response => from(response.text())))
   .pipe(map(response => response.split('null(')[1].slice(0, -2)))
   .pipe(map(response => JSON.parse(response)))

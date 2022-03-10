@@ -34,3 +34,5 @@ export const Routes = () => <>
 </>
 
 export * from 'routes/reducer'
+export * as Types from 'routes/types'
+export * from 'routes/epic'
