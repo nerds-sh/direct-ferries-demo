@@ -6,7 +6,9 @@ import { Destination } from 'routes/results/item/destination'
 import { useOnClick } from 'routes/results/item/hooks'
 import { Routes } from 'routes/types'
 
-export const Item = ({ item }: {item: Routes.Item}) => <Container className={'container'} onClick={useOnClick()}>
+type Props = {item: Routes.Item}
+
+export const Item = ({ item }: Props) => <Container className={'container'} onClick={useOnClick(item)}>
   <Row className={'mt-2 p-2'}>
     <Col>
       <Origin item={item} />
