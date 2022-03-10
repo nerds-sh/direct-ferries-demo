@@ -3,5 +3,6 @@ export type Item = {
     portTo: string,
     locationsFrom: string,
     locationsTo: string,
-    routeId: number
+    routeId: number,
+    routeName: string
 }
