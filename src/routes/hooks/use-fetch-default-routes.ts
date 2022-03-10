@@ -1,28 +1,10 @@
-import { useDispatch } from 'react-redux'
-import { get } from 'routes/slices'
 import { useEffect } from 'react'
-
-const params = {
-  SearchTerm: '',
-  AB_SAYT_ports: 'false',
-  OtherPortSearchStr: '',
-  legType: '1',
-  cult: 'en-US',
-  AB_user_iso_pop_route: 'False',
-  userIso: 'RO',
-  stdc: 'DF10COM',
-  opname: '',
-  country: '',
-  port_from: '',
-  port_to: '',
-  baseData: '',
-  callback: '',
-}
+import { useGetRoutes } from 'routes/hooks/use-get-routes'
 
 export const useFetchDefaultRoutes = () => {
-  const dispatch = useDispatch()
+  const getRoutes = useGetRoutes()
 
   useEffect(() => {
-    dispatch(get.actions.attempt(params))
-  }, [dispatch])
+    getRoutes('')
+  }, [getRoutes])
 }
