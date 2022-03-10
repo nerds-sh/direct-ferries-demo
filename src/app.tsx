@@ -10,14 +10,12 @@ export class App extends React.Component<any, any> {
 
     increment = () => this.setState({ count: this.state.count + 1 })
 
-    getParity = () => this.state.count % 2 === 0 ? 'even' : 'odd'
-
     componentDidMount() {
         this.interval = setInterval(this.increment, 1000)
     }
 
     componentDidUpdate(_prevState: Readonly<any>) {
-        console.log('Current counter\'s parity is ', this.getParity())
+        console.log(this.props.message)
     }
 
     componentWillUnmount() {
@@ -25,7 +23,7 @@ export class App extends React.Component<any, any> {
     }
 
     render() {
-        return <div>
+        return <div style={{height: '80vh'}}>
             Count: {this.state.count}
         </div>
     }
