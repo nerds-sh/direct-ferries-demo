@@ -3,7 +3,7 @@ import { fromFetch } from 'rxjs/fetch'
 import { from, mergeMap, map } from 'rxjs'
 import { bodyFromParams } from 'repositories/common'
 
-const url = () => `${settings().api}/ferry/ws/dealpicker.asmx/RouteDataGet`
+const url = () => `${settings().api}/ferry/ws/dealpicker.asmx/SearchDataGetAB`
 
 const options = (payload: object) => ({
   method: 'POST',
