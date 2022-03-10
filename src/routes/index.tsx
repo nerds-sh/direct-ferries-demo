@@ -32,3 +32,7 @@ export const Routes = () => <>
   <Results />
   <a href={getDefaultRoutes()}>Get default routes</a>
 </>
+
+export * from 'routes/reducer'
+export * as Types from 'routes/types'
+export * from 'routes/epic'
