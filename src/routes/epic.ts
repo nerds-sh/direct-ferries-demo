@@ -1,4 +1,4 @@
 import { combineEpics } from 'redux-observable'
-import { defaultRoutes } from 'routes/epics'
+import { get } from 'routes/epics'
 
-export const epic = combineEpics(defaultRoutes)
+export const epic = combineEpics(get)

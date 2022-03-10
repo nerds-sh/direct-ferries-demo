@@ -1,3 +1,3 @@
-import { defaultRoutes } from 'repositories/routes/default-routes'
+import { get } from 'repositories/routes/get'
 
-export const routes = { defaultRoutes }
+export const routes = { get }

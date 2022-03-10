@@ -1,1 +1,1 @@
-export * from 'routes/slices/default-routes'
+export * from 'routes/slices/get'

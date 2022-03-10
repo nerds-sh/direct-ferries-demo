@@ -1,8 +1,8 @@
 import { Types } from 'common'
-import { Default } from 'routes/types'
+import { Routes } from 'routes/types'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = Types.SliceState<Default.Input, any, any>
+type State = Types.SliceState<Routes.Input, any, any>
 
 type Reducer = Types.Reducer<any, State>
 
@@ -33,9 +33,9 @@ const success: Reducer = (state, { payload }) => ({ ...state, data: payload })
 
 const failure: Reducer = (state, { payload }) => ({ ...state, errors: payload })
 
-export const defaultRoutes = createSlice({
+export const get = createSlice({
   initialState,
-  name: 'routes/default',
+  name: 'routes/get',
   reducers: {
     attempt,
     success,
