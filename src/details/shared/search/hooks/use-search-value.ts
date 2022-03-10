@@ -1,4 +1,4 @@
-import { useSelectedRoute } from 'details/shared/search/hooks/use-selected-route'
+import { useSelectedRoute } from 'common/hooks'
 import { useContext } from 'details/context'
 
 export const useSearchValue = () => {

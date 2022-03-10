@@ -1,20 +1,19 @@
 import React from 'react'
 import { Col, FormControl, InputGroup, Row } from 'react-bootstrap'
-import { useContext } from 'details/context'
-import { useSearchValue } from 'details/shared/search/hooks'
+import { useOnClick, useSearchValue } from 'details/shared/search/hooks'
+import 'details/shared/search/style.scss'
 
 export const Search = () => {
-  const { handleChange } = useContext()
   const searchValue = useSearchValue()
+  const onClick = useOnClick()
 
   return <Row className={'mt-4'}>
     <Col>
       <InputGroup>
-        <FormControl placeholder={'Enter a port, country or ferry company'}
+        <FormControl placeholder={'Enter a port, country or ferry company'} className={'details-search'}
                      aria-label={'Search'}
                      aria-describedby={'basic-addon2'}
-                     value={searchValue} onChange={handleChange} name={'search'} />
-        <InputGroup.Text id={'basic-addon2'}>Edit</InputGroup.Text>
+                     value={searchValue} onClick={onClick} name={'search'} readOnly />
       </InputGroup>
     </Col>
   </Row>
