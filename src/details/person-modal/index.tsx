@@ -9,10 +9,12 @@ import 'details/person-modal/style.scss'
 
 const handleClose = (setModal: (modal: ModalType) => void) => () => setModal(ModalType.None)
 
+const makeId = (kind: ModalType) => `${kind === ModalType.Children ? 'children' : 'adults'}-modal`
+
 export const PersonModal = ({ kind }: {kind: ModalType}) => {
   const { modal, setModal } = useContext()
 
-  return <Modal show={modal === kind} onHide={handleClose(setModal)} fullscreen>
+  return <Modal name={makeId(kind)} show={modal === kind} onHide={handleClose(setModal)} fullscreen>
     <Modal.Header className={'person-modal-header'} closeButton>
       <Modal.Title>Total Passengers & Ages</Modal.Title>
     </Modal.Header>
