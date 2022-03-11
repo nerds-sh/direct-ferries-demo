@@ -14,7 +14,7 @@ export const Context = createContext({} as ContextType)
 export const useContext = ():ContextType => useReactContext(Context)
 
 const useFormikInit = (): FormikConfig<FormikValues> => ({
-  initialValues: { search: '', currency: Currency.USD },
+  initialValues: { search: '', currency: Currency.USD, adults: 2, children: 0 },
   onSubmit: ({ search }) => console.log('search is ', search),
 })
 
