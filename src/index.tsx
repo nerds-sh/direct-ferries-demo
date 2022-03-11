@@ -6,7 +6,7 @@ import { App } from './app'
 ReactDOM.render(
     <React.StrictMode>
         <Wrapper>
-            <App/>
+            <App message={'Hello'}/>
         </Wrapper>
     </React.StrictMode>,
     document.getElementById('root')
