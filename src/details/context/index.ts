@@ -1,6 +1,6 @@
 import { createContext, useContext as useReactContext, useState } from 'react'
 import { FormikConfig, FormikValues, useFormik } from 'formik'
-import { Form, Modal } from 'details/types'
+import { Form, Modal, Currency } from 'details/types'
 
 type ContextType = {
     type: Form,
@@ -14,7 +14,7 @@ export const Context = createContext({} as ContextType)
 export const useContext = ():ContextType => useReactContext(Context)
 
 const useFormikInit = (): FormikConfig<FormikValues> => ({
-  initialValues: { search: '' },
+  initialValues: { search: '', currency: Currency.USD },
   onSubmit: ({ search }) => console.log('search is ', search),
 })
 
