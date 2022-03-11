@@ -4,5 +4,6 @@ export type Item = {
     locationsFrom: string,
     locationsTo: string,
     routeId: number,
+    routeIdRet: number,
     routeName: string
 }
