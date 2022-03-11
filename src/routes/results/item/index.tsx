@@ -8,7 +8,7 @@ import { Routes } from 'routes/types'
 
 type Props = {item: Routes.Item}
 
-export const Item = ({ item }: Props) => <Container className={'container'} onClick={useOnClick(item)}>
+export const Item = ({ item }: Props) => <Container role={'button'} className={'container'} onClick={useOnClick(item)}>
   <Row className={'mt-2 p-2'}>
     <Col>
       <Origin item={item} />

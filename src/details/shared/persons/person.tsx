@@ -7,6 +7,7 @@ import { useOnItemClick } from 'details/shared/persons/hooks'
 const useContainerProps = (kind: Modal) => ({
   className: 'container',
   onClick: useOnItemClick(kind),
+  role: 'button',
 })
 
 const iconUrl = 'https://static.directferries.co.uk/image/ico/light-blue/passengers.svg'
