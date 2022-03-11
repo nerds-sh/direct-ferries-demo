@@ -2,7 +2,7 @@ import React from 'react'
 import 'details/shared/persons/style.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Modal } from 'details/types'
-import { useOnItemClick } from 'details/shared/persons/hooks'
+import { useOnItemClick, usePersonCount } from 'details/shared/persons/hooks'
 
 const useContainerProps = (kind: Modal) => ({
   className: 'container',
@@ -22,6 +22,6 @@ export const Person = ({ kind }: {kind: Modal}) => <Container {...useContainerPr
     <Col>{kind === Modal.Adults ? 'Adults' : 'Children'}</Col>
   </Row>
   <Row>
-    <Col>2</Col>
+    <Col>{usePersonCount(kind)}</Col>
   </Row>
 </Container>
