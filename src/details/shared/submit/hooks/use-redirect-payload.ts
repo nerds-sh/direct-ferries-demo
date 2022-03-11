@@ -1,11 +1,10 @@
 import { useContext } from 'details/context'
 import { Form } from 'details/types'
+import { useRouteIds } from 'details/shared/submit/hooks/use-route-ids'
 
 const staticParams = {
   stdc: 'DF10COM',
   grid: '0',
-  rfid: '97',
-  rfidr: '98',
   outd: '2022-04-25',
   outt: '9',
 }
@@ -16,9 +15,11 @@ const stringify = (value: any) => `${value}`
 
 export const useRedirectPayload = () => {
   const { type, values } = useContext()
+  const routeIds = useRouteIds()
 
   return {
     ...staticParams,
+    ...routeIds,
     psgr: stringify(values.adults + values.children),
     curr: stringify(values.currency),
     retn: stringify(isReturnTrip(type)),
