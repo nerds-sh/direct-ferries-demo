@@ -3,7 +3,7 @@ import { Col, FormControl, InputGroup, Row } from 'react-bootstrap'
 import { useContext } from 'details/context'
 
 export const Children = () => {
-  const { values, handleChange } = useContext()
+  const { values, errors, handleChange } = useContext()
 
   return <Row className={'mt-4'}>
     <Col>
@@ -13,6 +13,7 @@ export const Children = () => {
                      type={'number'}
                      value={values.children} name={'children'} onChange={handleChange} />
       </InputGroup>
+      {errors.children && <div className={'person-modal-error'}>{errors.children}</div>}
     </Col>
   </Row>
 }

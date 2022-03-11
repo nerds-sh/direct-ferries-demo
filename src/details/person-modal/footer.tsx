@@ -1,9 +1,14 @@
 import React from 'react'
 import { Button, Container, Row } from 'react-bootstrap'
+import { useCloseDisabled } from 'details/person-modal/hooks'
 
-export const Footer = ({ handleClose }: {handleClose: () => void}) => <Container>
+type Props = {
+  handleClose: () => void,
+}
+
+export const Footer = ({ handleClose }: Props) => <Container>
   <Row>
-    <Button variant={'warning'} onClick={handleClose}>
+    <Button variant={'warning'} onClick={handleClose} disabled={useCloseDisabled()}>
       Done
     </Button>
   </Row>

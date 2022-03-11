@@ -1,9 +1,17 @@
-.header {
-  background: #193354;
-  border: 0;
-  color: white;
-}
+.person-modal {
+  &-header {
+    background: #193354;
+    border: 0;
+    color: white;
+  }
 
-.personModalFooter {
-  border: 0;
+  &-footer {
+    border: 0;
+  }
+
+  &-error {
+    color: darkred;
+    font-weight: bold;
+    font-size: 16px;
+  }
 }
