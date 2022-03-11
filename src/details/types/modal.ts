@@ -6,5 +6,7 @@ export enum Modal {
     // eslint-disable-next-line no-unused-vars
     Adults,
     // eslint-disable-next-line no-unused-vars
-    Children
+    Children,
+    // eslint-disable-next-line no-unused-vars
+    Currency
 }

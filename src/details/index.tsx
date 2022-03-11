@@ -4,6 +4,7 @@ import { Form } from 'details/form'
 import { PersonModal } from 'details/person-modal'
 import { Modal } from 'details/types'
 import 'details/shared/currency/style.scss'
+import { CurrencyModal } from 'details/currency-modal'
 
 const params = {
   stdc: 'DF10COM',
@@ -29,6 +30,7 @@ const getBookingRedirectUrl = () => {
 export const Details = () => <Context.Provider value={useDefaultContext()}>
   <PersonModal kind={Modal.Children} />
   <PersonModal kind={Modal.Adults} />
+  <CurrencyModal />
   <Form />
   <a href={getBookingRedirectUrl()} target={'_top'}>Redirect</a>
 </Context.Provider>
