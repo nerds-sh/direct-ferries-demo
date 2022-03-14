@@ -1,4 +1,4 @@
-import { get, base } from 'src/dealfinder/slices'
+import { get, base } from 'src/deals/slices'
 import { combineReducers } from '@reduxjs/toolkit'
 
 export const reducer = combineReducers({

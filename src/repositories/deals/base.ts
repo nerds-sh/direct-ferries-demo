@@ -1,5 +1,5 @@
+import { Types } from 'src/deals'
 import { fromFetch } from 'rxjs/fetch'
-import { Types } from 'src/dealfinder'
 import { Settings } from 'src/settings'
 import { from, map, mergeMap } from 'rxjs'
 

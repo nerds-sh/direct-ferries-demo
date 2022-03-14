@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { get } from 'src/dealfinder/slices'
+import { get } from 'src/deals/slices'
 
 const makePayload = () => ({
   journeyType: 2,
