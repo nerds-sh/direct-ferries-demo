@@ -1,5 +1,5 @@
-import { useSelectedRoute } from 'common/hooks'
 import { useContext } from 'details/context'
+import { useSelectedRoute } from 'core/hooks'
 
 export const useSearchValue = () => {
   const selectedRoute = useSelectedRoute()

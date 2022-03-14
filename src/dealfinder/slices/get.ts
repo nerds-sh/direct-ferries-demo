@@ -1,5 +1,5 @@
+import { Types } from 'core'
 import { createSlice } from '@reduxjs/toolkit'
-import { Types } from 'common'
 
 type State = Types.SliceState<any, any, any>
 

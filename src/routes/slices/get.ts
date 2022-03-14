@@ -1,4 +1,4 @@
-import { Types } from 'common'
+import { Types } from 'core'
 import { Routes } from 'routes/types'
 import { createSlice } from '@reduxjs/toolkit'
 

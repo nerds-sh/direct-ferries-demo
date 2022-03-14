@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Types } from 'common'
+import { Types } from 'core/index'
 
 type LinkProps = {
     to: string,

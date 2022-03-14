@@ -1,5 +1,5 @@
+import { useSelectedRoute } from 'core/hooks'
 import { useSearchParams } from 'react-router-dom'
-import { useSelectedRoute } from 'common/hooks'
 
 export const useSearch = () => {
   const [search, setSearch] = useSearchParams()
