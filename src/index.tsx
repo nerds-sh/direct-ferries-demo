@@ -1,8 +1,8 @@
+import 'src/theme.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ReduxWrapper, Router } from 'startup'
-import { Settings } from 'settings'
-import 'theme.scss'
+import { Settings } from 'src/settings'
+import { ReduxWrapper, Router } from 'src/startup'
 
 ReactDOM.render(<React.StrictMode>
   <Settings>

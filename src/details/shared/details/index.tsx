@@ -1,9 +1,9 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { Persons } from 'details/shared/persons'
-import { Pets } from 'details/shared/pets'
-import { Transportation } from 'details/shared/transportation'
-import { Title } from 'details/shared/details/title'
+import { Pets } from 'src/details/shared/pets'
+import { Persons } from 'src/details/shared/persons'
+import { Title } from 'src/details/shared/details/title'
+import { Transportation } from 'src/details/shared/transportation'
 
 export const Details = () => <>
   <Title />

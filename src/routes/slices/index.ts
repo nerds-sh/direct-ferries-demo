@@ -1,1 +1,1 @@
-export * from 'routes/slices/get'
+export * from 'src/routes/slices/get'

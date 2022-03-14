@@ -1,9 +1,9 @@
+import { Types } from 'src/routes'
 import { ofType } from 'redux-observable'
-import { get as slice } from 'routes/slices'
-import { repositories } from 'repositories'
-import { mergeMap, catchError, of, Observable } from 'rxjs'
+import { repositories } from 'src/repositories'
+import { get as slice } from 'src/routes/slices'
 import { PayloadAction } from '@reduxjs/toolkit'
-import { Types } from 'routes'
+import { mergeMap, catchError, of, Observable } from 'rxjs'
 
 export const get = (actions$: Observable<any>) => actions$
   .pipe(ofType(slice.actions.attempt))

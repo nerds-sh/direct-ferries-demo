@@ -1,5 +1,5 @@
 import React from 'react'
-import 'details/shared/date/style.scss'
+import 'src/details/shared/date/style.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 
 export const Date = () => <Container className={'container'}>

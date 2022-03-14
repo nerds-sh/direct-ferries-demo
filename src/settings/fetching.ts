@@ -1,6 +1,6 @@
 import { map, tap } from 'rxjs'
-import { Types } from 'settings/types'
-import { fetch } from 'settings/repositories/fetch'
+import { Types } from 'src/settings/types'
+import { fetch } from 'src/settings/repositories/fetch'
 
 let fetchedSettings: Types.Settings
 

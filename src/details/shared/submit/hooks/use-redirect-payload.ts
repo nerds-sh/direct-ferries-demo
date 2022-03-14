@@ -1,6 +1,6 @@
-import { useContext } from 'details/context'
-import { Form } from 'details/types'
-import { useRouteIds } from 'details/shared/submit/hooks/use-route-ids'
+import { Form } from 'src/details/types'
+import { useContext } from 'src/details/context'
+import { useRouteIds } from 'src/details/shared/submit/hooks/use-route-ids'
 
 const staticParams = {
   stdc: 'DF10COM',

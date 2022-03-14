@@ -1,1 +1,1 @@
-export * as Base from 'dealfinder/types/base'
+export * as Base from 'src/dealfinder/types/base'

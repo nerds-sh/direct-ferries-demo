@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
-import { useRedirectUrl } from 'details/shared/submit/hooks'
+import { useRedirectUrl } from 'src/details/shared/submit/hooks'
 
 export const Submit = () => <Row className={'mt-4'}>
   <Col className={'d-grid'}>

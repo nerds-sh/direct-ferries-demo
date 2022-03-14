@@ -1,2 +1,2 @@
-export * from 'dealfinder/epics/get'
-export * from 'dealfinder/epics/base'
+export * from 'src/dealfinder/epics/get'
+export * from 'src/dealfinder/epics/base'

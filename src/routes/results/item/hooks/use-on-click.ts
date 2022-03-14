@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom'
 import { useCallback } from 'react'
-import { Routes } from 'routes/types'
+import { Routes } from 'src/routes/types'
+import { useNavigate } from 'react-router-dom'
 
 const makeParams = ({ routeId, routeIdRet }: Routes.Item) => ({
   routeId: `${routeId}`,

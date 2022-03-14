@@ -1,10 +1,10 @@
 import React from 'react'
-import { Submit } from 'details/shared/submit'
-import { Type } from 'details/shared/type'
-import { ReturnTrip } from 'details/return-trip'
-import { OneWay } from 'details/one-way'
-import { useContext } from 'details/context'
-import { Form as Forms } from 'details/types'
+import { OneWay } from 'src/details/one-way'
+import { Type } from 'src/details/shared/type'
+import { useContext } from 'src/details/context'
+import { Form as Forms } from 'src/details/types'
+import { Submit } from 'src/details/shared/submit'
+import { ReturnTrip } from 'src/details/return-trip'
 
 export const Form = () => {
   const { type, handleSubmit } = useContext()

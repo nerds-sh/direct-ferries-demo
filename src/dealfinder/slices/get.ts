@@ -1,4 +1,4 @@
-import * as core from 'core'
+import * as core from 'src/core'
 import { createSlice } from '@reduxjs/toolkit'
 
 type State = core.types.SliceState<any, any, any>

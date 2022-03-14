@@ -1,1 +1,1 @@
-export * from 'details/common/currencies'
+export * from 'src/details/common/currencies'

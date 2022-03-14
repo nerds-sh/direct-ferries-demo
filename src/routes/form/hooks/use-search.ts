@@ -1,4 +1,4 @@
-import * as core from 'core'
+import * as core from 'src/core'
 import { useSearchParams } from 'react-router-dom'
 
 export const useSearch = () => {

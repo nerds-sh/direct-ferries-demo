@@ -1,8 +1,8 @@
 import React from 'react'
-import 'details/shared/currency/style.scss'
-import { Form } from 'routes/form'
-import { Results } from 'routes/results'
-import { Behaviour } from 'routes/behaviour'
+import { Form } from 'src/routes/form'
+import { Results } from 'src/routes/results'
+import 'src/details/shared/currency/style.scss'
+import { Behaviour } from 'src/routes/behaviour'
 
 export const Routes = () => <>
   <Behaviour />
@@ -10,6 +10,6 @@ export const Routes = () => <>
   <Results />
 </>
 
-export * from 'routes/reducer'
-export * as Types from 'routes/types'
-export * from 'routes/epic'
+export * from 'src/routes/reducer'
+export * as Types from 'src/routes/types'
+export * from 'src/routes/epic'

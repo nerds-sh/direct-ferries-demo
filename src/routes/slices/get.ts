@@ -1,5 +1,5 @@
-import * as core from 'core'
-import { Routes } from 'routes/types'
+import * as core from 'src/core'
+import { Routes } from 'src/routes/types'
 import { createSlice } from '@reduxjs/toolkit'
 
 type State = core.types.SliceState<Routes.Input, Routes.Item[], any>

@@ -1,7 +1,7 @@
-import { Button, Container, Modal, Row } from 'react-bootstrap'
 import React from 'react'
-import { Modal as ModalType } from 'details/types'
-import { useContext } from 'details/context'
+import { useContext } from 'src/details/context'
+import { Modal as ModalType } from 'src/details/types'
+import { Button, Container, Modal, Row } from 'react-bootstrap'
 
 const handleClose = (setModal: (modal: ModalType) => void) => () => setModal(ModalType.None)
 

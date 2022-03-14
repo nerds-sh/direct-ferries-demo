@@ -1,7 +1,7 @@
-import { createContext, useContext as useReactContext, useState } from 'react'
+import { Form, Modal, Currency } from 'src/details/types'
 import { FormikConfig, FormikValues, useFormik } from 'formik'
-import { Form, Modal, Currency } from 'details/types'
-import { validationSchema } from 'details/context/validation-schema'
+import { validationSchema } from 'src/details/context/validation-schema'
+import { createContext, useContext as useReactContext, useState } from 'react'
 
 type ContextType = {
     type: Form,

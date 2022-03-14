@@ -1,6 +1,6 @@
-import { useDispatch } from 'react-redux'
-import { get } from 'routes/slices'
 import { useCallback } from 'react'
+import { get } from 'src/routes/slices'
+import { useDispatch } from 'react-redux'
 
 const defaultParams = {
   AB_SAYT_ports: 'false',

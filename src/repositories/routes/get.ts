@@ -1,7 +1,7 @@
 import lodash from 'lodash'
-import { Settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
-import { bodyFromParams } from 'repositories/common'
+import { Settings } from 'src/settings'
+import { bodyFromParams } from 'src/repositories/common'
 import { from, mergeMap, map, filter, toArray } from 'rxjs'
 
 const url = () => `${Settings.get().api}/ferry/ws/dealpicker.asmx/SearchDataGetAB`

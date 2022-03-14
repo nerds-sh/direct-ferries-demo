@@ -1,5 +1,5 @@
 import React from 'react'
-import * as core from 'core'
+import * as core from 'src/core'
 import { Col, Row } from 'react-bootstrap'
 
 type Props = { children: core.types.Children }

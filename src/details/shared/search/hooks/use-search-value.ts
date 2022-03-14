@@ -1,5 +1,5 @@
-import * as core from 'core'
-import { useContext } from 'details/context'
+import * as core from 'src/core'
+import { useContext } from 'src/details/context'
 
 export const useSearchValue = () => {
   const selectedRoute = core.hooks.useSelectedRoute()

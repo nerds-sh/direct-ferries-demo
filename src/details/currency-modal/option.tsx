@@ -1,7 +1,7 @@
 import React from 'react'
-import { useContext } from 'details/context'
 import { Form } from 'react-bootstrap'
-import { Currency } from 'details/types'
+import { Currency } from 'src/details/types'
+import { useContext } from 'src/details/context'
 
 type Props = {
   option: {value: Currency, label: string}

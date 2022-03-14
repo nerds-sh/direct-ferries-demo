@@ -1,9 +1,9 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { Modal } from 'details/types'
-import { PersonModal } from 'details/person-modal'
-import { Person } from 'details/shared/persons/person'
-import { Context, useDefaultContext } from 'details/context'
+import { Modal } from 'src/details/types'
+import { PersonModal } from 'src/details/person-modal'
+import { Person } from 'src/details/shared/persons/person'
+import { Context, useDefaultContext } from 'src/details/context'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 
 const Component = ({ kind }: {kind: Modal}) => <Context.Provider value={useDefaultContext()}>

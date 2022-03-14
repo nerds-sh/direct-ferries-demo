@@ -1,9 +1,9 @@
+import { Types } from 'src/dealfinder'
 import { ofType } from 'redux-observable'
-import { base as slice } from 'dealfinder/slices'
-import { repositories } from 'repositories'
-import { mergeMap, catchError, of, Observable } from 'rxjs'
+import { repositories } from 'src/repositories'
 import { PayloadAction } from '@reduxjs/toolkit'
-import { Types } from 'dealfinder'
+import { base as slice } from 'src/dealfinder/slices'
+import { mergeMap, catchError, of, Observable } from 'rxjs'
 
 export const base = (actions$: Observable<any>) => actions$
   .pipe(ofType(slice.actions.attempt))

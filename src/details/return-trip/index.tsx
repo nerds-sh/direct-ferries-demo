@@ -1,9 +1,9 @@
-import { Search } from 'details/shared/search'
 import React from 'react'
-import { Details } from 'details/shared/details'
-import { DifferentReturn } from 'details/return-trip/different-return'
-import { Currency } from 'details/shared/currency'
-import { Dates } from 'details/return-trip/dates'
+import { Search } from 'src/details/shared/search'
+import { Details } from 'src/details/shared/details'
+import { Dates } from 'src/details/return-trip/dates'
+import { Currency } from 'src/details/shared/currency'
+import { DifferentReturn } from 'src/details/return-trip/different-return'
 
 export const ReturnTrip = () => <>
   <Search />

@@ -1,1 +1,1 @@
-export * from 'routes/results/item/hooks/use-on-click'
+export * from 'src/routes/results/item/hooks/use-on-click'

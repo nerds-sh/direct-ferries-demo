@@ -1,2 +1,2 @@
-export * from 'dealfinder/hooks/get'
-export * from 'dealfinder/hooks/base'
+export * from 'src/dealfinder/hooks/get'
+export * from 'src/dealfinder/hooks/base'

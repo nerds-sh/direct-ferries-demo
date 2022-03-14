@@ -1,6 +1,6 @@
 import { Form, Modal } from 'react-bootstrap'
-import { currencies } from 'details/common'
-import { Option } from 'details/currency-modal/option'
+import { currencies } from 'src/details/common'
+import { Option } from 'src/details/currency-modal/option'
 import React from 'react'
 
 export const Body = () => <Modal.Body>

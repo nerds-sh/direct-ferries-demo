@@ -1,7 +1,7 @@
-import { Settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
+import { Settings } from 'src/settings'
 import { from, mergeMap, map } from 'rxjs'
-import { bodyFromParams } from 'repositories/common'
+import { bodyFromParams } from 'src/repositories/common'
 
 const url = () => `${Settings.get().api}/ferry/ws/dealpicker.asmx/RouteDataGet`
 

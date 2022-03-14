@@ -1,4 +1,4 @@
-import { Currency } from 'details/types'
+import { Currency } from 'src/details/types'
 
 export const currencies = [
   { value: Currency.USD, label: '$ (USD)' },

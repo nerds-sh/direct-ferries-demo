@@ -1,6 +1,6 @@
-import { Col, Row } from 'react-bootstrap'
 import React from 'react'
-import { Date } from 'details/shared/date'
+import { Col, Row } from 'react-bootstrap'
+import { Date } from 'src/details/shared/date'
 
 export const Dates = () => <Row className={'mt-4'}>
   <Col><Date /></Col>

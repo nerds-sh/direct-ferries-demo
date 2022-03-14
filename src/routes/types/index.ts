@@ -1,1 +1,1 @@
-export * as Routes from 'routes/types/routes'
+export * as Routes from 'src/routes/types/routes'

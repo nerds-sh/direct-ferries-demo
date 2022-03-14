@@ -1,6 +1,6 @@
 import React from 'react'
+import { useContext } from 'src/details/context'
 import { Col, FormControl, InputGroup, Row } from 'react-bootstrap'
-import { useContext } from 'details/context'
 
 export const Adults = () => {
   const { values, errors, handleChange } = useContext()

@@ -1,4 +1,4 @@
-import * as core from 'core'
+import * as core from 'src/core'
 
 export namespace Types {
   export type Settings = {
