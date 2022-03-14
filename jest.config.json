@@ -1,0 +1,12 @@
+{
+  "clearMocks": true,
+  "testEnvironment": "jsdom",
+  "transform": {
+    "\\.tsx?$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "<rootDir>/test/mocks/mock.style.js",
+    "src/(.*)": "<rootDir>/src/$1",
+    "tests/(.*)": "<rootDir>/test/$1"
+  }
+}
