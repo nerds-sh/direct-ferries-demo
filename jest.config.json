@@ -5,7 +5,7 @@
     "\\.tsx?$": "ts-jest"
   },
   "moduleNameMapper": {
-    "\\.(css|scss)$": "<rootDir>/test/mocks/mock.style.js",
+    "\\.(css|scss)$": "<rootDir>/test/mocks/style.js",
     "src/(.*)": "<rootDir>/src/$1",
     "tests/(.*)": "<rootDir>/test/$1"
   }
