@@ -26,17 +26,19 @@
     "import/resolver": {
       "node": {
         "paths": [
-          "./src"
+          "./"
         ],
         "extensions": [
           ".ts",
-          ".tsx"
+          ".tsx",
+          ".scss"
         ]
       }
     },
     "import/extensions": [
       ".ts",
-      ".tsx"
+      ".tsx",
+      ".scss"
     ]
   },
   "env": {
@@ -520,7 +522,10 @@
     "import/exports-last": "off",
     "import/extensions": [
       "error",
-      "never"
+      "never",
+      {
+        "scss": "always"
+      }
     ],
     "no-return-assign": "error",
     "node/no-callback-literal": "error",
@@ -621,7 +626,9 @@
       }
     },
     {
-      "files": ["test/pages/**/*.js"],
+      "files": [
+        "test/pages/**/*.js"
+      ],
       "rules": {
         "max-lines-per-function": [
           "error",
