@@ -1,9 +1,9 @@
-import { settings } from 'settings'
+import { Settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
 import { from, mergeMap, map } from 'rxjs'
 import { bodyFromParams } from 'repositories/common'
 
-const url = () => `${settings().api}/ferry/ws/dealpicker.asmx/RouteDataGet`
+const url = () => `${Settings.get().api}/ferry/ws/dealpicker.asmx/RouteDataGet`
 
 const options = (payload: object) => ({
   method: 'POST',

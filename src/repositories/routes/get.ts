@@ -1,10 +1,10 @@
-import { settings } from 'settings'
-import { fromFetch } from 'rxjs/fetch'
-import { from, mergeMap, map, filter, toArray } from 'rxjs'
-import { bodyFromParams } from 'repositories/common'
 import lodash from 'lodash'
+import { Settings } from 'settings'
+import { fromFetch } from 'rxjs/fetch'
+import { bodyFromParams } from 'repositories/common'
+import { from, mergeMap, map, filter, toArray } from 'rxjs'
 
-const url = () => `${settings().api}/ferry/ws/dealpicker.asmx/SearchDataGetAB`
+const url = () => `${Settings.get().api}/ferry/ws/dealpicker.asmx/SearchDataGetAB`
 
 const options = (payload: object) => ({
   method: 'POST',

@@ -1,13 +1,12 @@
+import { Settings } from 'settings'
+import { Types } from 'settings/types'
 import { useEffect, useState } from 'react'
-import { Settings } from 'settings/type'
-import { setup } from 'settings/index'
 
 export const useFetching = () => {
-  const [settings, setSettings] = useState<Settings | undefined>()
+  const [settings, setSettings] = useState<Types.Settings | undefined>()
 
   useEffect(() => {
-    const subscription = setup()
-      .subscribe(setSettings)
+    const subscription = Settings.setup().subscribe(setSettings)
 
     return subscription.unsubscribe
   }, [setSettings])
