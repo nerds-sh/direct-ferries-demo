@@ -1,9 +1,9 @@
-import { Types } from 'core'
+import * as core from 'core'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = Types.SliceState<any, any, any>
+type State = core.types.SliceState<any, any, any>
 
-type Reducer = Types.Reducer<any, State>
+type Reducer = core.types.Reducer<any, State>
 
 const initialState: State = {
   input: '',

@@ -1,16 +1,16 @@
 import React from 'react'
+import * as core from 'core'
 import { Link as RouterLink } from 'react-router-dom'
-import { Types } from 'core/index'
 
-type LinkProps = {
-    to: string,
-    children: Types.Children,
-    className?: string,
+type Props = {
+  to: string,
+  children: core.types.Children,
+  className?: string,
 }
 
 const makeClassname = (className?: string) => `nav-link${className && ` ${className}`}`
 
-export const Link = (props: LinkProps) => <RouterLink to={props.to} className={makeClassname(props.className)}>
+export const Link = (props: Props) => <RouterLink to={props.to} className={makeClassname(props.className)}>
   {props.children}
 </RouterLink>
 

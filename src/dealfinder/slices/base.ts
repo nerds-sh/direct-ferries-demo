@@ -1,10 +1,10 @@
-import { Types } from 'core'
+import * as core from 'core'
 import { Base } from 'dealfinder/types'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = Types.SliceState<Base.Input, any, any>
+type State = core.types.SliceState<Base.Input, any, any>
 
-type Reducer = Types.Reducer<any, State>
+type Reducer = core.types.Reducer<any, State>
 
 const initialState: State = {
   input: { stdc: '' },

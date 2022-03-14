@@ -1,7 +1,7 @@
-import { useLocation } from 'react-router-dom'
-import { useRoutes } from 'routes/hooks'
-import { Routes } from 'routes/types'
 import { parseInt } from 'lodash'
+import { Routes } from 'routes/types'
+import { useRoutes } from 'routes/hooks'
+import { useLocation } from 'react-router-dom'
 
 type Ids = {
   outgoingId: number,

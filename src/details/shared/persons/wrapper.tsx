@@ -1,8 +1,10 @@
 import React from 'react'
-import { Types } from 'core'
+import * as core from 'core'
 import { Col, Row } from 'react-bootstrap'
 
-export const Wrapper = ({ children }: {children: Types.Children}) => <Row>
+type Props = { children: core.types.Children }
+
+export const Wrapper = ({ children }: Props) => <Row>
   <Col>
     <Row>
       {children}
