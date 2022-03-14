@@ -1,4 +1,3 @@
-import { ReactElement } from 'react'
-import { Renderable } from 'core/types/renderable'
+import { ReactElement, ReactNode } from 'react'
 
-export type Children = ReactElement | ReactElement[] | Renderable
+export type Children = ReactElement | ReactElement[] | ReactNode | ReactNode[]
