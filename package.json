@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "lint:check": "eslint . --ext=ts,tsx,js,jsx --config .eslintconfig",
-    "lint:fix": "eslint . --ext=ts,tsx,js,jsx --fix --config .eslintconfig"
+    "lint:check": "eslint . --ext=ts,tsx,js,jsx",
+    "lint:fix": "eslint . --ext=ts,tsx,js,jsx --fix"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.8.0",
