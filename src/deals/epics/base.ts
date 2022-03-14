@@ -1,14 +1,15 @@
+import { Types } from 'src/deals'
 import { ofType } from 'redux-observable'
 import { repositories } from 'src/repositories'
 import { PayloadAction } from '@reduxjs/toolkit'
-import { get as slice } from 'src/dealfinder/slices'
+import { base as slice } from 'src/deals/slices'
 import { mergeMap, catchError, of, Observable } from 'rxjs'
 
-export const get = (actions$: Observable<any>) => actions$
+export const base = (actions$: Observable<any>) => actions$
   .pipe(ofType(slice.actions.attempt))
   .pipe(mergeMap(execute))
 
-const execute = ({ payload }: PayloadAction<object>) => repositories.dealfinder.get(payload)
+const execute = ({ payload }: PayloadAction<Types.Base.Input>) => repositories.deals.base(payload)
   .pipe(mergeMap(success))
   .pipe(catchError(failure))
 

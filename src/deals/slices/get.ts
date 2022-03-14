@@ -1,13 +1,12 @@
 import * as core from 'src/core'
-import { Base } from 'src/dealfinder/types'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = core.types.SliceState<Base.Input, any, any>
+type State = core.types.SliceState<any, any, any>
 
 type Reducer = core.types.Reducer<any, State>
 
 const initialState: State = {
-  input: { stdc: '' },
+  input: '',
   data: '',
   errors: '',
 }
@@ -18,9 +17,9 @@ const success: Reducer = (state, { payload }) => ({ ...state, data: payload })
 
 const failure: Reducer = (state, { payload }) => ({ ...state, errors: payload })
 
-export const base = createSlice({
+export const get = createSlice({
   initialState,
-  name: 'dealfinder/base',
+  name: 'deals/get',
   reducers: {
     attempt,
     success,

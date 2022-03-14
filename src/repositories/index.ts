@@ -1,4 +1,4 @@
+import { deals } from 'src/repositories/deals'
 import { routes } from 'src/repositories/routes'
-import { dealfinder } from 'src/repositories/dealfinder'
 
-export const repositories = { dealfinder, routes }
+export const repositories = { deals, routes }
