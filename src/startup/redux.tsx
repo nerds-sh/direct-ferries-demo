@@ -5,6 +5,6 @@ import { store } from 'src/startup/store'
 
 type Props = { children: core.types.Children }
 
-export const ReduxWrapper = ({ children }: Props) => <Provider store={store()}>
+export const Redux = ({ children }: Props) => <Provider store={store()}>
   {children}
 </Provider>
