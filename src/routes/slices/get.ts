@@ -1,10 +1,10 @@
-import { Types } from 'core'
+import * as core from 'core'
 import { Routes } from 'routes/types'
 import { createSlice } from '@reduxjs/toolkit'
 
-type State = Types.SliceState<Routes.Input, Routes.Item[], any>
+type State = core.types.SliceState<Routes.Input, Routes.Item[], any>
 
-type Reducer = Types.Reducer<any, State>
+type Reducer = core.types.Reducer<any, State>
 
 const initialState: State = {
   input: {

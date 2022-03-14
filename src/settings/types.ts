@@ -1,4 +1,4 @@
-import * as Common from 'core/types'
+import * as core from 'core'
 
 export namespace Types {
   export type Settings = {
@@ -6,6 +6,6 @@ export namespace Types {
   }
 
   export type Props = {
-    children: Common.Children
+    children: core.types.Children
   }
 }
