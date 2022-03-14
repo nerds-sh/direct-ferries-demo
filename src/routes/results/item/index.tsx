@@ -1,23 +1,17 @@
 import React from 'react'
 import { Routes } from 'src/routes/types'
 import 'src/routes/results/item/style.scss'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Icon } from 'src/routes/results/item/icon'
 import { Origin } from 'src/routes/results/item/origin'
-import { useOnClick } from 'src/routes/results/item/hooks'
 import { Destination } from 'src/routes/results/item/destination'
+import { useNavigateToDetails } from 'src/routes/results/item/hooks'
 
-type Props = {item: Routes.Item}
+type Props = { item: Routes.Item }
 
-export const Item = ({ item }: Props) => <Container role={'button'} className={'container'} onClick={useOnClick(item)}>
-  <Row className={'mt-2 p-2'}>
-    <Col>
-      <Origin item={item} />
-    </Col>
-    <Col>
-      Icon
-    </Col>
-    <Col>
-      <Destination item={item} />
-    </Col>
-  </Row>
-</Container>
+const CLASS_NAMES = 'routes__result-item d-flex justify-content-between align-items-center p-2 m-1'
+
+export const Item = ({ item }: Props) => <div className={CLASS_NAMES} onClick={useNavigateToDetails(item)}>
+  <Origin item={item} />
+  <Icon />
+  <Destination item={item} />
+</div>

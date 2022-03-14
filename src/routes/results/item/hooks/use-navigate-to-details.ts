@@ -7,7 +7,7 @@ const makeParams = ({ routeId, routeIdRet }: Routes.Item) => ({
   routeIdRet: `${routeIdRet}`,
 })
 
-export const useOnClick = (item: Routes.Item) => {
+export const useNavigateToDetails = (item: Routes.Item) => {
   const navigate = useNavigate()
 
   return useCallback(() => {
