@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Col, FormControl, InputGroup, Row } from 'react-bootstrap'
-import { useOnChange, useSearch, useSelectOnMount } from 'routes/form/hooks'
+import { useOnChange, useSearch, useSelectOnMount } from 'src/routes/form/hooks'
 
 export const Search = () => {
   const { search } = useSearch()

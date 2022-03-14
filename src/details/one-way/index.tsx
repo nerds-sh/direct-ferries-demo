@@ -1,8 +1,8 @@
-import { Search } from 'details/shared/search'
 import React from 'react'
-import { Details } from 'details/shared/details'
-import { Currency } from 'details/shared/currency'
-import { Dates } from 'details/one-way/dates'
+import { Dates } from 'src/details/one-way/dates'
+import { Search } from 'src/details/shared/search'
+import { Details } from 'src/details/shared/details'
+import { Currency } from 'src/details/shared/currency'
 
 export const OneWay = () => <>
   <Search />

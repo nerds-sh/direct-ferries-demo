@@ -1,5 +1,5 @@
-import { Modal } from 'details/types'
-import { useContext } from 'details/context'
+import { Modal } from 'src/details/types'
+import { useContext } from 'src/details/context'
 
 export const usePersonCount = (kind: Modal) => {
   const { values } = useContext()

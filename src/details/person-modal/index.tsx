@@ -1,11 +1,11 @@
 import React from 'react'
-import { useContext } from 'details/context'
 import { Modal } from 'react-bootstrap'
-import { Modal as ModalType } from 'details/types'
-import { Adults } from 'details/person-modal/adults'
-import { Children } from 'details/person-modal/children'
-import { Footer } from 'details/person-modal/footer'
-import 'details/person-modal/style.scss'
+import 'src/details/person-modal/style.scss'
+import { useContext } from 'src/details/context'
+import { Modal as ModalType } from 'src/details/types'
+import { Footer } from 'src/details/person-modal/footer'
+import { Adults } from 'src/details/person-modal/adults'
+import { Children } from 'src/details/person-modal/children'
 
 const handleClose = (setModal: (modal: ModalType) => void) => () => setModal(ModalType.None)
 

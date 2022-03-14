@@ -1,6 +1,6 @@
-import { useSelector } from 'react-redux'
 import { get } from 'lodash'
-import { Routes } from 'routes/types'
+import { Routes } from 'src/routes/types'
+import { useSelector } from 'react-redux'
 
 const path = 'routes.get.data'
 

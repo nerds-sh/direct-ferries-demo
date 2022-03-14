@@ -1,1 +1,1 @@
-export * from 'core/hooks/use-selected-route'
+export * from 'src/core/hooks/use-selected-route'

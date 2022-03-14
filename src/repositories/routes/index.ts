@@ -1,3 +1,3 @@
-import { get } from 'repositories/routes/get'
+import { get } from 'src/repositories/routes/get'
 
 export const routes = { get }

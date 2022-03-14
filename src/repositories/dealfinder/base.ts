@@ -1,6 +1,6 @@
-import { Types } from 'dealfinder'
-import { Settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
+import { Types } from 'src/dealfinder'
+import { Settings } from 'src/settings'
 import { from, map, mergeMap } from 'rxjs'
 
 const url = ({ stdc }: Types.Base.Input) => `${Settings.get().api}/partners/dealFinderBaseData.aspx?stdc=${stdc}`

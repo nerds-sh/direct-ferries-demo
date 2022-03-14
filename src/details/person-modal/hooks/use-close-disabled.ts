@@ -1,4 +1,4 @@
-import { useContext } from 'details/context'
+import { useContext } from 'src/details/context'
 
 export const useCloseDisabled = () => {
   const { errors } = useContext()

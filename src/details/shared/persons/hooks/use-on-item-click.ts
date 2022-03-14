@@ -1,6 +1,6 @@
-import { Modal } from 'details/types'
-import { useContext } from 'details/context'
 import { useCallback } from 'react'
+import { Modal } from 'src/details/types'
+import { useContext } from 'src/details/context'
 
 export const useOnItemClick = (kind: Modal) => {
   const { setModal } = useContext()

@@ -1,5 +1,5 @@
-import { Details } from 'details'
-import { Routes } from 'routes'
+import { Routes } from 'src/routes'
+import { Details } from 'src/details'
 
 export const routes = [
   {

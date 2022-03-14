@@ -1,10 +1,10 @@
 import React from 'react'
+import { Routes } from 'src/routes/types'
+import 'src/routes/results/item/style.scss'
 import { Col, Container, Row } from 'react-bootstrap'
-import 'routes/results/item/style.scss'
-import { Origin } from 'routes/results/item/origin'
-import { Destination } from 'routes/results/item/destination'
-import { useOnClick } from 'routes/results/item/hooks'
-import { Routes } from 'routes/types'
+import { Origin } from 'src/routes/results/item/origin'
+import { useOnClick } from 'src/routes/results/item/hooks'
+import { Destination } from 'src/routes/results/item/destination'
 
 type Props = {item: Routes.Item}
 

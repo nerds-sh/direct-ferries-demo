@@ -1,7 +1,7 @@
+import { epic } from 'src/startup/epic'
+import { reducer } from 'src/startup/reducer'
 import { createEpicMiddleware } from 'redux-observable'
 import { configureStore, Store } from '@reduxjs/toolkit'
-import { reducer } from 'startup/reducer'
-import { epic } from 'startup/epic'
 
 let storeInstance: Store
 

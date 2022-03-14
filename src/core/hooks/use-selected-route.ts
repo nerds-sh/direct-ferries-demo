@@ -1,6 +1,6 @@
 import { parseInt } from 'lodash'
-import { Routes } from 'routes/types'
-import { useRoutes } from 'routes/hooks'
+import { Routes } from 'src/routes/types'
+import { useRoutes } from 'src/routes/hooks'
 import { useLocation } from 'react-router-dom'
 
 type Ids = {

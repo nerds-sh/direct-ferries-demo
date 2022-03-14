@@ -1,2 +1,2 @@
-export * from 'dealfinder/slices/get'
-export * from 'dealfinder/slices/base'
+export * from 'src/dealfinder/slices/get'
+export * from 'src/dealfinder/slices/base'

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Title } from 'routes/results/title'
-import { List } from 'routes/results/list'
+import { List } from 'src/routes/results/list'
+import { Title } from 'src/routes/results/title'
 
 export const Results = () => <>
   <Title />

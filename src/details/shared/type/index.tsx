@@ -1,8 +1,8 @@
-import React, { ChangeEvent } from 'react'
-import { ButtonGroup, ToggleButton, ToggleButtonProps } from 'react-bootstrap'
 import { get } from 'lodash'
-import { useContext } from 'details/context'
-import { Form } from 'details/types'
+import { Form } from 'src/details/types'
+import React, { ChangeEvent } from 'react'
+import { useContext } from 'src/details/context'
+import { ButtonGroup, ToggleButton, ToggleButtonProps } from 'react-bootstrap'
 
 type Props = ToggleButtonProps
 

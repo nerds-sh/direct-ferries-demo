@@ -1,8 +1,8 @@
 import React from 'react'
-import 'details/shared/persons/style.scss'
+import { Modal } from 'src/details/types'
+import 'src/details/shared/persons/style.scss'
 import { Col, Container, Row } from 'react-bootstrap'
-import { Modal } from 'details/types'
-import { useOnItemClick, usePersonCount } from 'details/shared/persons/hooks'
+import { useOnItemClick, usePersonCount } from 'src/details/shared/persons/hooks'
 
 const useContainerProps = (kind: Modal) => ({
   className: 'container',

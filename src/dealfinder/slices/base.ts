@@ -1,5 +1,5 @@
-import * as core from 'core'
-import { Base } from 'dealfinder/types'
+import * as core from 'src/core'
+import { Base } from 'src/dealfinder/types'
 import { createSlice } from '@reduxjs/toolkit'
 
 type State = core.types.SliceState<Base.Input, any, any>

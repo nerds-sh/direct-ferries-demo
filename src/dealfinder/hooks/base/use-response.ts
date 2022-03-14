@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux'
 import { get } from 'lodash'
+import { useSelector } from 'react-redux'
 
 const path = 'dealfinder.base.data'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Container, Row } from 'react-bootstrap'
-import { useCloseDisabled } from 'details/person-modal/hooks'
+import { useCloseDisabled } from 'src/details/person-modal/hooks'
 
 type Props = {
   handleClose: () => void,

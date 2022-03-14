@@ -1,3 +1,3 @@
-export * from 'details/types/form'
-export * from 'details/types/modal'
-export * from 'details/types/currency'
+export * from 'src/details/types/form'
+export * from 'src/details/types/modal'
+export * from 'src/details/types/currency'

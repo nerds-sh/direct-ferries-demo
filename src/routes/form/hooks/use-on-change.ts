@@ -1,6 +1,6 @@
-import { useGetRoutes } from 'routes/hooks'
 import { useCallback } from 'react'
-import { useSearch } from 'routes/form/hooks/use-search'
+import { useGetRoutes } from 'src/routes/hooks'
+import { useSearch } from 'src/routes/form/hooks/use-search'
 
 export const useOnChange = () => {
   const { setSearch } = useSearch()

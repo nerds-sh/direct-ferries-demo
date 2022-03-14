@@ -1,2 +1,2 @@
-export * from 'startup/redux-wrapper'
-export * from 'startup/router'
+export * from 'src/startup/router'
+export * from 'src/startup/redux-wrapper'

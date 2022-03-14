@@ -1,9 +1,9 @@
 import React from 'react'
+import { Modal } from 'src/details/types'
 import { Col, Row } from 'react-bootstrap'
-import { useContext } from 'details/context'
-import { Modal } from 'details/types'
-import 'details/shared/currency/style.scss'
-import { currencies } from 'details/common'
+import { currencies } from 'src/details/common'
+import 'src/details/shared/currency/style.scss'
+import { useContext } from 'src/details/context'
 import { get } from 'lodash'
 
 const getLabel = ({ currency }: any) => {

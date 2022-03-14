@@ -1,1 +1,1 @@
-export * from 'repositories/common/body-from-params'
+export * from 'src/repositories/common/body-from-params'

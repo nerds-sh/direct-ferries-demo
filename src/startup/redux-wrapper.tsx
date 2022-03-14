@@ -1,7 +1,7 @@
 import React from 'react'
-import * as core from 'core'
-import { store } from 'startup/store'
+import * as core from 'src/core'
 import { Provider } from 'react-redux'
+import { store } from 'src/startup/store'
 
 type Props = { children: core.types.Children }
 

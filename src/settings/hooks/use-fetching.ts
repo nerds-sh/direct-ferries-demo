@@ -1,5 +1,5 @@
-import { Settings } from 'settings'
-import { Types } from 'settings/types'
+import { Settings } from 'src/settings'
+import { Types } from 'src/settings/types'
 import { useEffect, useState } from 'react'
 
 export const useFetching = () => {
