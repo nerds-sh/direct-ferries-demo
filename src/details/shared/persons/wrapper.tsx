@@ -1,5 +1,5 @@
 import React from 'react'
-import { Types } from 'common'
+import { Types } from 'core'
 import { Col, Row } from 'react-bootstrap'
 
 export const Wrapper = ({ children }: {children: Types.Children}) => <Row>

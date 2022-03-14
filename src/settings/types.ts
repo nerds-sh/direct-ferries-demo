@@ -1,4 +1,4 @@
-import * as Common from 'common/types'
+import * as Common from 'core/types'
 
 export namespace Types {
   export type Settings = {
