@@ -1,9 +1,9 @@
-import { settings } from 'settings'
+import { Types } from 'dealfinder'
+import { Settings } from 'settings'
 import { fromFetch } from 'rxjs/fetch'
 import { from, map, mergeMap } from 'rxjs'
-import { Types } from 'dealfinder'
 
-const url = ({ stdc }: Types.Base.Input) => `${settings().api}/partners/dealFinderBaseData.aspx?stdc=${stdc}`
+const url = ({ stdc }: Types.Base.Input) => `${Settings.get().api}/partners/dealFinderBaseData.aspx?stdc=${stdc}`
 
 const options = () => ({
   method: 'POST',
