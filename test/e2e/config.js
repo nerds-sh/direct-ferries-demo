@@ -1,5 +1,3 @@
-// @ts-ignore
-
 module.exports = {
   exclude: [
     'test/e2e/nightwatch.ts',
