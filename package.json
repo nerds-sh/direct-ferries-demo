@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test:unit": "jest --config test/unit/jest.config.json",
+    "test:e2e": "nightwatch test --config test/e2e/nightwatch.js --output test/e2e/output",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=ts,tsx,js,jsx --config .eslintconfig",
     "lint:fix": "eslint . --ext=ts,tsx,js,jsx --fix --config .eslintconfig"
