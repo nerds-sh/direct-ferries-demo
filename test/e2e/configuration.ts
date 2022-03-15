@@ -1,12 +1,12 @@
-export default {
-  src_folders: [
-    'test/e2e',
-  ],
+// @ts-ignore
+
+module.exports = {
   exclude: [
     'test/e2e/nightwatch.ts',
     'test/e2e/commands',
     'test/e2e/pages',
     'test/e2e/output',
+    'test/unit',
   ],
   custom_commands_path: [
     'test/e2e/commands',
