@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { useOnItemClick, usePersonCount } from 'src/details/shared/persons/hooks'
 
 const useContainerProps = (kind: Modal) => ({
-  className: 'container',
+  className: 'container route-details__adults-button',
   onClick: useOnItemClick(kind),
   role: 'button',
 })
