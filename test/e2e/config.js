@@ -20,7 +20,7 @@ module.exports = {
   },
   test_settings: {
     default: {
-      globals: { appUrl: 'http://localhost:3000' },
+      globals: { appUrl: 'http://localhost:9000' },
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,

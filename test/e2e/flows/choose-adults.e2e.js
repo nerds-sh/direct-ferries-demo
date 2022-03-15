@@ -1,9 +1,14 @@
 describe('when user is trying to navigate to adults', () => {
+  const page = {}
+
   before(browser => {
-    browser.url('http://localhost:3000')
+    page.routes = browser.page.routes()
+    page.routes.navigate()
   })
 
-  it('is being able to navigate', browser => {
-    browser.expect.url().to.startWith(`${browser.globals.appUrl}`)
+  it('content is right', () => {
+    page.routes.verifyBody()
+    page.routes.verifyFrame()
+    page.routes.verifyUrl()
   })
 })
