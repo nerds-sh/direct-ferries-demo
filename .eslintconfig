@@ -561,8 +561,8 @@
     },
     {
       "files": [
-        "test/**/*.e2e.js",
-        "test/**/*.js"
+        "test/e2e/**/*.e2e.ts",
+        "test/e2e/**/*.ts"
       ],
       "globals": {
         "describe": "readonly",
@@ -580,8 +580,8 @@
     },
     {
       "files": [
-        "test/commands/**/*.js",
-        "test/pages/**/*.js"
+        "test/e2e/commands/**/*.ts",
+        "test/e2e/pages/**/*.ts"
       ],
       "rules": {
         "filenames/match-regex": [
@@ -593,13 +593,13 @@
     },
     {
       "files": [
-        "test/**/*.js"
+        "test/e2e/**/*.ts"
       ],
       "excludedFiles": [
-        "test/commands/**/*.js",
-        "test/pages/**/*.js",
-        "test/extensions/**/*.js",
-        "test/output/**/*"
+        "test/e2e/commands/**/*.ts",
+        "test/e2e/pages/**/*.ts",
+        "test/e2e/extensions/**/*.ts",
+        "test/e2e/output/**/*"
       ],
       "rules": {
         "filenames/match-regex": [
@@ -627,7 +627,7 @@
     },
     {
       "files": [
-        "test/pages/**/*.js"
+        "test/e2e/pages/**/*.ts"
       ],
       "rules": {
         "max-lines-per-function": [
@@ -650,7 +650,7 @@
     },
     {
       "files": [
-        "test/nightwatch.js"
+        "test/e2e/config.ts"
       ],
       "rules": {
         "filenames/match-exported": "off",
