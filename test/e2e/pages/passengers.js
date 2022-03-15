@@ -30,6 +30,19 @@ const verifyChildrenCount = function(expected) {
   this.api.frameParent()
 }
 
+const clickDone = function() {
+  this.api.frame(0)
+  this.waitForElementVisible('@doneButton', TEN_SECONDS)
+  this.click('@doneButton').api.frameParent()
+}
+
+const ensureClosed = function() {
+  this.api.frame(0)
+  this.waitForElementNotPresent('@adultsCountInput')
+  this.waitForElementNotPresent('@childrenCountInput')
+  this.waitForElementNotPresent('@doneButton').api.frameParent()
+}
+
 module.exports = {
   commands: [{
     verifyUrl,
@@ -37,9 +50,12 @@ module.exports = {
     verifyAdultsCount,
     setChildrenCount,
     verifyChildrenCount,
+    clickDone,
+    ensureClosed,
   }],
   elements: {
     adultsCountInput: 'input.total-passengers__adults',
     childrenCountInput: 'input.total-passengers__children',
+    doneButton: 'button.total-passengers__done',
   },
 }
