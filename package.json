@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"yarn start:react\" \"yarn start:wrapper\"",
+    "start:react": "BROWSER=none react-scripts start",
+    "start:wrapper": "serve -l 9000 demo",
     "build": "react-scripts build",
     "test:unit": "jest --config test/unit/jest.config.json",
     "test:e2e": "nightwatch test -c test/e2e/config.js -o test/e2e/output test/e2e/flows",
@@ -28,6 +30,8 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
+    "serve": "13.0.2",
+    "concurrently": "7.0.0",
     "@types/nightwatch": "2.0.1",
     "chromedriver": "98.0.1",
     "nightwatch": "2.0.10",
