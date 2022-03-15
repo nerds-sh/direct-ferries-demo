@@ -31,4 +31,9 @@ describe('when user is trying to change passengers', () => {
     page.passengers.setChildrenCount('1')
     page.passengers.verifyChildrenCount('1')
   })
+
+  it('can close the modal', () => {
+    page.passengers.clickDone()
+    page.passengers.ensureClosed()
+  })
 })
