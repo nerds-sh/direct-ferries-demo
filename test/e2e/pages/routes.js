@@ -9,11 +9,19 @@ const verifyUrl = function() {
 }
 
 const verifyFrame = function() {
-  this.api.frame(0).waitForElementPresent('body', TEN_SECONDS)
+  this.api.frame(0)
+  this.waitForElementPresent('body', TEN_SECONDS).api.frameParent()
 }
 
 const verifyBody = function() {
+  this.api.frameParent()
   this.waitForElementPresent('body', TEN_SECONDS)
+}
+
+const selectFirst = function() {
+  this.api.frame(0)
+  this.waitForElementVisible('@firstRoute')
+  this.pause(200).click('@firstRoute').api.frameParent()
 }
 
 module.exports = {
@@ -22,6 +30,7 @@ module.exports = {
     verifyUrl,
     verifyBody,
     verifyFrame,
+    selectFirst,
   }],
-  elements: { firstRoute: '.approve .title' },
+  elements: { firstRoute: '.routes__result-item' },
 }
