@@ -9,8 +9,7 @@ export const Children = () => {
     <Col>
       <InputGroup>
         <InputGroup.Text id={'basic-addon2'}>Children (0-17)</InputGroup.Text>
-        <FormControl aria-label={'Search'}
-                     type={'number'}
+        <FormControl aria-label={'Search'} type={'number'} className={'total-passengers__children'}
                      value={values.children} name={'children'} onChange={handleChange} />
       </InputGroup>
       {errors.children && <div className={'person-modal-error'}>{errors.children}</div>}

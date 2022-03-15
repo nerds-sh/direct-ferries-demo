@@ -9,7 +9,7 @@ export const Adults = () => {
     <Col>
       <InputGroup>
         <InputGroup.Text id={'basic-addon2'}>Adults (18+)</InputGroup.Text>
-        <FormControl type={'number'}
+        <FormControl type={'number'} className={'total-passengers__adults'}
                      value={values.adults} name={'adults'} onChange={handleChange} />
       </InputGroup>
       {errors.adults && <div className={'person-modal-error'}>{errors.adults}</div>}
