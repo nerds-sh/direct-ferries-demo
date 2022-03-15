@@ -593,6 +593,42 @@
     },
     {
       "files": [
+        "test/unit/**/*.ts",
+        "test/unit/**/*.tsx"
+      ],
+      "rules": {
+        "filenames/match-regex": [
+          "error",
+          "^[a-z-]+(\\.test)+$",
+          true
+        ],
+        "max-lines-per-function": [
+          "error",
+          {
+            "skipBlankLines": true,
+            "skipComments": false,
+            "max": 200
+          }
+        ],
+        "max-lines": [
+          "error",
+          {
+            "max": 200,
+            "skipBlankLines": false,
+            "skipComments": false
+          }
+        ],
+        "max-nested-callbacks": [
+          "error",
+          {
+            "max": 4
+          }
+        ],
+        "testing-library/no-render-in-setup": "off"
+      }
+    },
+    {
+      "files": [
         "test/e2e/**/*.js"
       ],
       "excludedFiles": [
