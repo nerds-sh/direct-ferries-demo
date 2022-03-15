@@ -1,4 +1,5 @@
 {
+  "rootDir": "../../",
   "clearMocks": true,
   "testEnvironment": "jsdom",
   "transform": {
