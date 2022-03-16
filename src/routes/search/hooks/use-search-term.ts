@@ -1,13 +1,10 @@
 import * as core from 'src/core'
 import { useSearchParams } from 'react-router-dom'
 
-export const useSearch = () => {
-  const [search, setSearch] = useSearchParams()
+export const useSearchTerm = (): string => {
+  const [search] = useSearchParams()
   const selectedRoute = core.hooks.useSelectedRoute()
   const existingSearch = selectedRoute ? selectedRoute.routeName : search.get('term')
 
-  return {
-    search: existingSearch || '',
-    setSearch: (term: string) => setSearch({ term }),
-  }
+  return existingSearch || ''
 }

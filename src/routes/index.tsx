@@ -1,12 +1,12 @@
 import React from 'react'
-import { Form } from 'src/routes/form'
+import { Search } from 'src/routes/search'
 import { Results } from 'src/routes/results'
 import 'src/details/shared/currency/style.scss'
 import { Behaviour } from 'src/routes/behaviour'
 
 export const Routes = () => <>
   <Behaviour />
-  <Form />
+  <Search />
   <Results />
 </>
 

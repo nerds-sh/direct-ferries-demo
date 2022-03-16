@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
-import { useSearch } from 'src/routes/form/hooks'
+import { useSearchTerm } from 'src/routes/search/hooks'
 import { useGetRoutes } from 'src/routes/hooks/use-get-routes'
 
 export const useFetchDefaultRoutes = () => {
-  const { search } = useSearch()
+  const searchTerm = useSearchTerm()
   const getRoutes = useGetRoutes()
 
   useEffect(() => {
-    getRoutes(search)
-  }, [getRoutes, search])
+    getRoutes(searchTerm)
+  }, [getRoutes, searchTerm])
 }
