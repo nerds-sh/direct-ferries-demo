@@ -1,3 +1,5 @@
 import React from 'react'
 
-export const Title = () => <div className={'text-white mt-5'}>Popular Routes</div>
+export const Title = () => <div className={'text-white mt-4'}>
+  Popular Routes
+</div>

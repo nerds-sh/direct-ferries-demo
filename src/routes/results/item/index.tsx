@@ -8,7 +8,7 @@ import { useNavigateToDetails } from 'src/routes/results/item/hooks'
 
 type Props = { item: Routes.Item }
 
-const CLASS_NAMES = 'routes__result-item d-flex justify-content-between align-items-center p-2 m-1'
+const CLASS_NAMES = 'routes__result-item d-flex justify-content-between align-items-center p-2 m-1 my-3'
 
 export const Item = ({ item }: Props) => <div className={CLASS_NAMES} onClick={useNavigateToDetails(item)}>
   <Origin item={item} />
