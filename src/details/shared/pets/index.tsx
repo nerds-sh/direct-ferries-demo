@@ -1,12 +1,14 @@
 import React from 'react'
-import 'src/details/shared/pets/style.scss'
-import { Col, Container, Row } from 'react-bootstrap'
 
-export const Pets = () => <Container className={'container pt-2 pb-2'}>
-  <Row>
-    <Col>Icon</Col>
-    <Col>0</Col>
-    <Col>Pets</Col>
-    <Col>Edit</Col>
-  </Row>
-</Container>
+type Props = { className?: string }
+
+const CLASS_NAMES = 'd-flex justify-content-between rounded p-2 bg-white '
+
+export const Pets = ({ className = '' }: Props) => <div className={CLASS_NAMES + className}>
+  <div className={'text-center w-100'}>Icon</div>
+  <div className={'text-center w-100'}>0</div>
+  <div className={'text-center w-100'}>Pets</div>
+  <div className={'text-center w-100'}>Edit</div>
+</div>
+
+Pets.defaultProps = { className: '' }

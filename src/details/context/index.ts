@@ -14,17 +14,17 @@ export const Context = createContext({} as ContextType)
 
 export const useContext = (): ContextType => useReactContext(Context)
 
-const useFormikInit = (): FormikConfig<FormikValues> => ({
+const useFormikConfigs = (): FormikConfig<FormikValues> => ({
   initialValues: { search: '', currency: Currency.USD, adults: 2, children: 0 },
   onSubmit: ({ search }) => console.log('search is ', search),
   validationSchema,
 })
 
-export const useDefaultContext = () => {
+export const useValue = () => {
   const [type, setType] = useState(Form.Return)
   const [modal, setModal] = useState(Modal.None)
-  const formik = useFormik(useFormikInit())
+  const formikConfigs = useFormik(useFormikConfigs())
 
-  return { ...formik, type, setType, modal, setModal }
+  return { ...formikConfigs, type, setType, modal, setModal }
 }
 

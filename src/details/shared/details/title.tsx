@@ -1,6 +1,5 @@
-import { Col, Row } from 'react-bootstrap'
 import React from 'react'
 
-export const Title = () => <Row className={'mt-2'}>
-  <Col className={'text-white'}>Trip details</Col>
-</Row>
+export const Title = () => <div className={'mt-2 text-white w-100'}>
+  Trip details
+</div>
