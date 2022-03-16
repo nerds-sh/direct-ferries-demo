@@ -1,17 +1,17 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap'
-import 'src/details/person-modal/style.scss'
 import { useContext } from 'src/details/context'
+import 'src/details/modals/passengers/style.scss'
 import { Modal as ModalType } from 'src/details/types'
-import { Footer } from 'src/details/person-modal/footer'
-import { Adults } from 'src/details/person-modal/adults'
-import { Children } from 'src/details/person-modal/children'
+import { Footer } from 'src/details/modals/passengers/footer'
+import { Adults } from 'src/details/modals/passengers/adults'
+import { Children } from 'src/details/modals/passengers/children'
 
 const handleClose = (setModal: (modal: ModalType) => void) => () => setModal(ModalType.None)
 
 const makeId = (kind: ModalType) => `${kind === ModalType.Children ? 'children' : 'adults'}-modal`
 
-export const PersonModal = ({ kind }: {kind: ModalType}) => {
+export const Passengers = ({ kind }: {kind: ModalType}) => {
   const { modal, setModal } = useContext()
 
   return <Modal name={makeId(kind)} show={modal === kind} onHide={handleClose(setModal)} fullscreen>
