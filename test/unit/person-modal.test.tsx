@@ -1,14 +1,14 @@
 import React from 'react'
 import '@testing-library/jest-dom'
 import { Modal } from 'src/details/types'
-import { PersonModal } from 'src/details/person-modal'
+import { Modals } from 'src/details/modals'
 import { Context, useValue } from 'src/details/context'
 import { Person } from 'src/details/common/persons/person'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 
 const Component = ({ kind }: {kind: Modal}) => <Context.Provider value={useValue()}>
   <Person kind={kind} />
-  <PersonModal kind={kind} />
+  <Modals.Passengers kind={kind} />
 </Context.Provider>
 
 describe('Adults modal', () => {
