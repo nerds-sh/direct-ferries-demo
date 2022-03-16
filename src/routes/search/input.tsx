@@ -15,11 +15,7 @@ const useInputProperties = () => ({
 export const Input = () => {
   hooks.useSelectOnMount()
 
-  return <Bootstrap.Row className={'mt-4'}>
-    <Bootstrap.Col>
-      <Bootstrap.InputGroup>
-        <Bootstrap.FormControl {...useInputProperties()} />
-      </Bootstrap.InputGroup>
-    </Bootstrap.Col>
-  </Bootstrap.Row>
+  return <Bootstrap.InputGroup className={'mt-4'}>
+    <Bootstrap.FormControl {...useInputProperties()} />
+  </Bootstrap.InputGroup>
 }
