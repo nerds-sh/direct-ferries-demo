@@ -1,8 +1,8 @@
 import React from 'react'
 import { get } from 'lodash'
 import { Modal } from 'src/details/types'
-import { currencies } from 'src/details/common'
 import { useContext } from 'src/details/context'
+import { currencies } from 'src/details/common/currencies'
 
 const getLabel = ({ currency }: any) => {
   const current = currencies.find(({ value }) => `${currency}` === `${value}`)

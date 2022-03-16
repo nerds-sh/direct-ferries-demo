@@ -1,8 +1,8 @@
 import React from 'react'
 import { Modal } from 'src/details/types'
-import 'src/details/shared/persons/style.scss'
+import 'src/details/common/persons/style.scss'
 import { Col, Container, Row } from 'react-bootstrap'
-import { useOnItemClick, usePersonCount } from 'src/details/shared/persons/hooks'
+import { useOnItemClick, usePersonCount } from 'src/details/common/persons/hooks'
 
 type Props = { kind: Modal, className?: string }
 

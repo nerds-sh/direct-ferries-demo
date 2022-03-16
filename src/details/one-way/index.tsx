@@ -1,9 +1,9 @@
 import React from 'react'
-import { Date } from 'src/details/shared/date'
+import { Date } from 'src/details/common/date'
 import { Space } from 'src/details/one-way/space'
-import { Search } from 'src/details/shared/search'
-import { Details } from 'src/details/shared/details'
-import { Currency } from 'src/details/shared/currency'
+import { Search } from 'src/details/common/search'
+import { Details } from 'src/details/common/details'
+import { Currency } from 'src/details/common/currency'
 
 export const OneWay = () => <>
   <Search />

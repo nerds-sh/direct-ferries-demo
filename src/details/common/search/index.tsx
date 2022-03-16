@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import 'src/details/shared/search/style.scss'
-import { useOnClick, useSearchValue } from 'src/details/shared/search/hooks'
+import 'src/details/common/search/style.scss'
+import { useOnClick, useSearchValue } from 'src/details/common/search/hooks'
 
 export const Search = () => {
   const searchValue = useSearchValue()

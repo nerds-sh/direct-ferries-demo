@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'src/details/form'
 import { Modal } from 'src/details/types'
-import 'src/details/shared/currency/style.scss'
+import 'src/details/common/currency/style.scss'
 import { PersonModal } from 'src/details/person-modal'
 import { Context, useValue } from 'src/details/context'
 import { CurrencyModal } from 'src/details/currency-modal'
