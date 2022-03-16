@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useSearchValue } from 'src/details/shared/search/hooks/use-search-value'
+import { useSearchValue } from 'src/details/common/search/hooks/use-search-value'
 
 export const useOnClick = () => {
   const navigate = useNavigate()

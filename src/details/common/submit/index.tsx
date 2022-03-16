@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Bootstrap from 'react-bootstrap'
-import { useRedirectUrl } from 'src/details/shared/submit/hooks'
+import { useRedirectUrl } from 'src/details/common/submit/hooks'
 
 const useButtonProperties = (): Bootstrap.ButtonProps => ({
   type: 'submit',
