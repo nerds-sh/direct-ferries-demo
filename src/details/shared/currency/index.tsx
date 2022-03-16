@@ -1,10 +1,8 @@
 import React from 'react'
-import { Modal } from 'src/details/types'
-import { Col, Row } from 'react-bootstrap'
-import { currencies } from 'src/details/common'
-import 'src/details/shared/currency/style.scss'
-import { useContext } from 'src/details/context'
 import { get } from 'lodash'
+import { Modal } from 'src/details/types'
+import { currencies } from 'src/details/common'
+import { useContext } from 'src/details/context'
 
 const getLabel = ({ currency }: any) => {
   const current = currencies.find(({ value }) => `${currency}` === `${value}`)
@@ -17,13 +15,11 @@ export const Currency = () => {
 
   const onClick = () => setModal(Modal.Currency)
 
-  return <Row className={'mt-2'}>
-    <Col>
-      <div className={'container p-1'} role={'button'} onClick={onClick}>
-        Currency:
-        {' '}
-        {getLabel(values)}
-      </div>
-    </Col>
-  </Row>
+  return <div className={`m-3`}>
+    <button className={'w-100 bg-white rounded p-2 border-0'} onClick={onClick}>
+      Currency:
+      {' '}
+      <strong>{getLabel(values)}</strong>
+    </button>
+  </div>
 }

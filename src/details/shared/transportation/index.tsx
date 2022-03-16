@@ -1,11 +1,9 @@
 import React from 'react'
-import 'src/details/shared/transportation/style.scss'
-import { Col, Container, Row } from 'react-bootstrap'
 
-export const Transportation = () => <Container className={'container pt-2 pb-2'}>
-  <Row>
-    <Col>Icon</Col>
-    <Col>Foot</Col>
-    <Col>Edit</Col>
-  </Row>
-</Container>
+const CLASS_NAMES = 'd-flex justify-content-between rounded p-2 bg-white '
+
+export const Transportation = ({ className }: any) => <div className={CLASS_NAMES + className}>
+  <div className={'text-center w-100'}>Icon</div>
+  <div className={'text-center w-100'}>Foot</div>
+  <div className={'text-center w-100'}>Edit</div>
+</div>

@@ -1,11 +1,9 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
 import { Modal } from 'src/details/types'
 import 'src/details/shared/persons/style.scss'
 import { Person } from 'src/details/shared/persons/person'
-import { Wrapper } from 'src/details/shared/persons/wrapper'
 
-export const Persons = () => <Wrapper>
-  <Col><Person kind={Modal.Adults} /></Col>
-  <Col><Person kind={Modal.Children} /></Col>
-</Wrapper>
+export const Persons = () => <div className={'d-flex justify-content-between'}>
+  <Person kind={Modal.Adults} className={'my-3 me-3 w-100'} />
+  <Person kind={Modal.Children} className={'my-3 ms-3 w-100'} />
+</div>
