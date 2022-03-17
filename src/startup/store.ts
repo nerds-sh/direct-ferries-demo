@@ -1,24 +1,12 @@
-import { epic } from 'src/startup/epic'
-import { reducer } from 'src/startup/reducer'
-import { createEpicMiddleware } from 'redux-observable'
-import { configureStore, Store } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit"
+import { reducer } from "./reducer"
 
-let storeInstance: Store
+let instance: any
 
-const configureMiddleware = (middleware: any) => (getDefaultMiddleware: any) => getDefaultMiddleware()
-  .concat(middleware)
+export const store = (): any => {
+    if (!instance) {
+        instance = configureStore({reducer})
+    }
 
-const makeStoreConfiguration = (middleware: any) => ({
-  middleware: configureMiddleware(middleware),
-  reducer,
-})
-
-export const store = (): Store => {
-  if (!storeInstance) {
-    const middleware = createEpicMiddleware()
-    storeInstance = configureStore(makeStoreConfiguration(middleware))
-    middleware.run(epic)
-  }
-
-  return storeInstance
+    return instance
 }

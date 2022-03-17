@@ -1,7 +1,8 @@
-import { reducer as routes } from 'src/routes'
-import { combineReducers } from '@reduxjs/toolkit'
-import { reducer as deals } from 'src/deals'
+import { combineReducers } from "@reduxjs/toolkit";
+import {reducer as routes} from 'src/routes/reducer'
+import {reducer as users} from 'src/users/reducer'
 
-export const reducer = combineReducers({ deals, routes })
-
-export type State = ReturnType<typeof reducer>
+export const reducer = combineReducers({
+    routes,
+    users,
+})

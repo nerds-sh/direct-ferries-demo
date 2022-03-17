@@ -7,8 +7,6 @@
     "start:react": "cross-env BROWSER=none react-scripts start",
     "start:wrapper": "serve -l 9000 demo",
     "build": "react-scripts build",
-    "test:unit": "jest --config test/unit/jest.config.json",
-    "test:e2e": "nightwatch test -c test/e2e/config.js -o test/e2e/output test/e2e/flows",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=ts,tsx,js,jsx --config .eslintconfig",
     "lint:fix": "eslint . --ext=ts,tsx,js,jsx --fix --config .eslintconfig"

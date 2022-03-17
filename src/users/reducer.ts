@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { routes } from "./slices";
+import { list } from "./slices";
 
 export const reducer = combineReducers({
-    list: routes.reducer
+    list: list.reducer
 })

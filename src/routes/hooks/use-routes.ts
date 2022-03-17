@@ -1,7 +1,7 @@
-import { get } from 'lodash'
-import { Routes } from 'src/routes/types'
-import { useSelector } from 'react-redux'
+import { get } from "lodash"
+import { useSelector } from "react-redux"
+import { Route } from "../types"
 
-const path = 'routes.get.data'
+const path = 'routes.list.data'
 
-export const useRoutes = () => useSelector(state => get(state, path, []) as Routes.Item[])
+export const useRoutes = (): [Route] => useSelector(state => get(state, path, []))

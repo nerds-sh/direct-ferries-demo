@@ -1,15 +1,10 @@
-import React from 'react'
-import { Search } from 'src/routes/search'
-import { Results } from 'src/routes/results'
-import 'src/details/common/currency/style.scss'
-import { Behaviour } from 'src/routes/behaviour'
+import { useRoutes } from "./hooks";
+import { Route } from "./route";
 
-export const Routes = () => <>
-  <Behaviour />
-  <Search />
-  <Results />
-</>
+export const Routes = () => {
+    const routes = useRoutes()
 
-export * from 'src/routes/reducer'
-export * as Types from 'src/routes/types'
-export * from 'src/routes/epic'
+    return <div>
+        {routes.map(route => <Route route={route} />)}
+    </div>;
+}

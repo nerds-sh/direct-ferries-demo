@@ -1,5 +1,5 @@
-import { Routes } from 'src/routes'
 import { Details } from 'src/details'
+import { Users } from 'src/users'
 
 export const routes = [
   {
@@ -10,8 +10,8 @@ export const routes = [
   },
   {
     path: '/',
-    name: 'Routes',
+    name: 'Users',
     exact: true,
-    component: Routes,
+    component: Users,
   },
 ]
